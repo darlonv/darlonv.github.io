@@ -1,0 +1,809 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercícios &#8212; Ciência de Dados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Ciência de Dados</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../disciplina.html">
+   Ciência de Dados
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Introdução
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Introducao/01_Ciencia_de_Dados.html">
+   Ciência de dados
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../html/gantt.html">
+   Gantt
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Python/01-Arquivos.html">
+   Arquivos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Numpy
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/01-Importacao_e_Arrays.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/02-Operacoes_sobre_arrays.html">
+   Operações sobre
+   <em>
+    arrays
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/03-Polinomios.html">
+   Equações polinomiais
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  pandas
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Pandas/01_Pandas.html">
+   Pandas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  estatistica basica
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Estatistica/01_Elementos_de_estatistica_I.html">
+   Estatística básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Estatistica/03_Correlacao.html">
+   Correlação
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Regressão
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Regressao_linear.html">
+   Regressão linear simples
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/Regressao/Untitled.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="exercicios">
+<h1>Exercícios<a class="headerlink" href="#exercicios" title="Permalink to this headline">¶</a></h1>
+<p>Considerando a base de dados do ENEM de 2018, a partir da nota da redação, estime as seguintes notas:</p>
+<ul class="simple">
+<li><p>Demonstrar domínio da modalidade escrita formal da Língua</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">colunas</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NU_NOTA_REDACAO&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;NU_NOTA_COMP1&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;NU_NOTA_COMP2&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;NU_NOTA_COMP3&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;NU_NOTA_COMP4&#39;</span><span class="p">,</span>
+           <span class="s1">&#39;NU_NOTA_COMP5&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">base</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/home/darlon/Pesquisa/bases/Brasil/ENEM/2018/MICRODADOS_ENEM_2018.csv.tar.gz&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;latin-1&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span> <span class="o">=</span> <span class="n">base</span><span class="p">[</span><span class="n">colunas</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="k">del</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
+<span class="n">base</span> <span class="o">=</span> <span class="n">nb</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">base</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s1">&#39;NU_NOTA_REDACAO&#39;</span><span class="p">,</span> <span class="s1">&#39;NU_NOTA_COMP5&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f76bfc21e48&gt;
+</pre></div>
+</div>
+<img alt="../../_images/Untitled_6_1.png" src="../../_images/Untitled_6_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">base</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/home/darlon/Pesquisa/bases/Brasil/PRF/Infracoes/infracoes_2020.zip&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="stderr docutils container">
+<pre class="stderr literal-block">/home/darlon/disk/home/darlon/Pesquisa/env/lib/python3.6/site-packages/IPython/core/interactiveshell.py:3063: DtypeWarning: Columns (17,20,21) have mixed types.Specify dtype option on import or set low_memory=False.
+  interactivity=interactivity, compiler=compiler, result=result)
+</pre>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">base</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 483758 entries, 0 to 483757
+Data columns (total 22 columns):
+ #   Column                         Non-Null Count   Dtype  
+---  ------                         --------------   -----  
+ 0   Número do Auto                 483758 non-null  object 
+ 1   Data da Infração (DD/MM/AAAA)  483758 non-null  object 
+ 2   Indicador de Abordagem         483758 non-null  object 
+ 3   Assinatura do Auto             483758 non-null  object 
+ 4   Indicador Veiculo Estrangeiro  483758 non-null  object 
+ 5   Sentido Trafego                483758 non-null  object 
+ 6   UF Placa                       483758 non-null  object 
+ 7   UF Infração                    483758 non-null  object 
+ 8   BR Infração                    483758 non-null  int64  
+ 9   Km Infração                    483758 non-null  int64  
+ 10  Município                      483758 non-null  object 
+ 11  Código da Infração             483758 non-null  int64  
+ 12  Descrição Abreviada Infração   483758 non-null  object 
+ 13  Enquadramento da Infração      483758 non-null  object 
+ 14  Início Vigência da Infração    483758 non-null  object 
+ 15  Fim Vigência Infração          0 non-null       float64
+ 16  Medição Infração               483758 non-null  object 
+ 17  Descrição Especie Veículo      483758 non-null  object 
+ 18  Descrição Marca Veículo        483758 non-null  object 
+ 19  Hora Infração                  483758 non-null  int64  
+ 20  Medição Considerada            483758 non-null  object 
+ 21  Excesso Verificado             483758 non-null  object 
+dtypes: float64(1), int64(4), object(17)
+memory usage: 81.2+ MB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">base</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Número do Auto</th>
+      <th>Data da Infração (DD/MM/AAAA)</th>
+      <th>Indicador de Abordagem</th>
+      <th>Assinatura do Auto</th>
+      <th>Indicador Veiculo Estrangeiro</th>
+      <th>Sentido Trafego</th>
+      <th>UF Placa</th>
+      <th>UF Infração</th>
+      <th>BR Infração</th>
+      <th>Km Infração</th>
+      <th>...</th>
+      <th>Descrição Abreviada Infração</th>
+      <th>Enquadramento da Infração</th>
+      <th>Início Vigência da Infração</th>
+      <th>Fim Vigência Infração</th>
+      <th>Medição Infração</th>
+      <th>Descrição Especie Veículo</th>
+      <th>Descrição Marca Veículo</th>
+      <th>Hora Infração</th>
+      <th>Medição Considerada</th>
+      <th>Excesso Verificado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2b0d033ac754fc6</td>
+      <td>2020-01-16</td>
+      <td>S</td>
+      <td>N</td>
+      <td>N</td>
+      <td>C</td>
+      <td>-1</td>
+      <td>RS</td>
+      <td>290</td>
+      <td>111</td>
+      <td>...</td>
+      <td>Desobedecer às ordens emanadas da autorid comp...</td>
+      <td>195</td>
+      <td>2016-11-01</td>
+      <td>NaN</td>
+      <td>Nenhuma</td>
+      <td>CARGA</td>
+      <td>VW</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>e1f8917e70ebf38</td>
+      <td>2020-01-18</td>
+      <td>S</td>
+      <td>N</td>
+      <td>N</td>
+      <td>C</td>
+      <td>-1</td>
+      <td>RS</td>
+      <td>116</td>
+      <td>327</td>
+      <td>...</td>
+      <td>Desobedecer às ordens emanadas da autorid comp...</td>
+      <td>195</td>
+      <td>2016-11-01</td>
+      <td>NaN</td>
+      <td>Nenhuma</td>
+      <td>CARGA</td>
+      <td>OUTRA</td>
+      <td>0</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>dfd71eeac1fe06b</td>
+      <td>2020-01-25</td>
+      <td>C</td>
+      <td>N</td>
+      <td>N</td>
+      <td>D</td>
+      <td>RS</td>
+      <td>RS</td>
+      <td>116</td>
+      <td>292</td>
+      <td>...</td>
+      <td>Conduzir o veículo registrado que não esteja d...</td>
+      <td>230 * V</td>
+      <td>2016-11-01</td>
+      <td>NaN</td>
+      <td>Nenhuma</td>
+      <td>PASSAGEIRO</td>
+      <td>FORD</td>
+      <td>21</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>558685c5e4dbcca</td>
+      <td>2020-01-30</td>
+      <td>C</td>
+      <td>N</td>
+      <td>N</td>
+      <td>C</td>
+      <td>GO</td>
+      <td>MT</td>
+      <td>364</td>
+      <td>387</td>
+      <td>...</td>
+      <td>Conduzir o veículo que não esteja registrado</td>
+      <td>230 * V</td>
+      <td>2016-11-01</td>
+      <td>NaN</td>
+      <td>Nenhuma</td>
+      <td>TRAÇÃO</td>
+      <td>OUTRA</td>
+      <td>14</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>aac0a90d941bb4e</td>
+      <td>2020-01-31</td>
+      <td>C</td>
+      <td>N</td>
+      <td>N</td>
+      <td>C</td>
+      <td>RJ</td>
+      <td>RJ</td>
+      <td>101</td>
+      <td>65</td>
+      <td>...</td>
+      <td>Conduzir o veículo registrado que não esteja d...</td>
+      <td>230 * V</td>
+      <td>2016-11-01</td>
+      <td>NaN</td>
+      <td>Nenhuma</td>
+      <td>PASSAGEIRO</td>
+      <td>OUTRA</td>
+      <td>15</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 22 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alc</span> <span class="o">=</span> <span class="n">base</span><span class="p">[</span><span class="n">base</span><span class="p">[</span><span class="s1">&#39;Medição Infração&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Alcoolemia&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">alc</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Número do Auto</th>
+      <th>Data da Infração (DD/MM/AAAA)</th>
+      <th>Indicador de Abordagem</th>
+      <th>Assinatura do Auto</th>
+      <th>Indicador Veiculo Estrangeiro</th>
+      <th>Sentido Trafego</th>
+      <th>UF Placa</th>
+      <th>UF Infração</th>
+      <th>BR Infração</th>
+      <th>Km Infração</th>
+      <th>...</th>
+      <th>Descrição Abreviada Infração</th>
+      <th>Enquadramento da Infração</th>
+      <th>Início Vigência da Infração</th>
+      <th>Fim Vigência Infração</th>
+      <th>Medição Infração</th>
+      <th>Descrição Especie Veículo</th>
+      <th>Descrição Marca Veículo</th>
+      <th>Hora Infração</th>
+      <th>Medição Considerada</th>
+      <th>Excesso Verificado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>29</th>
+      <td>8e4e93652b7bdc2</td>
+      <td>2020-01-19</td>
+      <td>C</td>
+      <td>N</td>
+      <td>N</td>
+      <td>C</td>
+      <td>-1</td>
+      <td>RS</td>
+      <td>290</td>
+      <td>584</td>
+      <td>...</td>
+      <td>Dirigir sob a influência de álcool</td>
+      <td>165</td>
+      <td>2016-11-01</td>
+      <td>NaN</td>
+      <td>Alcoolemia</td>
+      <td>PASSAGEIRO</td>
+      <td>RENAULT</td>
+      <td>18</td>
+      <td>0.19</td>
+      <td>0.19</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>2b498ca1642022f</td>
+      <td>2020-01-19</td>
+      <td>C</td>
+      <td>N</td>
+      <td>N</td>
+      <td>C</td>
+      <td>RS</td>
+      <td>RS</td>
+      <td>290</td>
+      <td>584</td>
+      <td>...</td>
+      <td>Dirigir sob a influência de álcool</td>
+      <td>165</td>
+      <td>2016-11-01</td>
+      <td>NaN</td>
+      <td>Alcoolemia</td>
+      <td>PASSAGEIRO</td>
+      <td>GM</td>
+      <td>19</td>
+      <td>0.94</td>
+      <td>0.94</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>1a87742bcbccd29</td>
+      <td>2020-01-26</td>
+      <td>C</td>
+      <td>N</td>
+      <td>N</td>
+      <td>D</td>
+      <td>MS</td>
+      <td>MS</td>
+      <td>419</td>
+      <td>318</td>
+      <td>...</td>
+      <td>Dirigir sob a influência de álcool</td>
+      <td>165</td>
+      <td>2016-11-01</td>
+      <td>NaN</td>
+      <td>Alcoolemia</td>
+      <td>PASSAGEIRO</td>
+      <td>RENAULT</td>
+      <td>9</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>151</th>
+      <td>97c00d009d8d2b8</td>
+      <td>2020-01-18</td>
+      <td>C</td>
+      <td>N</td>
+      <td>N</td>
+      <td>C</td>
+      <td>AM</td>
+      <td>AM</td>
+      <td>174</td>
+      <td>991</td>
+      <td>...</td>
+      <td>Dirigir sob a influência de álcool</td>
+      <td>165</td>
+      <td>2016-11-01</td>
+      <td>NaN</td>
+      <td>Alcoolemia</td>
+      <td>PASSAGEIRO</td>
+      <td>VW</td>
+      <td>3</td>
+      <td>0.40</td>
+      <td>0.40</td>
+    </tr>
+    <tr>
+      <th>152</th>
+      <td>c689c23338e9dba</td>
+      <td>2020-01-24</td>
+      <td>C</td>
+      <td>N</td>
+      <td>N</td>
+      <td>D</td>
+      <td>AM</td>
+      <td>AM</td>
+      <td>174</td>
+      <td>927</td>
+      <td>...</td>
+      <td>Dirigir sob a influência de álcool</td>
+      <td>165</td>
+      <td>2016-11-01</td>
+      <td>NaN</td>
+      <td>Alcoolemia</td>
+      <td>ESPECIAL</td>
+      <td>GM</td>
+      <td>2</td>
+      <td>0.38</td>
+      <td>0.38</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 22 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">corr</span> <span class="o">=</span> <span class="n">alc</span><span class="p">[</span><span class="s1">&#39;Medição Considerada&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">corr</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-none notranslate"><div class="highlight"><pre><span></span>array([&#39;0.19&#39;, &#39;0.94&#39;, &#39;0.00&#39;, &#39;0.40&#39;, &#39;0.38&#39;, &#39;0.78&#39;, &#39;0.82&#39;, &#39;0.06&#39;,
+       &#39;0.62&#39;, &#39;0.84&#39;, &#39;0.57&#39;, &#39;0.23&#39;, &#39;0.56&#39;, &#39;0.03&#39;, &#39;0.04&#39;, &#39;0.20&#39;,
+       &#39;0.09&#39;, &#39;0.16&#39;, &#39;1.08&#39;, &#39;0.08&#39;, &#39;1.14&#39;, &#39;1.16&#39;, &#39;0.44&#39;, &#39;0.83&#39;,
+       &#39;0.02&#39;, &#39;0.76&#39;, &#39;0.71&#39;, &#39;0.95&#39;, &#39;0.07&#39;, &#39;0.11&#39;, &#39;0.28&#39;, &#39;0.74&#39;,
+       &#39;0.41&#39;, &#39;0.39&#39;, &#39;0.18&#39;, &#39;0.17&#39;, &#39;0.29&#39;, &#39;0.36&#39;, &#39;0.55&#39;, &#39;0.46&#39;,
+       &#39;1.12&#39;, &#39;0.51&#39;, &#39;0.27&#39;, &#39;0.65&#39;, &#39;0.50&#39;, &#39;0.34&#39;, &#39;0.10&#39;, &#39;0.42&#39;,
+       &#39;0.14&#39;, &#39;0.32&#39;, &#39;0.49&#39;, &#39;0.13&#39;, &#39;0.90&#39;, &#39;0.47&#39;, &#39;0.45&#39;, &#39;0.81&#39;,
+       &#39;0.63&#39;, &#39;0.21&#39;, &#39;0.05&#39;, &#39;0.25&#39;, &#39;0.35&#39;, &#39;0.72&#39;, &#39;1.09&#39;, &#39;0.77&#39;,
+       &#39;0.12&#39;, &#39;0.67&#39;, &#39;0.26&#39;, &#39;0.69&#39;, &#39;0.97&#39;, &#39;1.06&#39;, &#39;0.22&#39;, &#39;0.33&#39;,
+       &#39;0.61&#39;, &#39;0.54&#39;, &#39;0.52&#39;, &#39;0.24&#39;, &#39;1.01&#39;, &#39;0.98&#39;, &#39;1.17&#39;, &#39;1.18&#39;,
+       &#39;1.07&#39;, &#39;0.37&#39;, &#39;0.15&#39;, &#39;0.31&#39;, &#39;0.53&#39;, &#39;0.85&#39;, &#39;0.66&#39;, &#39;0.48&#39;,
+       &#39;0.43&#39;, &#39;1.02&#39;, &#39;0.73&#39;, &#39;0.88&#39;, &#39;0.58&#39;, &#39;0.01&#39;, &#39;0.92&#39;, &#39;0.96&#39;,
+       &#39;0.91&#39;, &#39;1.04&#39;, &#39;0.93&#39;, &#39;0.87&#39;, &#39;0.30&#39;, &#39;0.89&#39;, &#39;0.64&#39;, &#39;1.03&#39;,
+       &#39;0.60&#39;, &#39;1.36&#39;, &#39;1.19&#39;, &#39;1.00&#39;, &#39;0.80&#39;, &#39;0.75&#39;, &#39;1.24&#39;, &#39;1.69&#39;,
+       &#39;0.70&#39;, &#39;1.15&#39;, &#39;1.41&#39;, &#39;1.22&#39;, &#39;0.68&#39;, &#39;1.11&#39;, &#39;1.13&#39;, &#39;0.86&#39;,
+       &#39;0.79&#39;, &#39;1.21&#39;, &#39;0.59&#39;, &#39;1.34&#39;, &#39;1.43&#39;, &#39;0.99&#39;, &#39;1.49&#39;],
+      dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/Regressao"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Darlon Vasata<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

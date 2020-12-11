@@ -1,0 +1,408 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercícios &#8212; Ciência de Dados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Matplotlib" href="../Graficos/Matplotlib.html" />
+    <link rel="prev" title="Pandas" href="01_Pandas.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Ciência de Dados</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../disciplina.html">
+   Ciência de Dados
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Numpy
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/01-Importacao_e_Arrays.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/02-Operacoes_sobre_arrays.html">
+   Operações sobre
+   <em>
+    arrays
+   </em>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  pandas
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="01_Pandas.html">
+   Pandas
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Exercícios
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  gráficos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Matplotlib.html">
+   Matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Seaborn.html">
+   Seaborn
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  estatistica basica
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Estatistica/01_Elementos_de_estatistica_I.html">
+   Estatística básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Estatistica/03_Correlacao.html">
+   Correlação
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Regressão
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Regressao/Regressao_linear.html">
+   Regressão linear simples
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Agrupamento
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Agrupamento/Kmeans.html">
+   Kmeans
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Predição
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Arvores/Arvores_de_decisao.html">
+   Árvores de decisão
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/Pandas/01_Pandas_exercicio_enem.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#base-dados">
+   Base dados
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="exercicios">
+<h1>Exercícios<a class="headerlink" href="#exercicios" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Importação da biblioteca Pandas</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="base-dados">
+<h2>Base dados<a class="headerlink" href="#base-dados" title="Permalink to this headline">¶</a></h2>
+<p><strong>Fonte da base de dados</strong></p>
+<p>Enem 1998<br />
+<a class="reference external" href="http://www.dados.gov.br/dataset/microdados-do-exame-nacional-do-ensino-medio-enem">Microdados do Exame Nacional do Ensino Médio - Enem</a></p>
+<p><strong>Documentação da base de dados</strong></p>
+<p>Para entender a base, acesse a descrição dos campos, disponível neste <a class="reference external" href="https://docs.google.com/spreadsheets/d/1tKI5o9wBzBh_SaRccHJKwEzqIekqhyze/edit#gid=1105751035">link</a>.</p>
+<p><strong>Carregamento da base</strong></p>
+<p>Para carregar a base em um DataFrame Pandas, execute:
+Para acessar o arquivo com a base é necessário solicitar acesso ao Google Drive. No caso desta aula, a base de dados está compartilhada entre todos os alunos incluídos na turma do Google Classroom.</p>
+<p><strong>Google Colaboratory</strong></p>
+<p>Para execuções utilizando o ambiente do Google Colab, execute o código abaixo. A primeira vez que for executado, será solicitado um código de acesso. Para obter esse código, basta clicar no link gerado e seguir as instruções.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Solicita acesso ao Google Drive</span>
+<span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/drive&#39;</span><span class="p">)</span>
+
+<span class="c1">#Carrega a base de dados direto do Google Drive (Executando no Google Colab)</span>
+<span class="n">enem98</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/drive/Shared drives/BasesPublicas/Bases/ENEM/1998/MICRODADOS_ENEM_1998.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;latin1&#39;</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Jupyter</strong></p>
+<p>Para execuções no Jupyter:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Colocar a base no mesmo diretório em que está executando o arquivo jupyter</span>
+<span class="c1">#enem98 = pd.read_csv(&#39;MICRODADOS_ENEM_1998.csv&#39;, sep=&#39;;&#39;, encoding=&#39;latin1&#39; )</span>
+
+</pre></div>
+</div>
+<p><strong>Exercícios</strong></p>
+<p>Sobre a base de dados referente ao ENEM do ano de 1998, responda as questões abaixo utilizando a biblioteca Pandas.</p>
+<p>Sobre a base:</p>
+<ol class="simple">
+<li><p>Quantas linhas existem na base?</p></li>
+<li><p>Quantas colunas existem?</p></li>
+</ol>
+<p>Obtenha cada informação solicitada a seguir:</p>
+<ul class="simple">
+<li><p>Quantos alunos foram matriculados?</p></li>
+</ul>
+<ul class="simple">
+<li><p>Quantos alunos matricularam-se no ENEM por estado?</p></li>
+</ul>
+<ul class="simple">
+<li><p>Quantos estudantes matriculados não realizaram a prova?</p></li>
+</ul>
+<ul class="simple">
+<li><p>Dos estudantes matriculados, quantos não realizaram a prova, por estado?</p></li>
+</ul>
+<ul class="simple">
+<li><p>Qual é idade do(a) estudante mais velho(a)?</p></li>
+</ul>
+<ul class="simple">
+<li><p>Quantos estudantes empatam com a idade mais velha?</p></li>
+</ul>
+<ul class="simple">
+<li><p>Os estudantes com a idade mais mais velha são de quais estados?</p></li>
+</ul>
+<ul class="simple">
+<li><p>Qual é a idade do(a) estudante mais novo(a) do Paraná?</p></li>
+</ul>
+<ul class="simple">
+<li><p>Quantos estudantes possuem a mesma idade do estudante mais novo no Paraná?</p></li>
+</ul>
+<ul class="simple">
+<li><p>De quais cidades são os estudantes com a menor idade?</p></li>
+</ul>
+<ul class="simple">
+<li><p>No Paraná, qual a porcentagem de estudantes por sexo?</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/Pandas"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="01_Pandas.html" title="previous page">Pandas</a>
+    <a class='right-next' id="next-link" href="../Graficos/Matplotlib.html" title="next page">Matplotlib</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Darlon Vasata<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

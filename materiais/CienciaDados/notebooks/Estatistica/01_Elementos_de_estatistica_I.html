@@ -1,0 +1,738 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Estatística básica &#8212; Ciência de Dados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Correlação" href="03_Correlacao.html" />
+    <link rel="prev" title="Seaborn" href="../Graficos/Seaborn.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Ciência de Dados</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../disciplina.html">
+   Ciência de Dados
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Numpy
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/01-Importacao_e_Arrays.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/02-Operacoes_sobre_arrays.html">
+   Operações sobre
+   <em>
+    arrays
+   </em>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  pandas
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Pandas/01_Pandas.html">
+   Pandas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  gráficos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Matplotlib.html">
+   Matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Seaborn.html">
+   Seaborn
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  estatistica basica
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Estatística básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_Correlacao.html">
+   Correlação
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Regressão
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Regressao/Regressao_linear.html">
+   Regressão linear simples
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Agrupamento
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Agrupamento/Kmeans.html">
+   Kmeans
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Predição
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Arvores/Arvores_de_decisao.html">
+   Árvores de decisão
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/Estatistica/01_Elementos_de_estatistica_I.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#revisao">
+   Revisão
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pandas">
+     Pandas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Estatística básica
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#estatistica-descritiva">
+     Estatística descritiva
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipos-de-dados">
+   Tipos de dados
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#medidas-de-tendencia-central">
+   Medidas de tendência central
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#media">
+     Média
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mediana">
+     Mediana
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#medidas-de-dispersao">
+   Medidas de dispersão
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#amplitude">
+     Amplitude
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#desvio">
+     Desvio
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variancia">
+     Variância
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#desvio-padrao">
+     Desvio padrão
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Referências
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#outros-materiais">
+     Outros materiais
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="estatistica-basica">
+<h1>Estatística básica<a class="headerlink" href="#estatistica-basica" title="Permalink to this headline">¶</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">########################</span>
+<span class="c1">#Bibliotecas necessárias</span>
+<span class="c1">########################</span>
+
+<span class="c1">#Pandas</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">math</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="revisao">
+<h2>Revisão<a class="headerlink" href="#revisao" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pandas">
+<h3>Pandas<a class="headerlink" href="#pandas" title="Permalink to this headline">¶</a></h3>
+<p>Uma Series é uma estrutura de dados presente na biblioteca Pandas, que trata de agrupar dados, de maneira que cada um deles possa ser acessado por um índice.</p>
+<p>Uma Series possui diversos métodos, que podem ser utilizados para extrair informações do conjunto de dados.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Método</p></th>
+<th class="head"><p>objetivo</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.min()</span></code></p></td>
+<td><p>obtém o menor valor</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.max()</span></code></p></td>
+<td><p>obtém o maior valor</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.mean()</span></code></p></td>
+<td><p>obtém a média</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.sort_values()</span></code></p></td>
+<td><p>obtém os valores ordenados</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">valores</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">series</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Valores:&#39;</span><span class="p">,</span> <span class="n">valores</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Menor:&#39;</span><span class="p">,</span> <span class="n">valores</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Maior:&#39;</span><span class="p">,</span> <span class="n">valores</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Média:&#39;</span><span class="p">,</span> <span class="n">valores</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Valores ordenados:&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">valores</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Estatística básica<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>A Estatística é a ciência que consiste em coletar, organizar, analisar e interpretar dados para que decisões sejam tomadas.</p>
+<div class="section" id="estatistica-descritiva">
+<h3>Estatística descritiva<a class="headerlink" href="#estatistica-descritiva" title="Permalink to this headline">¶</a></h3>
+<p>De acordo com (LARSON, FARBER, 2004):</p>
+<ul class="simple">
+<li><p>Estatística descritiva:</p></li>
+</ul>
+<blockquote>
+<div><p>A estatística <strong>descritiva</strong> é o ramo que trata da organização, do resumo e da apresentação dos dados.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Estatística inferencial:</p></li>
+</ul>
+<blockquote>
+<div><p>A estatística <strong>inferencial</strong> é o ramo que trata de tirar conclusões sobre uma população a partir de uma amostra. A ferramenta básica no estudo da estatística inferencial é a <strong>probabilidade</strong>.</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="tipos-de-dados">
+<h2>Tipos de dados<a class="headerlink" href="#tipos-de-dados" title="Permalink to this headline">¶</a></h2>
+<p>Os dados se classificam em dados <strong>qualitativos</strong> ou <strong>quantitativos</strong>. Um dado qualitativo consiste em atributos, classificações ou registros <strong>não-numéricos</strong>. Já os quantitativos consistem em <strong>medidas</strong> ou contagens numéricas (LARSON, FARBER, 2004).</p>
+<p><strong>Exemplo</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Nome</p></th>
+<th class="head"><p>Altura</p></th>
+<th class="head"><p>Idade</p></th>
+<th class="head"><p>Sexo</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Maria</p></td>
+<td><p>175</p></td>
+<td><p>21</p></td>
+<td><p>f</p></td>
+</tr>
+<tr class="row-odd"><td><p>José</p></td>
+<td><p>182</p></td>
+<td><p>30</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-even"><td><p>Eduarda</p></td>
+<td><p>160</p></td>
+<td><p>41</p></td>
+<td><p>f</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sergio</p></td>
+<td><p>156</p></td>
+<td><p>30</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-even"><td><p>Julia</p></td>
+<td><p>180</p></td>
+<td><p>24</p></td>
+<td><p>f</p></td>
+</tr>
+<tr class="row-odd"><td><p>Baltazar</p></td>
+<td><p>158</p></td>
+<td><p>23</p></td>
+<td><p>m</p></td>
+</tr>
+<tr class="row-even"><td><p>Sofia</p></td>
+<td><p>175</p></td>
+<td><p>29</p></td>
+<td><p>f</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Qualitativos:</p>
+<ul>
+<li><p>Nome</p></li>
+<li><p>Sexo</p></li>
+</ul>
+</li>
+<li><p>Quantitativos:</p>
+<ul>
+<li><p>Altura</p></li>
+<li><p>Idade</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="medidas-de-tendencia-central">
+<h2>Medidas de tendência central<a class="headerlink" href="#medidas-de-tendencia-central" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="media">
+<h3>Média<a class="headerlink" href="#media" title="Permalink to this headline">¶</a></h3>
+<p>A média é um valor utilizado para representar um determinado conjunto de dados.</p>
+<p>A média de determinado conjunto de dados é a soma de todas os seus valores, dividida pela quantidade de valores. A letra grega <span class="math notranslate nohighlight">\(\mu\)</span> é comumente utilizada para representar a média.
+<span class="math notranslate nohighlight">\($
+\mu = \frac{\sum\limits_{i=0}^{n-1}{x_i}}{n}
+$\)</span>
+onde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mu\)</span>: média dos valores</p></li>
+<li><p><span class="math notranslate nohighlight">\(n\)</span>: número de valores</p></li>
+<li><p><span class="math notranslate nohighlight">\(x_i\)</span> valor na i-ésima posição</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sum\limits_{i=0}^{n-1}{x_i}\)</span>: soma dos valores de <span class="math notranslate nohighlight">\(x\)</span>, onde <span class="math notranslate nohighlight">\(i\)</span> varia de 0 a <span class="math notranslate nohighlight">\(n-1\)</span></p></li>
+</ul>
+<p><strong>Exemplo</strong></p>
+<p>Considere que <code class="docutils literal notranslate"><span class="pre">x</span></code> é um conjunto de dados, e <code class="docutils literal notranslate"><span class="pre">m</span></code> a sua média.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span> <span class="c1">#Valores</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="n">x</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="c1">#média, com a soma dos valores dividida pela quantidade</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Média: &#39;</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Uma Series, assim como os métodos <code class="docutils literal notranslate"><span class="pre">.sum()</span></code> e <code class="docutils literal notranslate"><span class="pre">.count()</span></code>, possui também o método <code class="docutils literal notranslate"><span class="pre">.mean()</span></code>, que calcula a média do conjunto de dados.
+<strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">])</span> <span class="c1">#Valores</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Média: &#39;</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="mediana">
+<h3>Mediana<a class="headerlink" href="#mediana" title="Permalink to this headline">¶</a></h3>
+<p>Para determinadas situações, a média pode não ser uma boa representação de conjuntos de dados.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">10000</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Média: &#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">mean</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>No caso do conjunto <code class="docutils literal notranslate"><span class="pre">y</span></code>, que é composto por diversos valores pequenos e um valor muito alto, quando comparado com eles. A média do conjunto (<code class="docutils literal notranslate"><span class="pre">1001.8</span></code>) é um valor que difere muito dos dados.</p>
+<p>Desta forma, a <strong>mediana</strong> é o valor que está exatamente no meio do conjunto de dados. Para isto, é necessário que o conjunto de dados esteja ordenado. Caso o conjunto de dados tenha uma quantidade ímpar, a mediana é o valor central. Caso a quantidade seja par, a mediana é a média dos dois valores centrais.</p>
+<p>As Series possuem o método <code class="docutils literal notranslate"><span class="pre">.median()</span></code>, que retorna o valor da mediana do conjunto.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">10000</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mediana:&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">.</span><span class="n">median</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="medidas-de-dispersao">
+<h2>Medidas de dispersão<a class="headerlink" href="#medidas-de-dispersao" title="Permalink to this headline">¶</a></h2>
+<p>Muitas vezes, apenas a média ou a mediana (medidas de tendência central) de um conjunto de dados não fornecem informações suficientes sobre ele. Desta forma, outras métricas são utilizadas, como apresentado a seguir. Tais medidas consistem em identificar <strong>quanto</strong> os dados estão distribuídos pelo conjunto.</p>
+<p><strong>Atividade</strong></p>
+<p>Qual a média dos dois conjuntos de dados A e B abaixo?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cjA</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">49</span><span class="p">,</span><span class="mi">49</span><span class="p">,</span><span class="mi">49</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">51</span><span class="p">,</span><span class="mi">51</span><span class="p">,</span><span class="mi">51</span><span class="p">])</span>
+<span class="n">cjB</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">99</span><span class="p">,</span><span class="mi">99</span><span class="p">,</span><span class="mi">99</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cjA</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">49</span><span class="p">,</span><span class="mi">49</span><span class="p">,</span><span class="mi">49</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">51</span><span class="p">,</span><span class="mi">51</span><span class="p">,</span><span class="mi">51</span><span class="p">])</span>
+<span class="n">cjB</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">99</span><span class="p">,</span><span class="mi">99</span><span class="p">,</span><span class="mi">99</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Como observado, ambos os conjuntos A e B possuem a mesma média, mesmo sendo conjuntos bastante distintos. Desta forma, as medidas de variação observam o quanto os dados <strong>variam</strong> em relação ao conjunto como um todo.</p>
+<p>Para os conceitos a seguir sobre medidas de variação, considere o conjunto de dados <code class="docutils literal notranslate"><span class="pre">alturas</span></code>, que correspondem à altura de um grupo de pessoas, medida em centímetros.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">alturas</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">175</span><span class="p">,</span> <span class="mi">182</span><span class="p">,</span> <span class="mi">160</span><span class="p">,</span> <span class="mi">156</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">158</span><span class="p">,</span> <span class="mi">175</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="section" id="amplitude">
+<h3>Amplitude<a class="headerlink" href="#amplitude" title="Permalink to this headline">¶</a></h3>
+<p>A <strong>amplitude</strong> de um conjunto de dados é a diferença entre o maior e menor valores do conjunto.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">amp</span> <span class="o">=</span> <span class="n">alturas</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">-</span> <span class="n">alturas</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Amplitude: &#39;</span><span class="p">,</span> <span class="n">amp</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>No exemplo, a <strong>amplitude</strong> corresponde à diferença de altura entre a pessoa mais alta e a mais baixa do grupo, que é de 26 centímetros.</p>
+</div>
+<div class="section" id="desvio">
+<h3>Desvio<a class="headerlink" href="#desvio" title="Permalink to this headline">¶</a></h3>
+<p>O <strong>desvio</strong> de um valor <span class="math notranslate nohighlight">\(x\)</span> em determinado conjunto é a diferença entre o valor <span class="math notranslate nohighlight">\(x\)</span> e a média do conjunto.</p>
+<div class="math notranslate nohighlight">
+\[
+d_x = x - \mu
+\]</div>
+<p>onde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(x\)</span>: valor do conjunto de dados</p></li>
+<li><p><span class="math notranslate nohighlight">\(d_x\)</span>: desvio do valor x</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mu\)</span>: média do conjunto de dados</p></li>
+</ul>
+<p><strong>Exemplo</strong></p>
+<p>Qual é o valor do desvio <code class="docutils literal notranslate"><span class="pre">d</span></code> da pessoa que tem sua altura armazenada na posição 1 do conjunto de alturas (182 centímetros)?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">alturas</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">alturas</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">d</span> <span class="o">=</span>  <span class="n">x</span> <span class="o">-</span> <span class="n">m</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Desvio: &#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span> <span class="c1">#Arredondando em 1 casa decimal</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="variancia">
+<h3>Variância<a class="headerlink" href="#variancia" title="Permalink to this headline">¶</a></h3>
+<p>Caso desejássemos calcular qual é o valor médio do desvio de todas as pessoas do conjunto, como poderia ser procedido?</p>
+<p>Vamos calcular a média dos desvios. Para calcular essa média, precisamos obter a soma de todos os desvios, e então dividí-los pela quantidade de elementos, certo? Errado. Observe:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Calculando o desvio</span>
+<span class="n">desvios</span> <span class="o">=</span> <span class="n">alturas</span> <span class="o">-</span> <span class="n">alturas</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="c1">#operação realizada sobre todos os valores da series</span>
+<span class="c1">#Mostra os valores, já arredondando com uma casa decimal</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Desvios: &#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">desvios</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1">#Mostra os desvios, arredondando para 1 casa decimal</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Soma dos desvios:&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">desvios</span><span class="o">.</span><span class="n">sum</span><span class="p">(),</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Ou seja, a soma dos desvios é 0. Desta forma, não é possível calcula a média dos desvios, visto que zero dividido por qualquer número é zero.</p>
+<p>Desta forma, a <strong>variância</strong> objetiva representar o que não é possível representar pela média dos desvios. Esta medida consiste em calcula o quanto os valores diferem da média do conjunto.</p>
+<p>A variância é representada pela letra grega <em>sigma</em> ao quadrado (<span class="math notranslate nohighlight">\(\sigma^2\)</span>).</p>
+<p>Para calcular a variância, faz-se a soma dos <strong>quadrados dos desvios</strong> :</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma^2 = \frac{\sum\limits_{i=0}^{n-1}{d_i^2}}{n} = \frac{\sum\limits_{i=0}^{n-1}{(x_i- \mu)^2}}{n}
+\]</div>
+<p>onde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\sigma^2\)</span>: variância</p></li>
+<li><p><span class="math notranslate nohighlight">\(d_i\)</span>: desvio, igual a <span class="math notranslate nohighlight">\(d_i - \mu\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(n\)</span>: número de elementos</p></li>
+</ul>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">alturas</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Alturas    :&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="n">alturas</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Média      :&#39;</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+
+<span class="c1">#Calcula desvios</span>
+<span class="n">desvios</span> <span class="o">=</span> <span class="n">alturas</span> <span class="o">-</span> <span class="n">m</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Desvios    :&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">desvios</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1">#1 casa decimal</span>
+
+<span class="c1">#Calcula desvios ao quadrado</span>
+<span class="n">desviosQuad</span> <span class="o">=</span> <span class="n">desvios</span><span class="o">**</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;desviosQuad:&#39;</span><span class="p">,</span> <span class="nb">list</span><span class="p">(</span><span class="nb">round</span><span class="p">(</span><span class="n">desviosQuad</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span> <span class="c1">#1 casa decimal</span>
+
+<span class="c1">#Calcula variância</span>
+<span class="n">var</span> <span class="o">=</span> <span class="n">desviosQuad</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">/</span><span class="n">desviosQuad</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="c1">#variância</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Variância  :&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">var</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="c1">#2 casas decimais</span>
+</pre></div>
+</div>
+<p>É possível calcular a variância de uma Series usando o método <code class="docutils literal notranslate"><span class="pre">.var()</span></code>. Por padrão, a variância de uma series calcula desconsiderando um elemento do conjunto (um <em>grau de liberdade</em>). Para obter a variância como estamos calculando é necessário informar o parâmetro <code class="docutils literal notranslate"><span class="pre">ddof=0</span></code>, ou seja, considerar todos os elementos do conjunto.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="n">alturas</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#variância</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Variância:&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">var</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span> <span class="c1">#arredondando em 2 casas decimais</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="desvio-padrao">
+<h3>Desvio padrão<a class="headerlink" href="#desvio-padrao" title="Permalink to this headline">¶</a></h3>
+<p>A variância eleva o desvio ao quadrado. O <strong>desvio padrão</strong> consiste em colocar os dados na mesma escala original. Desta forma, o desvio padrão é a <strong>raiz quadrada da variância</strong>.</p>
+<p>O desvio padrão é representado pela letra grega <span class="math notranslate nohighlight">\(\sigma\)</span> (<em>sigma</em>).
+<span class="math notranslate nohighlight">\($
+\sigma = \sqrt{\sigma^2} = \sqrt{\frac{\sum\limits_{i=0}^{n-1}{d_i^2}}{n}}
+$\)</span></p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Desvio padrão</span>
+<span class="n">var</span> <span class="o">=</span> <span class="n">alturas</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#variância</span>
+<span class="n">dp</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">var</span><span class="p">)</span> <span class="c1">#raiz quadrada da variância</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Desvio padrão: </span><span class="si">{</span><span class="n">dp</span><span class="si">:</span><span class="s1">0.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span><span class="c1">#2 casas decimais</span>
+</pre></div>
+</div>
+<p>As Series possuem o método <code class="docutils literal notranslate"><span class="pre">.std()</span></code> (acrônimo de <em>standard deviation</em>) para calcular o desvio padrão. Assim como na variância, é necessário informar os <em>graus de liberdade</em>, ou seja, quantos elementos devem ser desconsiderados. No nosso caso, para considerar todos os elementos (0 graus de liberdade) o parâmetro deve ser <code class="docutils literal notranslate"><span class="pre">ddof=0</span></code>.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dp</span> <span class="o">=</span> <span class="n">alturas</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#desvio padrão</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Desvio padrão: </span><span class="si">{</span><span class="n">dp</span><span class="si">:</span><span class="s1">0.2f</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span><span class="c1">#2 casas decimais</span>
+</pre></div>
+</div>
+<p>Desta forma, entende-se que o desvio padrão é quanto os valores do conjunto estão perto da média do conjunto. Um conjunto com desvio padrão baixo indica que os valores estão mais perto da média do conjunto, enquanto que um desvio padrão alto indica que os valores estão mais afastados da média.</p>
+<p><strong>Atividade</strong></p>
+<p>Retornando aos conjuntos A e B:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cjA</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">49</span><span class="p">,</span><span class="mi">49</span><span class="p">,</span><span class="mi">49</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">51</span><span class="p">,</span><span class="mi">51</span><span class="p">,</span><span class="mi">51</span><span class="p">])</span>
+<span class="n">cjB</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">99</span><span class="p">,</span><span class="mi">99</span><span class="p">,</span><span class="mi">99</span><span class="p">])</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Qual a média entre os conjuntos? (já foi calculado anteriormente)</p></li>
+<li><p>Qual o desvio padrão de cada conjunto?</p>
+<ul>
+<li><p>Qual a relação do desvio padrão com os dados do conjunto?</p></li>
+<li><p>Em qual conjunto os dados estão mais distantes da média? A ou B?</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="referencias">
+<h2>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://plataforma.bvirtual.com.br/Leitor/Publicacao/1242/pdf/17?code=uf41RbVY0KRUTqVSy8ZkDfrIynwKU/7WlWkTiuzQ80rimcX0BPrl4YlRFDwfh/CAJap2mr8WYHpuFbtdynL4mQ==">Larson, R. Farber, B. Estatística Aplicada. 4.ed. São Paulo: Pearson, 2010.</a> (Link para a biblioteca virtual)</p>
+<div class="section" id="outros-materiais">
+<h3>Outros materiais<a class="headerlink" href="#outros-materiais" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/Estatistica"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../Graficos/Seaborn.html" title="previous page">Seaborn</a>
+    <a class='right-next' id="next-link" href="03_Correlacao.html" title="next page">Correlação</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Darlon Vasata<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

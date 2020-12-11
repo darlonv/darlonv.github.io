@@ -1,0 +1,680 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Regressão linear simples &#8212; Ciência de Dados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Exercícios" href="Regressao_linear_exercicios.html" />
+    <link rel="prev" title="Exercícios" href="../Estatistica/03_Correlacao-Exercicios.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Ciência de Dados</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../disciplina.html">
+   Ciência de Dados
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Numpy
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/01-Importacao_e_Arrays.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/02-Operacoes_sobre_arrays.html">
+   Operações sobre
+   <em>
+    arrays
+   </em>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  pandas
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Pandas/01_Pandas.html">
+   Pandas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  gráficos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Matplotlib.html">
+   Matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Seaborn.html">
+   Seaborn
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  estatistica basica
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Estatistica/01_Elementos_de_estatistica_I.html">
+   Estatística básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Estatistica/03_Correlacao.html">
+   Correlação
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Regressão
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Regressão linear simples
+  </a>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Regressao_linear_exercicios.html">
+     Exercícios
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Agrupamento
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Agrupamento/Kmeans.html">
+   Kmeans
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Predição
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Arvores/Arvores_de_decisao.html">
+   Árvores de decisão
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/Regressao/Regressao_linear.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliotecas">
+   Bibliotecas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#observando-os-dados">
+   Observando os dados
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#graficos">
+     Gráficos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#graficos-com-dados-sobrepostos">
+     Gráficos com dados sobrepostos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#criando-o-modelo">
+   Criando o modelo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#treinando-o-modelo">
+   Treinando o modelo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testando-o-modelo">
+   Testando o modelo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#erros">
+   Erros
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#erro-medio-absoluto">
+     Erro médio absoluto
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resumo">
+   Resumo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Referências
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="regressao-linear-simples">
+<h1>Regressão linear simples<a class="headerlink" href="#regressao-linear-simples" title="Permalink to this headline">¶</a></h1>
+<p>A <strong>análise de regressão</strong> estuda a relação entre diversas variáveis, onde uma delas é a <strong>variável dependente</strong> e as demais são <strong>variáveis independentes</strong>.</p>
+<p>A regressão linear consiste em um modelo matemático, um algoritmo que associa a variável dependente de acordo com as variáveis independentes.</p>
+<p>Nas situações em que a relação é observada utilizando uma única variável independente, denomina-se o modelo como <strong>regressão linear simples (RLS)</strong>, e quando diversas variáveis independentes são consideradas, o modelo passa a chamar-se <strong>regressão linear múltipla (RLM)</strong>.</p>
+<p>Em resumo, a regressão linear consiste em descobrir uma equação de reta que calcule a variável dependente com base nas variáveis independentes, utilizando a menor taxa de erro possível.</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LinearRegression.svg" width="300">  
+<p>Figura: Exemplo de regressão linear - Fonte: <a class="reference external" href="https://pt.wikipedia.org/wiki/Regress%C3%A3o_linear">Wikipedia</a></p>
+<div class="section" id="bibliotecas">
+<h2>Bibliotecas<a class="headerlink" href="#bibliotecas" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1">#Numpy</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1">#Pandas</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1">#Matplotlib</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span> <span class="c1">#Regressão linear</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span> <span class="c1">#Cálculo do erro</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span> 
+</pre></div>
+</div>
+<p>Variáveis de ambiente utilizadas</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Diretório com dados de entrada</span>
+<span class="n">DATAPATH</span> <span class="o">=</span> <span class="s1">&#39;./&#39;</span> 
+
+<span class="c1">#Verifica se está no colab</span>
+<span class="n">COLAB</span> <span class="o">=</span> <span class="s1">&#39;google.colab&#39;</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">get_ipython</span><span class="p">())</span>
+<span class="k">if</span> <span class="n">COLAB</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Executando no Google Colaboratory.&#39;</span><span class="p">)</span>
+    
+    <span class="c1">#Diretório com dados de entrada</span>
+    <span class="n">DATAPATH</span><span class="o">=</span><span class="s1">&#39;/drive/Shared drives/BasesPublicas/Bases/Exemplos/&#39;</span> 
+    
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Solicitando acesso a arquivos...&#39;</span><span class="p">)</span>
+    <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
+    <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/drive&#39;</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="section" id="observando-os-dados">
+<h2>Observando os dados<a class="headerlink" href="#observando-os-dados" title="Permalink to this headline">¶</a></h2>
+<p>Utilizaremos como exemplo a base dados com informações sobre alunos. Nosso objetivo será descobrir, de acordo com os dados, a possível nota de um aluno que estudar <span class="math notranslate nohighlight">\(6\)</span> horas.</p>
+<p><strong>Atividade</strong></p>
+<p>Carregue a base de dados alunos para utilizar como exemplo.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">alunos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">DATAPATH</span><span class="o">+</span><span class="s1">&#39;alunos.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<p>Observe as primeiras linhas da base de dados.</p>
+<p><strong>Atividade</strong></p>
+<p>Plote o gráfico de dispersão (<em>scatter</em>) das variáveis <code class="docutils literal notranslate"><span class="pre">Tempo</span></code> e <code class="docutils literal notranslate"><span class="pre">Nota</span></code>.</p>
+<div class="section" id="graficos">
+<h3>Gráficos<a class="headerlink" href="#graficos" title="Permalink to this headline">¶</a></h3>
+<p>Outra maneira de visualizar os dados utilizando um gráfico de dispersão, é acesando diretamente a biblioteca <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> (já importada como <code class="docutils literal notranslate"><span class="pre">plt</span></code>).</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">alunos</span><span class="p">[</span><span class="s1">&#39;Tempo&#39;</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">alunos</span><span class="p">[</span><span class="s1">&#39;Nota&#39;</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Faça o gráfico de dispersão utilizando <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p></li>
+</ul>
+</div>
+<div class="section" id="graficos-com-dados-sobrepostos">
+<h3>Gráficos com dados sobrepostos<a class="headerlink" href="#graficos-com-dados-sobrepostos" title="Permalink to this headline">¶</a></h3>
+<p>Também é possível sobrepôr dados no gráfico, utilizando diferentes chamadas.</p>
+<p><strong>Exemplo</strong></p>
+<ul class="simple">
+<li><p>Dispersão com os dados</p></li>
+<li><p>ponto vermelho em <span class="math notranslate nohighlight">\((8,50)\)</span></p></li>
+<li><p>reta verde de <span class="math notranslate nohighlight">\((2,5)\)</span> a <span class="math notranslate nohighlight">\((4,80)\)</span></p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">alunos</span><span class="p">[</span><span class="s1">&#39;Tempo&#39;</span><span class="p">],</span> <span class="n">alunos</span><span class="p">[</span><span class="s1">&#39;Nota&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="mi">8</span><span class="p">],[</span><span class="mi">50</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">5</span><span class="p">,</span><span class="mi">80</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Plote o gráfico de dispersão, junto com um ponto e uma reta.</p></li>
+<li><p>Adicione um ponto rosa para <span class="math notranslate nohighlight">\((4,60)\)</span></p></li>
+<li><p>Adicione uma reta amarela de <span class="math notranslate nohighlight">\((1,1)\)</span> a <span class="math notranslate nohighlight">\((8,5)\)</span></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="criando-o-modelo">
+<h2>Criando o modelo<a class="headerlink" href="#criando-o-modelo" title="Permalink to this headline">¶</a></h2>
+<p>Para calcularmos a regressão linear, utilizemos a biblioteca <code class="docutils literal notranslate"><span class="pre">sklearn</span></code>, utilizando <code class="docutils literal notranslate"><span class="pre">LinearRegression</span></code>, já importado.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rl</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Crie uma instância de <code class="docutils literal notranslate"><span class="pre">LinearRegression</span></code></p></li>
+</ul>
+<p>Os valores a serem inseridos no cálculo da regressão linear, devem estar como vetores <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p>
+<p>Os valores da variável independente (Tempo) devem estar organizados em uma única linha. Para tal, pode-se obter os dados e já deixá-los da maneira correta utilizando o método <code class="docutils literal notranslate"><span class="pre">reshape(-1,1)</span></code>.</p>
+<p>Já para a variável dependente, pode-se utilizar o método <code class="docutils literal notranslate"><span class="pre">flatten()</span></code>.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tempo</span> <span class="o">=</span> <span class="n">alunos</span><span class="p">[</span><span class="s1">&#39;Tempo&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#variável independente</span>
+<span class="n">nota</span>  <span class="o">=</span> <span class="n">alunos</span><span class="p">[</span><span class="s1">&#39;Nota&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>      <span class="c1">#variável dependente</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Obtenha as variáveis independentes e dependente no formato compatível com o modelo de regressão linear.</p></li>
+</ul>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Observe o formato (<em>shape</em>) dos <em>arrays</em> numpy <code class="docutils literal notranslate"><span class="pre">tempo</span></code> e <code class="docutils literal notranslate"><span class="pre">nota</span></code>.</p></li>
+<li><p>Observe o conteúdo dos <em>arrays</em> <code class="docutils literal notranslate"><span class="pre">tempo</span></code> e <code class="docutils literal notranslate"><span class="pre">nota</span></code>.</p></li>
+</ul>
+<p><strong>Observação</strong></p>
+<ul class="simple">
+<li><p>O método <code class="docutils literal notranslate"><span class="pre">.flatten()</span></code>, presentes nos <em>arrays</em> numpy é utilizado para apresentar os dados de maneira unidimensional. P.ex., se usado em uma matriz, ele permite visualizar os dados para um formato em uma única linha.</p></li>
+</ul>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">matriz</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Matriz:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">matriz</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Matriz flatten:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">matriz</span><span class="o">.</span><span class="n">flatten</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Formato da matriz:&#39;</span><span class="p">,</span> <span class="n">matriz</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Formato da matriz flatten:&#39;</span><span class="p">,</span> <span class="n">matriz</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Observe o exemplo o método <code class="docutils literal notranslate"><span class="pre">.flatten()</span></code>.</p></li>
+</ul>
+</div>
+<div class="section" id="treinando-o-modelo">
+<h2>Treinando o modelo<a class="headerlink" href="#treinando-o-modelo" title="Permalink to this headline">¶</a></h2>
+<p>Com as variáveis no formato compatível, podemos utilizá-las no modelo de regressão linear, utilizando o método <code class="docutils literal notranslate"><span class="pre">.fit()</span></code>.</p>
+<p><strong>Sintaxe</strong></p>
+<ul class="simple">
+<li><p>método <code class="docutils literal notranslate"><span class="pre">fit()</span></code>:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Onde:</p>
+<ul>
+<li><p>x: variável independente</p></li>
+<li><p>y: variável dependente</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rl</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">tempo</span><span class="p">,</span><span class="n">nota</span><span class="p">)</span> <span class="c1">#treina o modelo com as variáveis</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Defina as variáveis dependente e independente no modelo de regressão linear alocado.</p></li>
+</ul>
+</div>
+<div class="section" id="testando-o-modelo">
+<h2>Testando o modelo<a class="headerlink" href="#testando-o-modelo" title="Permalink to this headline">¶</a></h2>
+<p>Com o objeto de regressão linear configurado, podemos então responder à nossa pergunta inicial:</p>
+<ul class="simple">
+<li><p>Qual é a nota prevista para o aluno que estudou 6 horas?</p></li>
+</ul>
+<p>Para tal, pode-se utilizar o método <code class="docutils literal notranslate"><span class="pre">.predict()</span></code>.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="c1">#Valor para a variável independente</span>
+<span class="n">x_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#prepara para o formato adequado</span>
+<span class="n">y_pred</span>  <span class="o">=</span> <span class="n">rl</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_arr</span><span class="p">)</span> <span class="c1">#calcula a predição</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tempos: &#39;</span><span class="p">,</span><span class="n">x_arr</span><span class="o">.</span><span class="n">flatten</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Notas : &#39;</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">.</span><span class="n">flatten</span><span class="p">())</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Calcule a predição da nota a partir do tempo de estudo de <span class="math notranslate nohighlight">\(6\)</span> horas.</p></li>
+</ul>
+<p><strong>Exemplo</strong></p>
+<ul class="simple">
+<li><p>No mesmo gráfico de dispersão, plote o novo ponto obtido</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">tempo</span><span class="p">,</span><span class="n">nota</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Plote o gráfico de dispersão com os dados e com os novos valores calculados</p></li>
+</ul>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Faça a predicão para os valores de 1 a 8</p></li>
+<li><p>Plote os valores calculados em um gráfico de dispersão, juntamente com os dados originais</p></li>
+</ul>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Plote um gráfico de dispersão, sobrepondo:</p>
+<ul>
+<li><p>os dados preditos para os valores de 1 a 8, e</p></li>
+<li><p>uma reta que vai do menor ao maior valor predito para o tempo de estudo.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Calcule as seguintes predições, utilizando regressão linear:</p>
+<ul>
+<li><p>Nota obtida pelo aluno que teve 3 horas de tempo de estudo</p></li>
+<li><p>Nota dos alunos que tiveram 15 e 19 faltas</p></li>
+<li><p>Tempo de estudo dos alunos que tiveram 10 faltas</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="erros">
+<h2>Erros<a class="headerlink" href="#erros" title="Permalink to this headline">¶</a></h2>
+<p>Uma das formas de analisar <em>quanto</em> a regressão linear funcionou é comparar os resultados reais com os resultado preditos.</p>
+<div class="section" id="erro-medio-absoluto">
+<h3>Erro médio absoluto<a class="headerlink" href="#erro-medio-absoluto" title="Permalink to this headline">¶</a></h3>
+<p>Há diferentes formas de analisar os erros, porém aqui observaremos apenas o <strong>erro absoluto médio</strong> , que consiste em</p>
+<div class="math notranslate nohighlight">
+\[
+e = \frac{\sum|y - y_{pred}|}{n}
+\]</div>
+<p>Pode-se utilizar o método <code class="docutils literal notranslate"><span class="pre">.mean_absolute_error()</span></code>, de <code class="docutils literal notranslate"><span class="pre">metrics</span></code>, presente na biblioteca <code class="docutils literal notranslate"><span class="pre">sklearn</span></code>. Como parâmetro, são passados os valores reais e os valores preditos.<br />
+<strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ema</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Média absoluta dos erros:&#39;</span><span class="p">,</span> <span class="n">ema</span> <span class="p">)</span>
+</pre></div>
+</div>
+<!---
+from sklearn import metrics
+print('Média asbsoluta dos erros:', metrics.mean_absolute_error(yTest, yPred))  
+print('Média dos erros quadráticos:', metrics.mean_squared_error(yTest, yPred))  
+print('Raiz quadrada da média dos erros quadráticos:', np.sqrt(metrics.mean_squared_error(yTest, yPred)))
+--->
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Calcule o erro médio absoluto obtidos com os valores da regressão linear, tomando Tempo como variável dependente e Nota como variável independente. Considere todos os dados das variáveis para calcular a regressão.</p></li>
+</ul>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Calcule os erros das regressões lineares das seguintes variáveis, independentes e dependentes:</p>
+<ul>
+<li><p>Tempo e Nota</p></li>
+<li><p>Faltas e Tempo</p></li>
+<li><p>Faltas e Nota</p></li>
+<li><p>Faltas e Altura</p></li>
+<li><p>Altura e Tempo</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Responda:</p>
+<ul>
+<li><p>em qual escala está o erro?</p></li>
+<li><p>qual seria o melhor valor do erro? maior ou menor?</p></li>
+<li><p>qual é a relação dos erros com o coeficiente de correlação?</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="resumo">
+<h2>Resumo<a class="headerlink" href="#resumo" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Carregando base</span>
+<span class="n">alunos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">DATAPATH</span><span class="o">+</span><span class="s1">&#39;alunos.csv&#39;</span><span class="p">)</span>
+
+<span class="c1">#Alocando regressão linear</span>
+<span class="n">rl</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
+
+<span class="c1">#Criando regressão linear</span>
+<span class="n">tempo</span> <span class="o">=</span> <span class="n">alunos</span><span class="p">[</span><span class="s1">&#39;Tempo&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">nota</span>  <span class="o">=</span> <span class="n">alunos</span><span class="p">[</span><span class="s1">&#39;Nota&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+<span class="n">rl</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">tempo</span><span class="p">,</span> <span class="n">nota</span><span class="p">)</span>
+
+<span class="c1">#Observando novos valores</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">]</span> 
+<span class="n">y_pred</span>  <span class="o">=</span> <span class="n">rl</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span> <span class="c1">#calcula a predição</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tempo: &#39;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Notas: &#39;</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+
+<span class="c1">#Calculando o erro médio abosoluto</span>
+<span class="n">ema</span> <span class="o">=</span> <span class="n">metrics</span><span class="o">.</span><span class="n">mean_absolute_error</span><span class="p">(</span><span class="n">nota</span><span class="p">,</span> <span class="n">rl</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">tempo</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;EMA:&#39;</span><span class="p">,</span> <span class="n">ema</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="referencias">
+<h2>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<p><strong>Outros materiais</strong><br />
+<a class="reference external" href="https://www.ime.usp.br/%7Efmachado/MAE229/AULA10.pdf">Regressão Linear Simples</a><br />
+<a class="reference external" href="https://medium.com/data-hackers/implementando-regress%C3%A3o-linear-simples-em-python-91df53b920a8">Data Hackers - Implementando Regressão Linear Simples em Python</a><br />
+<a class="reference external" href="https://towardsdatascience.com/simple-and-multiple-linear-regression-in-python-c928425168f9">BRONSHTEIN, A. Simple and Multiple Linear Regression in Python. Towards data science, 2017</a><br />
+<a class="reference external" href="https://towardsdatascience.com/a-beginners-guide-to-linear-regression-in-python-with-scikit-learn-83a8f7ae2b4f">CHAUHAN, N.S. A beginner’s guide to linear regression in Python with Scikit-Learn. Towards data science, 2019</a></p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "all"
+        },
+        kernelOptions: {
+            kernelName: "all",
+            path: "./notebooks/Regressao"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'all'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../Estatistica/03_Correlacao-Exercicios.html" title="previous page">Exercícios</a>
+    <a class='right-next' id="next-link" href="Regressao_linear_exercicios.html" title="next page">Exercícios</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Darlon Vasata<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

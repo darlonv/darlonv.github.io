@@ -1,0 +1,428 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Trabalho de Tópicos Especiais (TEI e TEP) &#8212; Ciência de Dados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Ciência de Dados</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../disciplina.html">
+   Ciência de Dados
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Numpy
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/01-Importacao_e_Arrays.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/02-Operacoes_sobre_arrays.html">
+   Operações sobre
+   <em>
+    arrays
+   </em>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  pandas
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Pandas/01_Pandas.html">
+   Pandas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  gráficos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Matplotlib.html">
+   Matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Seaborn.html">
+   Seaborn
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  estatistica basica
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Estatistica/01_Elementos_de_estatistica_I.html">
+   Estatística básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Estatistica/03_Correlacao.html">
+   Correlação
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Regressão
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Regressao/Regressao_linear.html">
+   Regressão linear simples
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Agrupamento
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Agrupamento/Kmeans.html">
+   Kmeans
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Predição
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Arvores/Arvores_de_decisao.html">
+   Árvores de decisão
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/Projeto/Trabalho de Tópicos Especiais.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#informacoes">
+   Informações
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datas-e-prazos">
+   Datas e prazos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#apresentacao">
+   Apresentação
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#criterios-de-avaliacao">
+   Critérios de avaliação
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trabalho">
+     Trabalho
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Apresentação
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="trabalho-de-topicos-especiais-tei-e-tep">
+<h1>Trabalho de Tópicos Especiais (TEI e TEP)<a class="headerlink" href="#trabalho-de-topicos-especiais-tei-e-tep" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="informacoes">
+<h2>Informações<a class="headerlink" href="#informacoes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>O trabalho é individual;</p></li>
+<li><p>Consiste na análise e predição, utilizando conceitos aprendidos na disciplina;</p></li>
+<li><p>O aluno deverá escolher uma base de dados, de maneira que não seja escolhida por outro aluno;</p></li>
+<li><p>A base escolhida deve ser registrada na planilha compartilhada, divulgada no Google Classroom (Link <a class="reference external" href="https://docs.google.com/spreadsheets/d/1q_-w9qa_F0oIWoT6JBI9ZUxCuywgg9OP3I8YGWFKUpo/edit?usp=sharing">aqui</a> também);</p></li>
+<li><p>O material entregue deverá ser desenvolvido no Google Colaboratory ou Jupyter, seguindo o modelo disponibilizado;</p></li>
+<li><p>As atividades a serem desenvolvidas consistem em duas fases:</p>
+<ul>
+<li><p>Fase 1:</p>
+<ul>
+<li><p>Corresponde ao terceiro bimestre;</p></li>
+<li><p>Deverá ser feita a análise da base de dados escolhida, utilizando conceitos aprendidos na disciplina;</p></li>
+</ul>
+</li>
+<li><p>Fase 2:</p>
+<ul>
+<li><p>Corresponde ao quarto bimestre;</p></li>
+<li><p>Deverá ser feita uma predição de dados utilizando a base escolhida. Podem ser utilizados outros métodos de predição diferentes dos utilizados em sala. Neste caso,  o trabalho deve conter a explicação do funcionamento do método escolhido;</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>A Fase 2 consiste na entrega do mesmo trabalho da Fase 1, adicionando as predições.</p></li>
+</ul>
+</div>
+<div class="section" id="datas-e-prazos">
+<h2>Datas e prazos<a class="headerlink" href="#datas-e-prazos" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Fase 1:</p>
+<ul>
+<li><p>Análise da base da de dados;</p></li>
+<li><p>Data de entrega: 12/01/2021;</p></li>
+<li><p>Data da apresentação para TEI (3º ano): 19/01/2021;</p></li>
+<li><p>Data da apresentação para TEP (4º ano): 20/01/2021.</p></li>
+</ul>
+</li>
+<li><p>Fase 2:</p>
+<ul>
+<li><p>Predições de informações utilizando a base de dados;</p></li>
+<li><p>Data de entrega: 31/01/2021;</p></li>
+<li><p>Data da apresentação para TEI (3º ano): 02/02/2021;</p></li>
+<li><p>Data da apresentação para TEP (4º ano): 03/02/2021.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="apresentacao">
+<h2>Apresentação<a class="headerlink" href="#apresentacao" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>As apresentações consistem em explicar o trabalho desenvolvido. Cada aluno terá 5 minutos para comentar sobre o trabalho, em horário pré-estabelecido. Aqueles que não puderem apresentar devem enviar um vídeo de até 5 minutos;</p></li>
+<li><p>Não há necessidade de preparar slides. O próprio trabalho desenvolvido deve ser utilizado na apresentação.</p></li>
+</ul>
+</div>
+<div class="section" id="criterios-de-avaliacao">
+<h2>Critérios de avaliação<a class="headerlink" href="#criterios-de-avaliacao" title="Permalink to this headline">¶</a></h2>
+<p>Os critérios abaixo descritos valem para ambas as fases do trabalho.</p>
+<div class="section" id="trabalho">
+<h3>Trabalho<a class="headerlink" href="#trabalho" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Conformidade com a norma culta da língua portuguesa;</p></li>
+<li><p>Uso correto dos conceitos aprendidos em sala (análises, estatísticas, descrições, leituras, gráficos…);</p></li>
+<li><p>Descrições das atividades desenvolvidas no código e texto(explicações de código, funções…);</p></li>
+<li><p>Uso de referências aos materiais utilizados;</p></li>
+<li><p>Conformidade com a estrutura do trabalho (introdução, desenvolvimento, conclusão…);</p></li>
+<li><p>Discussão dos resultados obtidos;</p></li>
+<li><p>Correta especificação e descrição da base. Definir corretamente cada campo na planilha de registro da base escolhida e explicar no trabalho o que está contido na base, seus campos, sua fonte e outras características;</p></li>
+<li><p>Referência e citação das bases utilizadas, de acordo com a ABNT;</p></li>
+<li><p>Cópias e plágios não serão tolerados. Para este caso, conceito D.</p></li>
+</ul>
+</div>
+<div class="section" id="id1">
+<h3>Apresentação<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Adequação ao tempo;</p></li>
+<li><p>Domínio do assunto;</p></li>
+<li><p>Explicação e discussão do trabalho.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/Projeto"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Darlon Vasata<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

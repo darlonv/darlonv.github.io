@@ -1,0 +1,494 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kmeans &#8212; Ciência de Dados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Ciência de Dados</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../disciplina.html">
+   Ciência de Dados
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Introdução
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Introducao/01_Ciencia_de_Dados.html">
+   Ciência de dados
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Python/01-Arquivos.html">
+   Arquivos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Numpy
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/01-Importacao_e_Arrays.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/02-Operacoes_sobre_arrays.html">
+   Operações sobre
+   <em>
+    arrays
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/03-Polinomios.html">
+   Equações polinomiais
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  pandas
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Pandas/01_Pandas.html">
+   Pandas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  gráficos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Matplotlib.html">
+   Matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Matplotlib.html#salvando-figuras">
+   Salvando figuras
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Seaborn.html">
+   Seaborn
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Seaborn.html#plots-para-dados-quantitativos">
+   Plots para dados quantitativos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Sankey.html">
+   Sankey chart
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Chart_race.html">
+   <em>
+    Chart race
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Chart_race.html#referencias">
+   Referências
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  estatistica basica
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Estatistica/01_Elementos_de_estatistica_I.html">
+   Estatística básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Estatistica/03_Correlacao.html">
+   Correlação
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Regressão
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Regressao/Regressao_linear.html">
+   Regressão linear simples
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Predição
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Arvores/Arvores_de_decisao.html">
+   Árvores de decisão
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/Agrupamento/01-Kmeans.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="kmeans">
+<h1>Kmeans<a class="headerlink" href="#kmeans" title="Permalink to this headline">¶</a></h1>
+<p>O Kmeans (K-Médias) é um algoritmo de agrupamento, que consiste em alocar elementos semelhantes em um mesmo conjunto, cuja semelhança é calculada com algum critério definido.</p>
+<p>Utilizaremos o método KMeans disponível na biblioteca Scikit-learn. Para importa-lo:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+</pre></div>
+</div>
+<p>adicionalmente, precisaremos de outras bibliotecas também</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Importe as bibliotecas necessárias.</p></li>
+</ul>
+<p>Para trabalhar com o KMeans é necessário criar um objeto, para acessar os métodos e atributos para aplicar e obter o resultado do algoritmo de agrupamento.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>O parâmetro <code class="docutils literal notranslate"><span class="pre">n_clusters</span></code> indica o número de grupos que deseja formar.</p>
+</div></blockquote>
+<p><strong>Exemplo</strong></p>
+<p>Gerando um conjunto aleatório de dados:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">x</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="p">),</span> <span class="n">random</span><span class="o">.</span><span class="n">randrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="p">)]</span> <span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Observando o conjunto de dados:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>print<span class="o">(</span>x<span class="o">)</span>
+</pre></div>
+</div>
+<p>Para calcular, utiliza-se o método <code class="docutils literal notranslate"><span class="pre">.fit()</span></code>.</p>
+<blockquote>
+<div><p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>kmeans.fit(x)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>Pode-ser ver os centróides, observando o atributo <code class="docutils literal notranslate"><span class="pre">.cluster_centers_</span></code>.</p>
+<blockquote>
+<div><p><strong>Exemplo</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>kmeans.cluster_centers_</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>Para observar a qual grupo pertence cada ponto, com o atributo <code class="docutils literal notranslate"><span class="pre">.labels_</span></code>.</p>
+<blockquote>
+<div><p><strong>Exemplo</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>kmeans.labels_</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>O conjunto de dados e os grupos podem ser observados de maneira gráfica, utilizando gráficos de <em>scatter</em>.</p>
+<blockquote>
+<div><p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># plota os pontos</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>x[:, 0], x[:, 1], #x e y
+c = kmeans.labels_, #cores de acordo com o grupo
+marker=&#39;o&#39;, # pontos com &#39;o&#39;
+edgecolor=&#39;black&#39;, #cor da borda
+cmap=&#39;rainbow&#39;, #esquema de cores
+s=100 #tamanho
+</pre></div>
+</div>
+<p>)</p>
+<p>plt.scatter(
+kmeans.cluster_centers_[:,0], kmeans.cluster_centers_[:, 1],#x e y
+c=’white’,  #cor fixa
+marker=’*’, #pontos marcados com estrela
+edgecolor=’black’, #cor da borda
+s=100 #tamanho
+)
+plt.show()</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p><strong>Exercícios</strong></p>
+<ul class="simple">
+<li><p>Crie 3 grupos, colocando como entrada a idade e altura de um grupo de pessoas</p></li>
+</ul>
+<p><strong>Dataframes Pandas</strong></p>
+<p>Para aplicar o K-means a partir de Dataframes Pandas, basta converter as colunas necessárias em Arrays Numpy.</p>
+<blockquote>
+<div><p><strong>Exemplo</strong></p>
+<ul class="simple">
+<li><p>Crie 3 grupos a partir das variáveis <code class="docutils literal notranslate"><span class="pre">preco</span></code> e <code class="docutils literal notranslate"><span class="pre">area</span></code>, da base <code class="docutils literal notranslate"><span class="pre">rioAptos</span></code>.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>data = pd.read_csv(‘../../../book/notebooks/Regressao/rioAptos.csv’)
+kmeans = KMeans(n_clusters=3)
+x = data[[‘preco’,’area’]].values
+kmeans.fit(x)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+**Atividade**  
+
+- Execute o exemplo
+- Observe o resultado utilizando gráfico *scatter*. Qual o significado de cada grupo?
+</pre></div>
+</div>
+</div>
+<div class="section" id="plota-os-centroides">
+<h1>plota os centróides<a class="headerlink" href="#plota-os-centroides" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="referencias">
+<h2>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<p>CARVALHO, A. et al. Inteligência Artificial - Uma Abordagem de Aprendizado de Máquina. LTC, 2011.</p>
+<p><a class="reference external" href="http://www.inf.ufpr.br/menotti/am-17/slides/ML-08cluster-regression.pdf">MENOTTI, D. Boas maneiras, aprendizado não supervisionado e regressão. Notas de aula da Especialização em Engenharia Industrial. Universidade Federal do Paraná.</a></p>
+<p><strong>Outros materiais</strong><br />
+<a class="reference external" href="https://towardsdatascience.com/k-means-clustering-with-scikit-learn-6b47a369a83c">Towards data science. K-Means Clustering with scikit-learn. Medium. 2019</a><br />
+<a class="reference external" href="https://www.guru99.com/r-k-means-clustering.html">GURU99. K-means Clustering in R with Example</a><br />
+<a class="reference external" href="https://scikit-learn.org/stable/">SCIKIT-LEARN. Scikit-learn: machine learning in Python</a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/Agrupamento"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Darlon Vasata<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,419 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Arquivos texto &#8212; Ciência de Dados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Ciência de Dados</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../disciplina.html">
+   Ciência de Dados
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Numpy
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/01-Importacao_e_Arrays.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/02-Operacoes_sobre_arrays.html">
+   Operações sobre
+   <em>
+    arrays
+   </em>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  pandas
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Pandas/01_Pandas.html">
+   Pandas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  gráficos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Matplotlib.html">
+   Matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Seaborn.html">
+   Seaborn
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  estatistica basica
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Estatistica/01_Elementos_de_estatistica_I.html">
+   Estatística básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Estatistica/03_Correlacao.html">
+   Correlação
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Regressão
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Regressao/Regressao_linear.html">
+   Regressão linear simples
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Agrupamento
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Agrupamento/Kmeans.html">
+   Kmeans
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Predição
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Arvores/Arvores_de_decisao.html">
+   Árvores de decisão
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/Python/02-Texto.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#escrita">
+   Escrita
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#leitura">
+   Leitura
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Referências
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="arquivos-texto">
+<h1>Arquivos texto<a class="headerlink" href="#arquivos-texto" title="Permalink to this headline">¶</a></h1>
+<!--
+TODO: 
+- Melhorar as referências
+---><p>Um arquivo de texto grava os dados utilizando uma codificação específica, como a ASCII, p. ex.</p>
+<p>Um arquivo texto contém, basicamente, <em>strings</em> armazenadas. Para abrir um arquivo texto em Python utilizamos a função <code class="docutils literal notranslate"><span class="pre">open()</span></code>.</p>
+<p><strong>Exemplo</strong><br />
+Escrita:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">arq</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;arquivo.txt&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Leitura:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">arq</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;arquivo.txt&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Os parâmetros <code class="docutils literal notranslate"><span class="pre">w</span></code> e <code class="docutils literal notranslate"><span class="pre">r</span></code> correspondem a <em>write</em> e <em>read</em>, respectivamente.</p>
+<p>Para fechar um arquivo, utiliza-se o método <code class="docutils literal notranslate"><span class="pre">.close()</span></code>.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">arq</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+</pre></div>
+</div>
+<div class="section" id="escrita">
+<h2>Escrita<a class="headerlink" href="#escrita" title="Permalink to this headline">¶</a></h2>
+<p>Para escrever informações em um arquivo, utiliza-se o método <code class="docutils literal notranslate"><span class="pre">.write()</span></code>.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">arq</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;arquivo.txt&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="c1">#criando arquivo.txt</span>
+<span class="c1">#escrevendo dados no arquivo</span>
+<span class="n">arq</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Python&#39;</span><span class="p">)</span> 
+<span class="n">arq</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;Manipulacao de arquivos&#39;</span><span class="p">)</span> 
+<span class="n">arq</span><span class="o">.</span><span class="n">close</span><span class="p">()</span> <span class="c1">#fechando arquivo</span>
+</pre></div>
+</div>
+<p>Observe o conteúdo do arquivo <code class="docutils literal notranslate"><span class="pre">arquivo.txt</span></code>.</p>
+<p><strong>Exemplo</strong><br />
+Para salvar números de 0 a 9 em um arquivo:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">arq</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;numeros.txt&#39;</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">arq</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<span class="n">arq</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>crie um arquivo <code class="docutils literal notranslate"><span class="pre">nome.txt</span></code>, contendo seu nome</p></li>
+<li><p>crie um arquivo <code class="docutils literal notranslate"><span class="pre">pares.txt</span></code>, contendo os números pares dentro de um intervalo definido pelo usuário. Os números deve estar separados por espaços</p></li>
+</ul>
+</div>
+<div class="section" id="leitura">
+<h2>Leitura<a class="headerlink" href="#leitura" title="Permalink to this headline">¶</a></h2>
+<p>A leitura de dados de um arquivo pode ser realizada de diversas maneiras.<br />
+<strong>Exemplo</strong><br />
+Iterando entre cada linha:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">arq</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;numeros.txt&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">linha</span> <span class="ow">in</span> <span class="n">arq</span><span class="p">:</span> <span class="c1">#Lê cada linha do arquivo</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">linha</span><span class="p">)</span>
+<span class="n">arq</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Por que entre cada linha possui uma linha sem nenhum caractere?</p></li>
+<li><p>Adicione o parâmetro <code class="docutils literal notranslate"><span class="pre">end=''</span></code> na função <code class="docutils literal notranslate"><span class="pre">print()</span></code>. Observe e explique o resultado.</p></li>
+</ul>
+<p>Lendo todo o arquivo de uma única vez, com o método <code class="docutils literal notranslate"><span class="pre">.read()</span></code>:<br />
+<strong>Exemplo</strong></p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">arq</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;numeros.txt&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">todosOsDados</span> <span class="o">=</span> <span class="n">arq</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">todosOsDados</span><span class="p">)</span>
+<span class="n">arq</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Lendo uma única linha, com o método <code class="docutils literal notranslate"><span class="pre">.readline()</span></code>:<br />
+<strong>Exemplo</strong></p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">arq</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;numeros.txt&#39;</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">linha</span> <span class="o">=</span> <span class="n">arq</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">linha</span><span class="p">)</span>
+<span class="n">arq</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Atividades</strong></p>
+<ul class="simple">
+<li><p>Abra o arquivo <code class="docutils literal notranslate"><span class="pre">numeros.txt</span></code>, e mostre apenas os números divisíveis por 6.</p></li>
+</ul>
+</div>
+<div class="section" id="referencias">
+<h2>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://pt.stackoverflow.com/questions/156951/quais-as-principais-diferen%C3%A7as-entre-unicode-utf-ascii-ansi">Stackoverflow. Quais as principais diferenças entre UTF, ASCII, ANSI?. 2016. Acesso em: 23 set 2019</a><br />
+<a class="reference external" href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/">SPOLSKI, J. The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!). 2003. Acesso em: 23 set 2019.</a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/Python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Darlon Vasata<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

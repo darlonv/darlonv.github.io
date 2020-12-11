@@ -1,0 +1,524 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Correlação &#8212; Ciência de Dados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Exercícios" href="03_Correlacao-Exercicios.html" />
+    <link rel="prev" title="Estatística básica" href="01_Elementos_de_estatistica_I.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Ciência de Dados</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../disciplina.html">
+   Ciência de Dados
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Numpy
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/01-Importacao_e_Arrays.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/02-Operacoes_sobre_arrays.html">
+   Operações sobre
+   <em>
+    arrays
+   </em>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  pandas
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Pandas/01_Pandas.html">
+   Pandas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  gráficos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Matplotlib.html">
+   Matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Seaborn.html">
+   Seaborn
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  estatistica basica
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_Elementos_de_estatistica_I.html">
+   Estatística básica
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Correlação
+  </a>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_Correlacao-Exercicios.html">
+     Exercícios
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Regressão
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Regressao/Regressao_linear.html">
+   Regressão linear simples
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Agrupamento
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Agrupamento/Kmeans.html">
+   Kmeans
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Predição
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Arvores/Arvores_de_decisao.html">
+   Árvores de decisão
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/Estatistica/03_Correlacao.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#coeficiente-de-correlacao">
+   Coeficiente de correlação
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interpretacao">
+     Interpretação
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#matriz-de-correlacao">
+     Matriz de correlação
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Referências
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Executar no Colab, para acessar arquivos no Drive</span>
+<span class="c1"># from google.colab import drive</span>
+<span class="c1"># drive.mount(&#39;/drive&#39;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="correlacao">
+<h1>Correlação<a class="headerlink" href="#correlacao" title="Permalink to this headline">¶</a></h1>
+<p>O <strong>coeficiente de correlação</strong> é uma métrica de avaliação de <strong>quanto</strong> uma variável influencia em outra.</p>
+<p><strong>Exemplo</strong></p>
+<p>Considere os dados apresentados no dataframe abaixo. A tabela possui informações de uma turma de alunos, com o tempo de dedicação ao estudo da disciplina (em horas) e a nota obtida em determinada disciplina (expresso em valores de 0 a 100).</p>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Gere e observe o dataframe com informações sobre tempo de estudo e nota obtida.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Dataframe</span>
+<span class="n">dfTempoEstudo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s1">&#39;Tempo&#39;</span><span class="p">:</span> 
+     <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mf">9.9</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mf">2.8</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mf">9.9</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mf">2.8</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="mf">3.6</span><span class="p">,</span> <span class="mi">6</span><span class="p">:</span> <span class="mf">6.4</span><span class="p">,</span> <span class="mi">7</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">,</span> <span class="mi">8</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mi">9</span><span class="p">:</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span> <span class="mf">8.1</span><span class="p">,</span> <span class="mi">11</span><span class="p">:</span> <span class="mf">3.2</span><span class="p">,</span> <span class="mi">12</span><span class="p">:</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mi">13</span><span class="p">:</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mi">14</span><span class="p">:</span> <span class="mf">2.6</span><span class="p">,</span> <span class="mi">15</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">,</span> <span class="mi">16</span><span class="p">:</span> <span class="mf">5.8</span><span class="p">,</span> <span class="mi">17</span><span class="p">:</span> <span class="mf">4.8</span><span class="p">,</span> <span class="mi">18</span><span class="p">:</span> <span class="mf">6.4</span><span class="p">,</span> <span class="mi">19</span><span class="p">:</span> <span class="mf">5.2</span><span class="p">,</span> <span class="mi">20</span><span class="p">:</span> <span class="mf">5.3</span><span class="p">,</span> <span class="mi">21</span><span class="p">:</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mi">22</span><span class="p">:</span> <span class="mf">7.2</span><span class="p">,</span> <span class="mi">23</span><span class="p">:</span> <span class="mf">3.9</span><span class="p">,</span> <span class="mi">24</span><span class="p">:</span> <span class="mf">3.6</span><span class="p">,</span> <span class="mi">25</span><span class="p">:</span> <span class="mf">10.0</span><span class="p">,</span> <span class="mi">26</span><span class="p">:</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mi">27</span><span class="p">:</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mi">28</span><span class="p">:</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mi">29</span><span class="p">:</span> <span class="mf">1.8</span><span class="p">},</span> 
+     <span class="s1">&#39;Nota&#39;</span><span class="p">:</span> 
+     <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mi">96</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">:</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">6</span><span class="p">:</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">7</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span> <span class="mi">8</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">9</span><span class="p">:</span> <span class="mi">89</span><span class="p">,</span> <span class="mi">10</span><span class="p">:</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">11</span><span class="p">:</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">12</span><span class="p">:</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">13</span><span class="p">:</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">14</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">:</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">16</span><span class="p">:</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">17</span><span class="p">:</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">18</span><span class="p">:</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">19</span><span class="p">:</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">20</span><span class="p">:</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">21</span><span class="p">:</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">22</span><span class="p">:</span> <span class="mi">58</span><span class="p">,</span> <span class="mi">23</span><span class="p">:</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">24</span><span class="p">:</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">25</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">26</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">27</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">28</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">29</span><span class="p">:</span> <span class="mi">25</span><span class="p">}}</span>
+<span class="p">)</span>
+<span class="n">dfTempoEstudo</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Gere um <em>gráfico de dispersão</em> com as variáveis <code class="docutils literal notranslate"><span class="pre">Tempo</span></code> e <code class="docutils literal notranslate"><span class="pre">Nota</span></code>.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Gráfico de dispersão</span>
+<span class="n">dfTempoEstudo</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s1">&#39;Tempo&#39;</span><span class="p">,</span><span class="s1">&#39;Nota&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Observação</strong></p>
+<p>Um <em>gráfico de dispersão</em> consiste em apresentar pontos em um eixo cartesiano. No exemplo, o eixo X é composto pelo tempo de estudo e o eixo Y pela nota obtida.</p>
+<p><strong>Atividade</strong></p>
+<p>Observando os dados com as variádeis do tempo de estudo e a nota da prova, e responda:</p>
+<ul class="simple">
+<li><p>existe relação entre essas variáveis?</p></li>
+<li><p>qual dela é a causa e qual é o resultado?</p></li>
+<li><p>a influência de uma variável na outra é baixa ou alta?</p></li>
+</ul>
+<div class="section" id="coeficiente-de-correlacao">
+<h2>Coeficiente de correlação<a class="headerlink" href="#coeficiente-de-correlacao" title="Permalink to this headline">¶</a></h2>
+<p>O coeficiente de <strong>correlação</strong> consiste em um valor que expressa <strong>quanto</strong> uma variável influencia em outra.</p>
+<p>Para que o coeficiente possa ser calculado, é necessário que ambas as variáveis sejam <strong>quantitativas</strong> (devem ser numéricas e expressarem quantidade).</p>
+<p>A fórmula matemática para cálculo do coeficiente de correlação é:
+<span class="math notranslate nohighlight">\($
+r = \frac
+{n \sum{xy} - (\sum{x})(\sum{y}) }
+{\sqrt{n\sum(x^2)-(\sum{x})^2}\sqrt{n\sum{y^2}-(\sum{y})^2}}
+$\)</span>
+onde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(r\)</span>: coeficiente de correlação</p></li>
+<li><p><span class="math notranslate nohighlight">\(n\)</span>: número de pares de dados</p></li>
+<li><p><span class="math notranslate nohighlight">\(x\)</span>: e <span class="math notranslate nohighlight">\(y\)</span>: valores em cada par de dados</p></li>
+</ul>
+<p>A biblioteca Pandas possui métodos para o cálculo do coeficiente de correlação. Para tal, podemos utilizar o método <code class="docutils literal notranslate"><span class="pre">.corr()</span></code> presentes nas estruturas do tipo <code class="docutils literal notranslate"><span class="pre">Series</span></code>.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tempo</span> <span class="o">=</span> <span class="n">dfTempoEstudo</span><span class="p">[</span><span class="s1">&#39;Tempo&#39;</span><span class="p">]</span> <span class="c1">#Seleciona coluna Tempo, que é uma Series</span>
+<span class="n">nota</span>  <span class="o">=</span> <span class="n">dfTempoEstudo</span><span class="p">[</span><span class="s1">&#39;Nota&#39;</span><span class="p">]</span> <span class="c1">#Seleciona coluna Nota, que é uma Series</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">tempo</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">nota</span><span class="p">)</span> <span class="c1">#Calcula a correlação entre tempo e nota</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Correlação:&#39;</span><span class="p">,</span> <span class="n">r</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>Com isto, dizemos que a <em>correlação</em> entre as variáveis <code class="docutils literal notranslate"><span class="pre">Tempo</span></code> e <code class="docutils literal notranslate"><span class="pre">Nota</span></code> é de <span class="math notranslate nohighlight">\(0.9\)</span>.</p>
+<div class="section" id="interpretacao">
+<h3>Interpretação<a class="headerlink" href="#interpretacao" title="Permalink to this headline">¶</a></h3>
+<p>O valor do coeficiente de correlação <span class="math notranslate nohighlight">\(r\)</span> sempre estará entre <span class="math notranslate nohighlight">\(-1\)</span> e <span class="math notranslate nohighlight">\(+1\)</span>, sendo que para valores de <span class="math notranslate nohighlight">\(r\)</span>:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(r = 0\)</span> indica que não há correlação.</p></li>
+<li><p><span class="math notranslate nohighlight">\(r &gt; 0\)</span> indica que a correlação é <strong>positiva</strong>, e as variáveis são <em>diretamente proporcionais</em>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(r &lt; 0\)</span> indica que a correlação é <strong>negativa</strong>, e as variáveis ão <em>inversamente proporcionais</em>.</p></li>
+</ul>
+<p>Para valores próximos a <span class="math notranslate nohighlight">\(0\)</span>, dizemos há <strong>baixa</strong> correlação, enquanto para valores próximos de <span class="math notranslate nohighlight">\(1\)</span> ou <span class="math notranslate nohighlight">\(-1\)</span> dizemos que há <strong>alta</strong> correlação.</p>
+</div>
+<div class="section" id="matriz-de-correlacao">
+<h3>Matriz de correlação<a class="headerlink" href="#matriz-de-correlacao" title="Permalink to this headline">¶</a></h3>
+<p>Uma <strong>matriz de correlação</strong> é uma matriz que apresenta as correlações entre diversas variáveis. Os <code class="docutils literal notranslate"><span class="pre">DataFrames</span></code> Pandas possuem o método <code class="docutils literal notranslate"><span class="pre">.corr()</span></code> que calcula a matriz, retornando um dataframe.</p>
+<p><strong>Atividade</strong></p>
+<p>Carregue o dataframe <code class="docutils literal notranslate"><span class="pre">dfAlunos</span></code> e observe quais são as suas variáveis (colunas).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Colab</span>
+<span class="n">dfAlunos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/drive/Shared drives/BasesPublicas/Exemplos/alunos.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;latin1&#39;</span><span class="p">)</span>
+<span class="c1">#Jupyter</span>
+<span class="c1"># dfAlunos = pd.read_csv(&#39;alunos.csv&#39;)</span>
+<span class="n">dfAlunos</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Exemplo</strong></p>
+<ul class="simple">
+<li><p>Apresente a matriz de correlação das variáveis presentes no dataframe <code class="docutils literal notranslate"><span class="pre">dfAlunos</span></code>.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dfAlunos</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul>
+<li><p>Qual é o coeficiente de correlação <span class="math notranslate nohighlight">\(r\)</span> entre as variáveis <code class="docutils literal notranslate"><span class="pre">Altura</span></code> e <code class="docutils literal notranslate"><span class="pre">Faltas</span></code>? Elas têm relação?</p>
+<ul class="simple">
+<li><p>Há correlação? se sim, ela é positiva ou negativa?</p></li>
+<li><p>Apresente o gráfico de dispersão das variáveis.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">dfAlunos</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s1">&#39;Altura&#39;</span><span class="p">,</span><span class="s1">&#39;Faltas&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>É possível traçar uma reta que represente o conjunto de dados, de maneira aproximada?</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Qual é o coeficiente de correlação <span class="math notranslate nohighlight">\(r\)</span> entre as variáveis <code class="docutils literal notranslate"><span class="pre">Tempo</span></code> e <code class="docutils literal notranslate"><span class="pre">Nota</span></code>? Elas têm relação?</p>
+<ul>
+<li><p>Existe correlação? se sim, ela é positiva ou negativa?</p></li>
+<li><p>Apresente o gráfico de dispersão das variáveis.</p></li>
+<li><p>É possível traçar uma reta que represente o conjunto de dados, de maneira aproximada?</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Qual é o coeficiente de correlação <span class="math notranslate nohighlight">\(r\)</span> entre as variáveis <code class="docutils literal notranslate"><span class="pre">Faltas</span></code> e <code class="docutils literal notranslate"><span class="pre">Nota</span></code>? Elas têm relação?</p>
+<ul>
+<li><p>Há correlação? se sim, ela é positiva ou negativa?</p></li>
+<li><p>Apresente o gráfico de dispersão das variáveis.</p></li>
+<li><p>É possível traçar uma reta que represente o conjunto de dados, de maneira aproximada?</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Exercícios</strong></p>
+<ul class="simple">
+<li><p>Ao observar a diagonal principal da matriz de correlação, quais são os valores?</p>
+<ul>
+<li><p>Por que esses valores aparecem?</p></li>
+<li><p>Faça o gráfico de dispersão das variáveis na diagonal principal.</p></li>
+</ul>
+</li>
+<li><p>Apresente e discuta a correlação entre as variáveis <code class="docutils literal notranslate"><span class="pre">Faltas</span></code> e <code class="docutils literal notranslate"><span class="pre">Tempo</span></code></p>
+<ul>
+<li><p>Mostre o gráfico de dispersão.</p></li>
+</ul>
+</li>
+<li><p>Qual variável que possui maior influência na nota?</p></li>
+</ul>
+<p><strong>Observações</strong></p>
+<ul class="simple">
+<li><p>Variáveis devem ser quantitativas</p></li>
+<li><p><strong>Correlação não implica causalidade</strong></p>
+<ul>
+<li><p>Exemplos: <a class="reference external" href="https://www.tylervigen.com/spurious-correlations"><em>Spurious Correlations</em></a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="referencias">
+<h2>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://plataforma.bvirtual.com.br/Leitor/Publicacao/1242/pdf/17?code=uf41RbVY0KRUTqVSy8ZkDfrIynwKU/7WlWkTiuzQ80rimcX0BPrl4YlRFDwfh/CAJap2mr8WYHpuFbtdynL4mQ==">Larson, R. Farber, B. Estatística Aplicada. 4.ed. São Paulo: Pearson, 2010.</a> (Link para a biblioteca virtual)<br />
+Morettin<br />
+<a class="reference external" href="https://www.tylervigen.com/spurious-correlations">VIGEN, T. Spurious Correlations.</a></p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/Estatistica"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="01_Elementos_de_estatistica_I.html" title="previous page">Estatística básica</a>
+    <a class='right-next' id="next-link" href="03_Correlacao-Exercicios.html" title="next page">Exercícios</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Darlon Vasata<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

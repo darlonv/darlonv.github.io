@@ -1,0 +1,818 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Matplotlib &#8212; Ciência de Dados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Seaborn" href="Seaborn.html" />
+    <link rel="prev" title="Exercícios" href="../Pandas/01_Pandas_exercicio_enem.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Ciência de Dados</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../disciplina.html">
+   Ciência de Dados
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Numpy
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/01-Importacao_e_Arrays.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/02-Operacoes_sobre_arrays.html">
+   Operações sobre
+   <em>
+    arrays
+   </em>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  pandas
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Pandas/01_Pandas.html">
+   Pandas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  gráficos
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Seaborn.html">
+   Seaborn
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  estatistica basica
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Estatistica/01_Elementos_de_estatistica_I.html">
+   Estatística básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Estatistica/03_Correlacao.html">
+   Correlação
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Regressão
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Regressao/Regressao_linear.html">
+   Regressão linear simples
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Agrupamento
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Agrupamento/Kmeans.html">
+   Kmeans
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Predição
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Arvores/Arvores_de_decisao.html">
+   Árvores de decisão
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/Graficos/Matplotlib.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#subgraficos">
+   Subgraficos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#utilizando-orientacao-a-objetos">
+   Utilizando orientação a objetos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#legendas">
+   Legendas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#salvando-figuras">
+   Salvando figuras
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outros-graficos">
+   Outros gráficos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#barras">
+     Barras
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#histogramas">
+     Histogramas
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#imagens">
+       Imagens
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dispersao-scatter">
+     Dispersão (
+     <em>
+      scatter
+     </em>
+     )
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pizza">
+     Pizza
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boxplot">
+     Boxplot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Referências
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="matplotlib">
+<h1>Matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this headline">¶</a></h1>
+<p>O Matplotlib é uma biblioteca para visualização de dados, amplamente popular. Com ela é possível plotar gráficos e  controlar diversos aspectos das figuras nela criadas.</p>
+<p><strong>Importação</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+<p>Para que os gráficos gerados possam ser vistos diretos no Jupyter ou Colaboratory, é necessário passar um comando de configuração da interface, conhecidos como <em>magic commands</em>. Para visualizar as imagens:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+</pre></div>
+</div>
+<p>Também utilizaremos outras bibliotecas, para manipulação de dados, imagens e carregamento de arquivos.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span> <span class="c1">#imagens</span>
+<span class="kn">import</span> <span class="nn">urllib.request</span> <span class="k">as</span> <span class="nn">urllib2</span> <span class="c1">#download de arquivos</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Importe a biblioteca <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> e as demais bibliotecas necessárias.</p></li>
+<li><p>execute o <em>magic command</em> que permite visualizar as imagens na própria interface de desenvolvimento.</p></li>
+</ul>
+<p><strong>Exemplo</strong></p>
+<ul class="simple">
+<li><p>Iniciaremos com dois <em>arrays</em> numpy, <code class="docutils literal notranslate"><span class="pre">x</span></code> e <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span><span class="o">//</span><span class="mi">1</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">*</span><span class="n">x</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Crie os <em>arrays</em> <code class="docutils literal notranslate"><span class="pre">x</span></code> e <code class="docutils literal notranslate"><span class="pre">y</span></code> e observe o conteúdo deles.</p></li>
+</ul>
+<p>Para plotar o gráfico, utiliza-se o método <code class="docutils literal notranslate"><span class="pre">plot()</span></code>, com os parâmetros dos pontos <code class="docutils literal notranslate"><span class="pre">x</span></code> e <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Plote um gráfico de linhas, com os valores de <code class="docutils literal notranslate"><span class="pre">x</span></code> e <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p></li>
+</ul>
+<p>Uma das possibilidades é colocar rótulos nos eixos <code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code> e título no gráfico.</p>
+<p><strong>Exemplo</strong></p>
+<ul class="simple">
+<li><p>Rótulos nos eixos e título no gráfico:</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Eixo x&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Eixo y&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;x ao quadrado&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Mostre o gráfico de x e y, colocando rótulos nos eixos e título na figura.</p></li>
+</ul>
+<p>É possível trocar as cores.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Eixo x&#39;</span><span class="p">)</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Eixo y&#39;</span><span class="p">)</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;x ao quadrado, em vermelho&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Outra possibilidade é apresentar as linhas de diferentes formas.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;r--&#39;</span><span class="p">)</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Eixo x&#39;</span><span class="p">)</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Eixo y&#39;</span><span class="p">)</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;x ao quadra, com linha vermelha e tracejada&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Outra possibilidade é gerar diversos gráficos, organizados como uma matriz.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># 1 linha e 2 colunas. Plotando na posicao 1</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;g--&#39;</span><span class="p">)</span> <span class="c1"># linha verde (green) tracejada</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># 1 linha e 2 colunas. Plotando na posicao 2</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s1">&#39;y*&#39;</span><span class="p">)</span>  <span class="c1"># linha amarela (yellow) com estrelas</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Inclua dois gráficos em uma única figura.</p></li>
+</ul>
+<p><strong>Tamanho</strong></p>
+<p>Com o método <code class="docutils literal notranslate"><span class="pre">.figure()</span></code>, é possível gerenciar a criação de figuras, com diferentes parâmetros. Um parâmetro é o tamanho da figura com <code class="docutils literal notranslate"><span class="pre">figsize</span></code>, passando uma tupla com os tamanhos de <code class="docutils literal notranslate"><span class="pre">x</span></code> e <code class="docutils literal notranslate"><span class="pre">y</span></code> como parâmetro.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>  
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>  
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>  
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Crie figuras com diferentes tamanhos.</p></li>
+</ul>
+<p>Observe que os eixos do gráfico não são alterados, apenas as proporções da figura.</p>
+<p><strong>Múltiplos gráficos na mesma figura</strong></p>
+<p>É possível incluir vários gráficos na mesma figura.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Crie uma figura que possua mais de um gráfico.</p></li>
+</ul>
+<p>Outra forma também é especificar qual o ponto de origem de cada gráfico.<br />
+<strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>  
+<span class="n">axes1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>  
+<span class="n">axes1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>  
+<span class="n">axes1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="subgraficos">
+<h2>Subgraficos<a class="headerlink" href="#subgraficos" title="Permalink to this headline">¶</a></h2>
+<p>Diversos gráficos podem ser criados. Para tal, é necessário informar o ponto inicial do gráfico em relação à imagem original e o tamanho do novo gráfico.</p>
+<p>O método <code class="docutils literal notranslate"><span class="pre">add_axes()</span></code> informa a posição e tamanho do novo gráfico.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>  
+<span class="c1"># começa em x=0 e y=0. O tamanho do subgráfico é igual à imagem original</span>
+<span class="n">sg1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># O subgrafico 1 é criado</span>
+<span class="n">sg1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>  <span class="c1">#gráfico no subgrafico1</span>
+<span class="n">sg1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+<span class="c1">#começa em x=30% e y=70% da imagem original. O tamanho do subgráfico é de 40% da imagem original.</span>
+<span class="n">sg2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.7</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mf">0.4</span><span class="p">])</span> <span class="c1"># subgrafico 1 é criado</span>
+<span class="n">sg2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="c1">#gráfico no subgrafico2</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Crie um gráfico com um subgráfico.</p></li>
+</ul>
+<p><strong>Exercício</strong></p>
+<ul class="simple">
+<li><p>Modifique o código anterior até que todo o subgráfico esteja posicionado em uma parte do gráfico maior que não possua nada. Modifique o tamanho do sub-gráfico para ocupar um espaço maior.</p></li>
+</ul>
+</div>
+<div class="section" id="utilizando-orientacao-a-objetos">
+<h2>Utilizando orientação a objetos<a class="headerlink" href="#utilizando-orientacao-a-objetos" title="Permalink to this headline">¶</a></h2>
+<p>Outra forma de utilizar o gráfico é utilizando o método <code class="docutils literal notranslate"><span class="pre">subplots()</span></code>, que retorna uma figura e os eixos, bastando setar os valores nos objetos retornados.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">figura</span><span class="p">,</span> <span class="n">eixos</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>  
+<span class="n">eixos</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="s1">&#39;g*&#39;</span> <span class="p">)</span>  
+<span class="n">eixos</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="s1">&#39;b.&#39;</span> <span class="p">)</span>  
+<span class="n">eixos</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;eixo x&#39;</span><span class="p">)</span>  
+<span class="n">eixos</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;eixo y&#39;</span><span class="p">)</span>  
+<span class="n">eixos</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Título do grafico&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Múltiplos gráficos</strong></p>
+<p>Outra maneira de plotar diversos gráficos é utilizar a notação de orientação a objetos, identificado o número de linhas e colunas das imagens.</p>
+<p><strong>Exemplo</strong></p>
+<ul class="simple">
+<li><p>Criando uma imagem com 4 gráficos, em 2 linhas e 2 colunas</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">figura</span><span class="p">,</span> <span class="n">e</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>  
+<span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">)</span> <span class="c1">#Gráfico na posição 0,0</span>
+<span class="n">e</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;y&#39;</span><span class="p">)</span> <span class="c1">#Gráfico na posição 0,1</span>
+<span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="c1">#Gráfico na posição 1,0</span>
+<span class="n">e</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)</span> <span class="c1">#Gráfico na posição 1,1</span>
+</pre></div>
+</div>
+<p>Execute e explique o resultado.</p>
+</div>
+<div class="section" id="legendas">
+<h2>Legendas<a class="headerlink" href="#legendas" title="Permalink to this headline">¶</a></h2>
+<p>O método <code class="docutils literal notranslate"><span class="pre">.legend()</span></code> possibilita mostrar a legenda na figura que possua múltiplos gráficos, indicando o conteúdo de cada gráfico. O conteúdo mostrado é informado pelo parâmetro <code class="docutils literal notranslate"><span class="pre">label</span></code>.</p>
+<p><strong>Exemplo</strong></p>
+<ul class="simple">
+<li><p>Figuras com legenda</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">figura</span><span class="p">,</span> <span class="n">eixos</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>  
+<span class="n">eixos</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="s1">&#39;g*&#39;</span> <span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;2 * x&#39;</span><span class="p">)</span> <span class="c1">#informa o conteúdo da legenda</span>
+<span class="n">eixos</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x</span><span class="p">,</span> <span class="s1">&#39;b.&#39;</span> <span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;3 * x&#39;</span><span class="p">)</span> <span class="c1">#informa o conteúdo da legenda </span>
+<span class="n">eixos</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;eixo x&#39;</span><span class="p">)</span>  
+<span class="n">eixos</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;eixo y&#39;</span><span class="p">)</span>  
+<span class="n">eixos</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Título do grafico&#39;</span><span class="p">)</span>  
+<span class="n">eixos</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Exercício</strong></p>
+<p>Faça uma figura com gráficos de duas equações de segundo grau, do tipo <span class="math notranslate nohighlight">\(ax^2 + bx + c\)</span> .</p>
+<ul class="simple">
+<li><p>Na eq. A:</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(a=10\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(b=20\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(c=30\)</span></p></li>
+</ul>
+</li>
+<li><p>Na eq. B:</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(a=5\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(b=20\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(c=10\)</span></p></li>
+</ul>
+</li>
+<li><p>Utilize <span class="math notranslate nohighlight">\(x\)</span> de <span class="math notranslate nohighlight">\(-100\)</span> a <span class="math notranslate nohighlight">\(100\)</span>, com <span class="math notranslate nohighlight">\(1000\)</span> pontos.</p></li>
+<li><p>Inclua legenda de cada função plotada no gráfico.</p></li>
+</ul>
+<p>No método <code class="docutils literal notranslate"><span class="pre">.legend()</span></code>, o parâmetro <code class="docutils literal notranslate"><span class="pre">loc</span></code> pode ser utilizado para posicionar a legenda no gráfico</p>
+<p><strong>Exercício</strong></p>
+<ul class="simple">
+<li><p>Inclua no método <code class="docutils literal notranslate"><span class="pre">legend</span></code> o parâmetro <code class="docutils literal notranslate"><span class="pre">loc=i</span></code>, variando os valores de <code class="docutils literal notranslate"><span class="pre">i</span></code> e observe o resultado. Inicie com <code class="docutils literal notranslate"><span class="pre">i=0</span></code> .</p></li>
+</ul>
+</div>
+<div class="section" id="salvando-figuras">
+<h2>Salvando figuras<a class="headerlink" href="#salvando-figuras" title="Permalink to this headline">¶</a></h2>
+<p>O método savefig salva a figura, utilizando o formato de imagem passado como parametro no nome do arquivo</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;grafico.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="outros-graficos">
+<h2>Outros gráficos<a class="headerlink" href="#outros-graficos" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="barras">
+<h3>Barras<a class="headerlink" href="#barras" title="Permalink to this headline">¶</a></h3>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">linguagens</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;Javascript&#39;</span><span class="p">,</span> <span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;C#&#39;</span><span class="p">,</span> <span class="s1">&#39;C/C++&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;PHP&#39;</span><span class="p">]</span>
+<span class="n">usuarios</span>   <span class="o">=</span> <span class="p">[</span><span class="mf">31.02</span><span class="p">,</span>     <span class="mf">8.41</span><span class="p">,</span>        <span class="mf">16.38</span><span class="p">,</span>  <span class="mf">6.52</span><span class="p">,</span>  <span class="mf">5.56</span><span class="p">,</span>   <span class="mf">4.26</span><span class="p">,</span> <span class="mf">5.83</span> <span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">linguagens</span><span class="p">,</span> <span class="n">usuarios</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Outras variações dos gráficos de barras também são bastante utilizadas, utilizando barras empilhadas e diferentes barras para expressar características de conjunto.</p>
+<p><strong>Exemplo</strong></p>
+<ul class="simple">
+<li><p>Barras empilhadas</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">turmas</span>   <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;T1&#39;</span><span class="p">,</span> <span class="s1">&#39;T2&#39;</span><span class="p">,</span> <span class="s1">&#39;T3&#39;</span><span class="p">,</span> <span class="s1">&#39;T4&#39;</span><span class="p">,</span> <span class="s1">&#39;T5&#39;</span><span class="p">]</span> <span class="c1">#Turmas</span>
+<span class="n">homens</span>   <span class="o">=</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">26</span><span class="p">]</span> <span class="c1">#número de homens nas turmas</span>
+<span class="n">mulheres</span> <span class="o">=</span> <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">4</span> <span class="p">]</span> <span class="c1">#número de mulheres</span>
+
+<span class="c1">#plota as barras referente ao número de homens</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">turmas</span><span class="p">,</span> <span class="n">homens</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Homens&#39;</span><span class="p">)</span>  
+<span class="c1">#plotas a parte das barras referente o número de mulheres</span>
+<span class="c1">#bottom indica acima de qual posição a barra deve ser plotada</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">turmas</span><span class="p">,</span> <span class="n">mulheres</span><span class="p">,</span> <span class="n">bottom</span><span class="o">=</span> <span class="n">homens</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Mulheres&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span> <span class="c1">#mostra legenda</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="c1">#mostra o gráfico</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="histogramas">
+<h3>Histogramas<a class="headerlink" href="#histogramas" title="Permalink to this headline">¶</a></h3>
+<p>Os histogramas são gráficos utilizados para representação de frequências de elementos em determinados conjuntos.</p>
+<p><strong>Exemplo</strong></p>
+<ul class="simple">
+<li><p>Idades de alunos em uma turma</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">idades</span> <span class="o">=</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span>  <span class="mi">18</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">idades</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>O parâmetro <code class="docutils literal notranslate"><span class="pre">bins</span></code> indica o tamanho do faixa das amostras de contagem que deve ser considerada. Valores maiores indicam mais precisão, e valores menores mais valores são considerados em uma mesma faixa.</p>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>teste o parâmetro <code class="docutils literal notranslate"><span class="pre">bins</span></code> com os valores apresentados a seguir, e explique o ocorrido.</p>
+<ul>
+<li><p>2</p></li>
+<li><p>5</p></li>
+<li><p>30</p></li>
+</ul>
+</li>
+</ul>
+<p>Os histogramas também podem ser bidimensionais, onde as frequências são representadas por cores.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">idades</span>  <span class="o">=</span> <span class="p">[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span>  <span class="mi">18</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">16</span><span class="p">]</span>
+<span class="n">alturas</span> <span class="o">=</span> <span class="p">[</span><span class="mi">170</span><span class="p">,</span> <span class="mi">162</span><span class="p">,</span> <span class="mi">171</span><span class="p">,</span> <span class="mi">172</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="mi">174</span><span class="p">,</span> <span class="mi">164</span><span class="p">,</span> <span class="mi">164</span><span class="p">,</span> <span class="mi">171</span><span class="p">,</span> <span class="mi">166</span><span class="p">,</span> <span class="mi">173</span><span class="p">,</span> <span class="mi">159</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">158</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="mi">155</span><span class="p">,</span> <span class="mi">162</span><span class="p">,</span> <span class="mi">158</span><span class="p">,</span> <span class="mi">176</span><span class="p">,</span> <span class="mi">179</span><span class="p">,</span> <span class="mi">179</span><span class="p">,</span> <span class="mi">179</span><span class="p">,</span> <span class="mi">156</span><span class="p">,</span> <span class="mi">156</span><span class="p">,</span> <span class="mi">161</span><span class="p">,</span> <span class="mi">178</span><span class="p">,</span> <span class="mi">161</span><span class="p">,</span> <span class="mi">173</span><span class="p">,</span> <span class="mi">178</span><span class="p">,</span> <span class="mi">174</span><span class="p">,</span> <span class="mi">165</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">175</span><span class="p">,</span> <span class="mi">162</span><span class="p">]</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist2d</span><span class="p">(</span><span class="n">idades</span><span class="p">,</span> <span class="n">alturas</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span> <span class="c1">#barra de cores, para comparação de valores</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Execute o exemplo.</p></li>
+<li><p>Observando o gráfico, as pessoas com 23 e 24 anos do conjunto apresentado no exemplo, são mais altas ou mais baixas?</p></li>
+</ul>
+<div class="section" id="imagens">
+<h4>Imagens<a class="headerlink" href="#imagens" title="Permalink to this headline">¶</a></h4>
+<p>Histogramas de imagens são bastante conhecidos, visto que pela sua interpretação é possível obter informações das imagens como contraste e brilho, entre outros.</p>
+<p>Outra maneira de realizar um histograma é utilizar métodos da biblioteca PIL para contagem das frequências, e então utilizar gráficos de linhas para apresentar os valores do histograma.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="c1">#carrega a imagem de uma URL como arquivo</span>
+<span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Snowy_%C3</span><span class="si">%85r</span><span class="s1">eskutan_Ski_lift.jpg/640px-Snowy_%C3</span><span class="si">%85r</span><span class="s1">eskutan_Ski_lift.jpg&#39;</span> <span class="c1">#link para a imagem</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="c1">#abre a imagem</span>
+<span class="c1">#abre a imagem</span>
+<span class="n">imagem</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="c1">#mostra a imagem</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">imagem</span><span class="p">)</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="c1">#observa as frequências utilizando PIL</span>
+<span class="n">hist</span> <span class="o">=</span> <span class="n">imagem</span><span class="o">.</span><span class="n">histogram</span><span class="p">()</span> <span class="c1">#retorna uma lista unidimensional. Biblioteca PIL já calcula valores de histograma</span>
+<span class="c1">#como são 3 canais, convém colocar cada canal em uma linha de um array numpy</span>
+<span class="n">hist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">hist</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+<span class="c1">#apresenta o histograma utilizando gráfico de linhas</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hist</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="c1">#red</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hist</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="s1">&#39;g&#39;</span><span class="p">)</span> <span class="c1">#green</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hist</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="s1">&#39;b&#39;</span><span class="p">)</span> <span class="c1">#blue</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Execute o exemplo acima.</p></li>
+<li><p>As cores são predominantes em qual faixa de valores?</p>
+<ul>
+<li><p>Alta ou baixa?</p>
+<ul>
+<li><p>A imagem é clara ou escura?</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Observe os dados retornados pelo método <code class="docutils literal notranslate"><span class="pre">.histogram()</span></code>.</p>
+<ul>
+<li><p>Qual é o <em>shape</em> dos dados?</p></li>
+<li><p>Plote um gráfico de linhas com este resultado (sem <em>reshape</em>), e compare com o resultado do exemplo.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Execute o explique o código abaixo</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">img</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Snowy_%C3</span><span class="si">%85r</span><span class="s1">eskutan_Ski_lift.jpg/640px-Snowy_%C3</span><span class="si">%85r</span><span class="s1">eskutan_Ski_lift.jpg&#39;</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">imagem</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s1">&#39;L&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">imagem</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">)</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">hist</span> <span class="o">=</span> <span class="n">imagem</span><span class="o">.</span><span class="n">histogram</span><span class="p">()</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hist</span><span class="p">,</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- Responda também:
+    - Qual é o *shape* dos dados?
+    - O que é o `.convert(&#39;L&#39;)`.
+    - Por que há uma única linha no histograma?
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>No exemplo, modifique a URL da imagem e obverve o histograma.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/New_York_City_at_night_HDR.jpg/640px-New_York_City_at_night_HDR.jpg</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Vultures_in_the_nest%2C_Orchha%2C_MP%2C_India.jpg/640px-Vultures_in_the_nest%2C_Orchha%2C_MP%2C_India.jpg</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Dead_Sea_sunrise.jpg/640px-Dead_Sea_sunrise.jpg</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Lanz_Bulldog_gets_started.JPG/480px-Lanz_Bulldog_gets_started.JPG</span></code></p></li>
+</ul>
+</li>
+<li><p>Obtenha três imagens, o observe seu histograma.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="dispersao-scatter">
+<h3>Dispersão (<em>scatter</em>)<a class="headerlink" href="#dispersao-scatter" title="Permalink to this headline">¶</a></h3>
+<p>Os gráficos de dispersão consistem em apresentar pontos em um plano. Os pontos podem ser configurados de acordo com a necessidade.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">xa</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="n">ya</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">100</span><span class="p">))</span>
+<span class="n">xb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+<span class="n">yb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+<span class="n">xc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">))</span>
+<span class="n">yc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xa</span><span class="p">,</span><span class="n">ya</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xb</span><span class="p">,</span><span class="n">yb</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;B&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">xc</span><span class="p">,</span><span class="n">yc</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pizza">
+<h3>Pizza<a class="headerlink" href="#pizza" title="Permalink to this headline">¶</a></h3>
+<p>O gráfico de pizza é utilizado para expressar o quanto determinadas quantidades fazem parte de um todo.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">linguagens</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Python&#39;</span><span class="p">,</span> <span class="s1">&#39;Javascript&#39;</span><span class="p">,</span> <span class="s1">&#39;Java&#39;</span><span class="p">,</span> <span class="s1">&#39;C#&#39;</span><span class="p">,</span> <span class="s1">&#39;C/C++&#39;</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">,</span> <span class="s1">&#39;PHP&#39;</span> <span class="p">]</span>
+<span class="n">porcent</span> <span class="o">=</span>    <span class="p">[</span><span class="mf">31.02</span><span class="p">,</span>      <span class="mf">8.41</span><span class="p">,</span>         <span class="mf">16.38</span><span class="p">,</span>   <span class="mf">6.52</span><span class="p">,</span> <span class="mf">5.56</span><span class="p">,</span>    <span class="mf">4.26</span><span class="p">,</span> <span class="mf">5.83</span> <span class="p">]</span>
+<span class="n">linguagens</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;Outras&#39;</span><span class="p">)</span>
+<span class="n">porcent</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">100</span> <span class="o">-</span> <span class="nb">sum</span><span class="p">(</span><span class="n">porcent</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">porcent</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">linguagens</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="boxplot">
+<h3>Boxplot<a class="headerlink" href="#boxplot" title="Permalink to this headline">¶</a></h3>
+<p>O gráfico de boxplot, ou diagrama de caixa consiste permite observar como os dados estão distribuídos. Em sua base. Os dados do conjunto são dividos em 4 partes, onde cada parte (<em>quartil</em>) corresponde a 25% dos dados do conjunto. No gráfico são mostrados onde estão os valores correspondentes a cada quartil, e sua distribuição pelo conjunto. As marcações superiores e inferiores são valores considerados discrepantes do conjunto, chamados de <em>outliers</em>.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data</span>  <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span> 
+<span class="n">data1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
+<span class="n">data2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">data3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="p">[</span><span class="mi">45</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">boxplot</span><span class="p">([</span><span class="n">data</span><span class="p">,</span> <span class="n">data1</span><span class="p">,</span> <span class="n">data2</span><span class="p">,</span> <span class="n">data3</span><span class="p">])</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="referencias">
+<h2>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://matplotlib.org/">MATPLOTLIB. Matploplib: Python plotting.</a></p>
+<p><strong>Outros materiais</strong></p>
+<p><a class="reference external" href="https://matplotlib.org/tutorials/introductory/sample_plots.html">MATPLOTLIB. Sample plots in Matplotlib</a>.<br />
+<a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.hist.html">MATPLOTLIB.  matplotlib.pyplot.hist</a>.<br />
+<a class="reference external" href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.pie.html#matplotlib.pyplot.pie">MATPLOTLIB. matplotlib.pyplot.pie</a></p>
+<p><strong>Fontes das imagens</strong></p>
+<p><a class="reference external" href="https://commons.wikimedia.org/wiki/File:New_York_City_at_night_HDR.jpg">New York City at night HDR</a><br />
+<a class="reference external" href="https://commons.wikimedia.org/wiki/File:Snowy_%C3%85reskutan_Ski_lift.jpg#file">Snowy Åreskutan Ski lift</a><br />
+<a class="reference external" href="https://commons.wikimedia.org/wiki/File:Vultures_in_the_nest,_Orchha,_MP,_India.jpg">Vultures in the nest, Orchha, MP, India</a><br />
+<a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Dead_Sea_sunrise.jpg/640px-Dead_Sea_sunrise.jpg">Dead Sea sunrise</a><br />
+<a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Lanz_Bulldog_gets_started.JPG/480px-Lanz_Bulldog_gets_started.JPG">Lanz Bulldog gets started</a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/Graficos"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../Pandas/01_Pandas_exercicio_enem.html" title="previous page">Exercícios</a>
+    <a class='right-next' id="next-link" href="Seaborn.html" title="next page">Seaborn</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Darlon Vasata<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,927 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Árvores de decisão &#8212; Ciência de Dados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Kmeans" href="../Agrupamento/Kmeans.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Ciência de Dados</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../disciplina.html">
+   Ciência de Dados
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Numpy
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/01-Importacao_e_Arrays.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/02-Operacoes_sobre_arrays.html">
+   Operações sobre
+   <em>
+    arrays
+   </em>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  pandas
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Pandas/01_Pandas.html">
+   Pandas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  gráficos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Matplotlib.html">
+   Matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Seaborn.html">
+   Seaborn
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  estatistica basica
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Estatistica/01_Elementos_de_estatistica_I.html">
+   Estatística básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Estatistica/03_Correlacao.html">
+   Correlação
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Regressão
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Regressao/Regressao_linear.html">
+   Regressão linear simples
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Agrupamento
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Agrupamento/Kmeans.html">
+   Kmeans
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Predição
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Árvores de decisão
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/Arvores/Arvores_de_decisao.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variaveis-dummy">
+   Variáveis
+   <em>
+    dummy
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preparacao-da-base">
+   Preparação da base
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#criacao-e-visualizacao">
+   Criação e visualização
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#utilizando-a-arvore-criada">
+     Utilizando a árvore criada
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resumo">
+   Resumo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Referências
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="arvores-de-decisao">
+<h1>Árvores de decisão<a class="headerlink" href="#arvores-de-decisao" title="Permalink to this headline">¶</a></h1>
+<p>Uma àrvore de decisão consiste em dividir um conjunto de dados determinado de maneira recursiva, para resolver um problema de decisão. Desta forma, um problema maior é dividido em diversos outros problemas mais simples.</p>
+<p><strong>Exemplo</strong></p>
+<ul class="simple">
+<li><p>Considere a seguinte base de dados ( base adaptada de (FACELLI 2011, p. 88)). A base consiste em um registro das condições do tempo em dias de jogos de tênis.</p></li>
+<li><p>A ideia de utilização do algoritmo é predizer se haverá ou não jogo de tênis em determinado dia, com base nas condições climáticas.</p></li>
+</ul>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tempo</p></th>
+<th class="head"><p>Temperatura</p></th>
+<th class="head"><p>Umidade</p></th>
+<th class="head"><p>Vento</p></th>
+<th class="head"><p>Jogo</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Chuvoso</p></td>
+<td><p>22</p></td>
+<td><p>91</p></td>
+<td><p>Sim</p></td>
+<td><p>Não</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ensolarado</p></td>
+<td><p>21</p></td>
+<td><p>72</p></td>
+<td><p>Não</p></td>
+<td><p>Sim</p></td>
+</tr>
+<tr class="row-even"><td><p>Ensolarado</p></td>
+<td><p>27</p></td>
+<td><p>90</p></td>
+<td><p>Sim</p></td>
+<td><p>Não</p></td>
+</tr>
+<tr class="row-odd"><td><p>Nublado</p></td>
+<td><p>28</p></td>
+<td><p>86</p></td>
+<td><p>Não</p></td>
+<td><p>Sim</p></td>
+</tr>
+<tr class="row-even"><td><p>Chuvoso</p></td>
+<td><p>21</p></td>
+<td><p>96</p></td>
+<td><p>Não</p></td>
+<td><p>Sim</p></td>
+</tr>
+<tr class="row-odd"><td><p>Chuvoso</p></td>
+<td><p>18</p></td>
+<td><p>70</p></td>
+<td><p>Sim</p></td>
+<td><p>Não</p></td>
+</tr>
+<tr class="row-even"><td><p>Nublado</p></td>
+<td><p>18</p></td>
+<td><p>65</p></td>
+<td><p>Sim</p></td>
+<td><p>Sim</p></td>
+</tr>
+<tr class="row-odd"><td><p>Nublado</p></td>
+<td><p>22</p></td>
+<td><p>90</p></td>
+<td><p>Sim</p></td>
+<td><p>Sim</p></td>
+</tr>
+<tr class="row-even"><td><p>Ensolarado</p></td>
+<td><p>24</p></td>
+<td><p>70</p></td>
+<td><p>Sim</p></td>
+<td><p>Sim</p></td>
+</tr>
+<tr class="row-odd"><td><p>Chuvoso</p></td>
+<td><p>20</p></td>
+<td><p>80</p></td>
+<td><p>Não</p></td>
+<td><p>Sim</p></td>
+</tr>
+<tr class="row-even"><td><p>Nublado</p></td>
+<td><p>27</p></td>
+<td><p>75</p></td>
+<td><p>Não</p></td>
+<td><p>Sim</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ensolarado</p></td>
+<td><p>29</p></td>
+<td><p>85</p></td>
+<td><p>Não</p></td>
+<td><p>Não</p></td>
+</tr>
+<tr class="row-even"><td><p>Ensolarado</p></td>
+<td><p>22</p></td>
+<td><p>95</p></td>
+<td><p>Não</p></td>
+<td><p>Não</p></td>
+</tr>
+<tr class="row-odd"><td><p>Chuvoso</p></td>
+<td><p>24</p></td>
+<td><p>80</p></td>
+<td><p>Não</p></td>
+<td><p>Sim</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>Como exemplo, tentaremos responder à seguinte pergunta:</p>
+<ul>
+<li><p>Se a previsão do tempo de amanhã indicar que o dia será ensolarado, terá vento, umidade será de 68 e a temperatura estimada será de 26, terá jogo?</p></li>
+</ul>
+</li>
+<li><p>Faremos divisões sucessivas na base de dados, com bases em observações.</p></li>
+</ul>
+<p>Para gerar um Dataframe Pandas com esses dados:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">dJogo</span> <span class="o">=</span> <span class="p">{</span>
+<span class="s1">&#39;Tempo&#39;</span>       <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Chuvoso&#39;</span><span class="p">,</span> <span class="s1">&#39;Ensolarado&#39;</span><span class="p">,</span> <span class="s1">&#39;Ensolarado&#39;</span><span class="p">,</span> <span class="s1">&#39;Nublado&#39;</span><span class="p">,</span> <span class="s1">&#39;Chuvoso&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;Chuvoso&#39;</span><span class="p">,</span> <span class="s1">&#39;Nublado&#39;</span><span class="p">,</span> <span class="s1">&#39;Nublado&#39;</span><span class="p">,</span> <span class="s1">&#39;Ensolarado&#39;</span><span class="p">,</span> <span class="s1">&#39;Chuvoso&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;Nublado&#39;</span><span class="p">,</span> <span class="s1">&#39;Ensolarado&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;Ensolarado&#39;</span><span class="p">,</span> <span class="s1">&#39;Chuvoso&#39;</span><span class="p">],</span>
+<span class="s1">&#39;Temperatura&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">22</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> 
+                 <span class="mi">18</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> 
+                 <span class="mi">27</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">24</span><span class="p">],</span>
+<span class="s1">&#39;Umidade&#39;</span>     <span class="p">:</span> <span class="p">[</span><span class="mi">91</span><span class="p">,</span><span class="mi">72</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">86</span><span class="p">,</span><span class="mi">96</span><span class="p">,</span>
+                 <span class="mi">70</span><span class="p">,</span><span class="mi">65</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span>
+                 <span class="mi">75</span><span class="p">,</span><span class="mi">85</span><span class="p">,</span><span class="mi">95</span><span class="p">,</span><span class="mi">80</span><span class="p">],</span>
+<span class="s1">&#39;Vento&#39;</span>       <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Sim&#39;</span><span class="p">,</span><span class="s1">&#39;Não&#39;</span><span class="p">,</span><span class="s1">&#39;Sim&#39;</span><span class="p">,</span><span class="s1">&#39;Não&#39;</span><span class="p">,</span><span class="s1">&#39;Não&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;Sim&#39;</span><span class="p">,</span><span class="s1">&#39;Sim&#39;</span><span class="p">,</span><span class="s1">&#39;Sim&#39;</span><span class="p">,</span><span class="s1">&#39;Sim&#39;</span><span class="p">,</span><span class="s1">&#39;Não&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;Não&#39;</span><span class="p">,</span><span class="s1">&#39;Não&#39;</span><span class="p">,</span><span class="s1">&#39;Não&#39;</span><span class="p">,</span><span class="s1">&#39;Não&#39;</span><span class="p">],</span>
+<span class="s1">&#39;Jogo&#39;</span>        <span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Não&#39;</span><span class="p">,</span><span class="s1">&#39;Sim&#39;</span><span class="p">,</span><span class="s1">&#39;Não&#39;</span><span class="p">,</span><span class="s1">&#39;Sim&#39;</span><span class="p">,</span><span class="s1">&#39;Sim&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;Não&#39;</span><span class="p">,</span><span class="s1">&#39;Sim&#39;</span><span class="p">,</span><span class="s1">&#39;Sim&#39;</span><span class="p">,</span><span class="s1">&#39;Sim&#39;</span><span class="p">,</span><span class="s1">&#39;Sim&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;Sim&#39;</span><span class="p">,</span><span class="s1">&#39;Não&#39;</span><span class="p">,</span><span class="s1">&#39;Não&#39;</span><span class="p">,</span><span class="s1">&#39;Sim&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+<span class="n">dfTenis</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dJogo</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Crie um Dataframe Pandas com a base de dados do exemplo.</p></li>
+</ul>
+<p>As divisões que adotaremos são meramente didáticas, para explicar o funcionamento das árvores de decisão.</p>
+<p>Nos próximos passos, tentaremos dividir recursivamente o problema. Tentaremos criar um algoritmo específico para essa base, com base nas divisões realizadas.</p>
+<p>Inicialmente, vamos realizar uma divisão da base observando a variável <code class="docutils literal notranslate"><span class="pre">Tempo</span></code>. Dividiremos em duas partes, onde o tempo é <code class="docutils literal notranslate"><span class="pre">Nublado</span></code> ou não <code class="docutils literal notranslate"><span class="pre">Nublado</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">dfTenis</span>
+<span class="n">condicao</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Tempo&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;Nublado&#39;</span>
+<span class="n">TempoNubladoSim</span><span class="p">,</span> <span class="n">TempoNubladoNao</span> <span class="o">=</span>  <span class="n">df</span><span class="p">[</span><span class="n">condicao</span><span class="p">]</span> <span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="o">~</span><span class="n">condicao</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Observando a base caso tempo seja nublado:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TempoNubladoSim</span>
+</pre></div>
+</div>
+<p>Nas situações em que <code class="docutils literal notranslate"><span class="pre">Tempo</span> <span class="pre">==</span> <span class="pre">Nublado</span></code>, a variável <code class="docutils literal notranslate"><span class="pre">Jogo</span></code> tem valor <code class="docutils literal notranslate"><span class="pre">Sim</span></code>. Com isso, começamos a construir nosso algoritmo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- O tempo está nublado?
+    Sim: 
+        Tem jogo.
+    Não:
+        ...
+</pre></div>
+</div>
+<p>Observando o caso contrário, a variável <code class="docutils literal notranslate"><span class="pre">Jogo</span></code> não é homogênea.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TempoNubladoNao</span>
+</pre></div>
+</div>
+<p>A partir da base onde o tempo não está nublado, vamos dividí-la novamente. Neste ponto pela temperatura, em 22.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">TempoNubladoNao</span>
+<span class="n">condicao</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Temperatura&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">22</span>
+<span class="n">TempoNubladoNao_TempMenorq22</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">condicao</span><span class="p">]</span>
+<span class="n">TempoNubladoNao_TempMaiori22</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="o">~</span><span class="n">condicao</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>O conteúdo da variável <code class="docutils literal notranslate"><span class="pre">Jogo</span></code> ainda não é homogêneo. Porém, vamos atualizar nosso algoritmo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- O tempo está nublado?
+    Sim: 
+        Tem jogo!
+    Não:
+        A Temperatura é menor que 22?
+        Sim:
+            ...
+        Não:
+            ...
+</pre></div>
+</div>
+<p>Continuando as divisões e agora observando onde a temperatura é maior que 22. Realizaremos uma divisão considerando a variável <code class="docutils literal notranslate"><span class="pre">Vento</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">TempoNubladoNao_TempMenorq22</span>
+<span class="n">condicao</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Vento&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Sim&#39;</span>
+<span class="n">TempoNubladoNao_TempMenorq22_VentoSim</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">condicao</span><span class="p">]</span>
+<span class="n">TempoNubladoNao_TempMenorq22_VentoNao</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="o">~</span><span class="n">condicao</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Observando as bases resultantes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TempoNubladoNao_TempMenorq22_VentoSim</span>
+</pre></div>
+</div>
+<p>e</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TempoNubladoNao_TempMenorq22_VentoNao</span>
+</pre></div>
+</div>
+<p>Atualizando o algoritmo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>- O tempo está nublado?
+    Sim: 
+        Tem jogo!
+    Não:
+        A Temperatura é menor que 22?
+        Sim:
+            Tem vento?
+                Sim:
+                    Não tem jogo.
+                Não:
+                    Tem jogo!
+        Não:
+            ...
+</pre></div>
+</div>
+<p>Ainda falta observar quando a temperatura é maior ou igual a 22. Neste caso, dividiremos de acordo com a variável <code class="docutils literal notranslate"><span class="pre">umidade</span></code>, com valores abaixo e acima de 85.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">TempoNubladoNao_TempMaiori22</span>
+<span class="n">condicao</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Umidade&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">85</span>
+<span class="n">TempoNubladoNao_TempMaiori22_UmidadeMenorq85</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">condicao</span><span class="p">]</span>
+<span class="n">TempoNubladoNao_TempMaiori22_UmidadeMaiori85</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="o">~</span><span class="n">condicao</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Observando as bases resultantes</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TempoNubladoNao_TempMaiori22_UmidadeMenorq85</span>
+</pre></div>
+</div>
+<p>e</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TempoNubladoNao_TempMaiori22_UmidadeMaiori85</span>
+</pre></div>
+</div>
+<p>Agora, possuimos divisões da base original em que nelas o valor da variável <code class="docutils literal notranslate"><span class="pre">Jogo</span></code> é homogêneo. Atualizando o algoritmo temos:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>O tempo está nublado?
+    Sim: 
+        Tem jogo.
+    Não:
+        A Temperatura é menor que 22?
+        Sim:
+            Tem vento?
+                Sim:
+                    Não tem jogo.
+                Não:
+                    Tem jogo.
+        Não:
+            A umidade é menor que 85?
+                Sim:
+                    Tem jogo.
+                Não:
+                    Não tem jogo.
+</pre></div>
+</div>
+<!-- 
+
+```
+O tempo está nublado? (1)
+    Sim: 
+        Tem jogo! (rA)
+    Não:
+        A Temperatura é menor que 22? (2)
+        Sim:
+            Tem vento? (3)
+                Sim:
+                    Não tem jogo. (rB)
+                Não:
+                    Tem jogo! (rC)
+        Não:
+            A umidade é menor que 85? (4)
+                Sim:
+                    Tem jogo! (rD)
+                Não:
+                    Não tem jogo. (rE)
+```
+ --><ul class="simple">
+<li><p>Agora com o algoritmo, tentaremos responder à pergunta inicial:</p>
+<ul>
+<li><p>Se a previsão do tempo de amanhã indicar que o dia:</p>
+<ul>
+<li><p>será ensolarado,</p></li>
+<li><p>terá vento,</p></li>
+<li><p>umidade será de 68 e a</p></li>
+<li><p>temperatura estimada será de 26.</p></li>
+<li><p>Então, terá jogo?</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Podemos visualizar o algoritmo gerado com as decisões utilizando uma árvore.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../../_images/Arvores_de_decisao_37_0.svg" src="../../_images/Arvores_de_decisao_37_0.svg" /></div>
+</div>
+<p>Por isso, esta estratégia é chamada de <strong>Árvores de decisão</strong>.</p>
+<p>Consideraremos a variável <code class="docutils literal notranslate"><span class="pre">jogo</span></code> como variável <strong>alvo</strong> (<em>target</em>), é ela que desejamos obter a partir das demais variáveis.</p>
+<div class="section" id="variaveis-dummy">
+<h2>Variáveis <em>dummy</em><a class="headerlink" href="#variaveis-dummy" title="Permalink to this headline">¶</a></h2>
+<p>Para as variáveis independentes qualitativas, é necessário passá-las a um formato binário. Neste formato, cada valor da variável original gera uma coluna com valores binários indicando a presença ou ausência daquele valor.</p>
+<p><strong>Exemplo</strong></p>
+<ul class="simple">
+<li><p>Considere a variável <code class="docutils literal notranslate"><span class="pre">Tempo</span></code>. Convertendo-a para <em>dummy</em>:</p></li>
+</ul>
+<table>
+    <tr><th>Variável original </th><th>Variável com valores dummy</th></tr>
+<tr><td>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tempo</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Chuvoso</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ensolarado</p></td>
+</tr>
+<tr class="row-even"><td><p>Ensolarado</p></td>
+</tr>
+<tr class="row-odd"><td><p>Nublado</p></td>
+</tr>
+<tr class="row-even"><td><p>Chuvoso</p></td>
+</tr>
+<tr class="row-odd"><td><p>Chuvoso</p></td>
+</tr>
+<tr class="row-even"><td><p>Nublado</p></td>
+</tr>
+<tr class="row-odd"><td><p>Nublado</p></td>
+</tr>
+<tr class="row-even"><td><p>Ensolarado</p></td>
+</tr>
+<tr class="row-odd"><td><p>Chuvoso</p></td>
+</tr>
+<tr class="row-even"><td><p>Nublado</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ensolarado</p></td>
+</tr>
+<tr class="row-even"><td><p>Ensolarado</p></td>
+</tr>
+<tr class="row-odd"><td><p>Chuvoso</p></td>
+</tr>
+</tbody>
+</table>
+</td><td>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tempo_Chuvoso</p></th>
+<th class="head"><p>Tempo_Ensolarado</p></th>
+<th class="head"><p>Tempo_Nublado</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+</td></tr> </table><p>A biblioteca Pandas possui o método <code class="docutils literal notranslate"><span class="pre">.get_dummies()</span></code> para converter Series e Dataframes para o formato <em>dummy</em>.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">dfTenis</span><span class="p">[</span><span class="s1">&#39;Tempo&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>É possível converter várias variáveis de uma única vez.</p>
+<p><strong>Exemplo</strong></p>
+<ul class="simple">
+<li><p>Convertendo todas as variáveis qualitativas da base de uma única vez</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">quali</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Tempo&#39;</span><span class="p">,</span> <span class="s1">&#39;Vento&#39;</span><span class="p">]</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">dfTenis</span><span class="p">[</span><span class="n">quali</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="preparacao-da-base">
+<h2>Preparação da base<a class="headerlink" href="#preparacao-da-base" title="Permalink to this headline">¶</a></h2>
+<p>Convém criar uma base contendo apenas as variáveis <em>dummy</em> e as quantitativas, que servirá de entrada para a criação da árvore de decisão.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">quali</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Tempo&#39;</span><span class="p">,</span> <span class="s1">&#39;Vento&#39;</span><span class="p">]</span> <span class="c1">#Variáveis qualitativas</span>
+<span class="n">quant</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Temperatura&#39;</span><span class="p">,</span> <span class="s1">&#39;Umidade&#39;</span><span class="p">]</span> <span class="c1">#Variáveis quantitativas</span>
+
+<span class="n">dfQualiDummies</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">dfTenis</span><span class="p">[</span><span class="n">quali</span><span class="p">])</span> <span class="c1">#Dataframe com qualitativas dummy</span>
+<span class="n">dfQuant</span> <span class="o">=</span> <span class="n">dfTenis</span><span class="p">[</span><span class="n">quant</span><span class="p">]</span> <span class="c1">#Dataframe com quantitativas</span>
+
+<span class="n">dfWork</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">dfQualiDummies</span><span class="p">,</span> <span class="n">dfQuant</span> <span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span> <span class="p">)</span> <span class="c1">#Dataframe com quali dummy e quant</span>
+<span class="n">dfWork</span>
+</pre></div>
+</div>
+<p>Convém separar a variável alvo também.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">target</span> <span class="o">=</span> <span class="n">dfTenis</span><span class="p">[</span><span class="s1">&#39;Jogo&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="criacao-e-visualizacao">
+<h2>Criação e visualização<a class="headerlink" href="#criacao-e-visualizacao" title="Permalink to this headline">¶</a></h2>
+<p>Para criar a árvore utilizaremos a biblioteca <code class="docutils literal notranslate"><span class="pre">sklearn</span></code>. Na biblioteca, utilizamos a classe <code class="docutils literal notranslate"><span class="pre">tree</span></code>.</p>
+<p><strong>Atividade</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
+</pre></div>
+</div>
+<p>Com base no tipo de variável que se tem como variável alvo, deve-se escolher o tipo de árvore, de classificação ou regressão.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">arv</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">()</span> <span class="c1">#árvore de classificação</span>
+</pre></div>
+</div>
+<p>ou</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">arv</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeRegressor</span><span class="p">()</span> <span class="c1">#árvore de regressão</span>
+</pre></div>
+</div>
+<p>Após alocado o objeto responsável pela árvore, é necessário criar a árvore. Para isso, utilizaremos o método <code class="docutils literal notranslate"><span class="pre">.fit()</span></code>, passando como parâmetros a base com as variáveis <em>dummy</em> e quantitativas, e a variável alvo.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">arv</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">dfWork</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Para visualizar a árvore, pode-se utilizar a biblioteca <code class="docutils literal notranslate"><span class="pre">graphviz</span></code>.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">graphviz</span>
+<span class="n">dot_data</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">export_graphviz</span><span class="p">(</span><span class="n">arv</span><span class="p">,</span> 
+                      <span class="n">feature_names</span><span class="o">=</span><span class="n">dfWork</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>  <span class="c1">#variáveis</span>
+                      <span class="n">class_names</span><span class="o">=</span><span class="n">arv</span><span class="o">.</span><span class="n">classes_</span><span class="p">,</span>      <span class="c1">#valores dos resultados</span>
+                      <span class="n">out_file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>                 <span class="c1">#Arquivo de saída</span>
+                      <span class="c1">#configurações dos nós</span>
+                      <span class="n">filled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rounded</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>     
+                      <span class="n">special_characters</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  
+<span class="n">graph</span> <span class="o">=</span> <span class="n">graphviz</span><span class="o">.</span><span class="n">Source</span><span class="p">(</span><span class="n">dot_data</span><span class="p">)</span>  
+<span class="n">graph</span> 
+</pre></div>
+</div>
+<div class="section" id="utilizando-a-arvore-criada">
+<h3>Utilizando a árvore criada<a class="headerlink" href="#utilizando-a-arvore-criada" title="Permalink to this headline">¶</a></h3>
+<p>Para fazer uma busca por resultados na árvore pode-se utilizar o método <code class="docutils literal notranslate"><span class="pre">.predict()</span></code></p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vals</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span>  <span class="c1">#Tempo_Chuvoso</span>
+        <span class="mi">1</span><span class="p">,</span>  <span class="c1">#Tempo_Ensolarado</span>
+        <span class="mi">0</span><span class="p">,</span>  <span class="c1">#Tempo_Nublado</span>
+        <span class="mi">1</span><span class="p">,</span>  <span class="c1">#Vento_Não</span>
+        <span class="mi">0</span><span class="p">,</span>  <span class="c1">#Vento_Sim</span>
+        <span class="mi">22</span><span class="p">,</span> <span class="c1">#Temperatura</span>
+        <span class="mi">80</span>  <span class="c1">#Umidade</span>
+       <span class="p">]</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">arv</span><span class="o">.</span><span class="n">predict</span><span class="p">([</span><span class="n">vals</span><span class="p">])</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Execute o exemplo</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="resumo">
+<h2>Resumo<a class="headerlink" href="#resumo" title="Permalink to this headline">¶</a></h2>
+<p>Para criar e utilizar uma árvore de decisão:</p>
+<ol class="simple">
+<li><p>Defina qual será a variável alvo</p>
+<ol class="simple">
+<li><p>Salve a variável alvo separadamente da base</p></li>
+</ol>
+</li>
+<li><p>Observe quais são as variáveis qualitativas</p>
+<ol class="simple">
+<li><p>Converta as variáveis qualitativas em variáveis <em>dummy</em></p></li>
+</ol>
+</li>
+<li><p>Observe quais são as variáveis quantitativas</p></li>
+<li><p>Coloque as variáveis <em>dummy</em> e as quantitativas em uma base de trabalho</p></li>
+<li><p>Observe a variável alvo e gere a árvore</p>
+<ul class="simple">
+<li><p>Caso seja qualitativa, será uma árvore de <strong>decisão</strong></p></li>
+<li><p>Caso seja quantitativa, será uma árvore de <strong>regressão</strong></p></li>
+</ul>
+</li>
+<li><p>Gere a árvore</p></li>
+<li><p>Observe os resultados, fazendo buscas na árvore</p></li>
+</ol>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">alvo</span> <span class="o">=</span> <span class="s1">&#39;Jogo&#39;</span> <span class="c1">#variável alvo</span>
+<span class="n">quali</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Tempo&#39;</span><span class="p">,</span> <span class="s1">&#39;Vento&#39;</span><span class="p">]</span> <span class="c1">#Variáveis qualitativas</span>
+<span class="n">quant</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Temperatura&#39;</span><span class="p">,</span> <span class="s1">&#39;Umidade&#39;</span><span class="p">]</span> <span class="c1">#Variáveis quantitativas</span>
+
+
+
+<span class="n">target</span> <span class="o">=</span> <span class="n">dfTenis</span><span class="p">[</span><span class="n">alvo</span><span class="p">]</span> <span class="c1">#Separa a variável alvo</span>
+<span class="n">dfQualiDummies</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">dfTenis</span><span class="p">[</span><span class="n">quali</span><span class="p">])</span> <span class="c1">#Dataframe com qualitativas dummy</span>
+<span class="n">dfQuant</span> <span class="o">=</span> <span class="n">dfTenis</span><span class="p">[</span><span class="n">quant</span><span class="p">]</span> <span class="c1">#Dataframe com quantitativas</span>
+<span class="n">dfWork</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">dfQualiDummies</span><span class="p">,</span> <span class="n">dfQuant</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#Dataframe com todas variáveis</span>
+
+<span class="n">arv</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">()</span> <span class="c1">#árvore de decisão</span>
+<span class="c1"># arv = tree.DecisionTreeRegressor()  #árvore de regressão</span>
+
+<span class="c1">#Gere a árvore</span>
+<span class="n">arv</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">dfWork</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span> <span class="c1">#cria a árvore</span>
+
+<span class="c1">#Visualize a árvore (passo não obrigatório)</span>
+<span class="c1"># import graphviz</span>
+<span class="c1"># dot_data = tree.export_graphviz(arv, </span>
+<span class="c1">#                       feature_names=dfWork.columns,  #variáveis</span>
+<span class="c1">#                       class_names=arv.classes_,      #valores dos resultados</span>
+<span class="c1">#                       out_file=None,                 #Arquivo de saída</span>
+<span class="c1">#                       #configurações dos nós</span>
+<span class="c1">#                       filled=True, rounded=True,     </span>
+<span class="c1">#                       special_characters=True)  </span>
+<span class="c1"># graph = graphviz.Source(dot_data)  </span>
+<span class="c1"># graph </span>
+</pre></div>
+</div>
+<p>De maneira concisa:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#Variáveis</span>
+<span class="n">alvo</span> <span class="o">=</span> <span class="s1">&#39;Jogo&#39;</span> <span class="c1">#variável alvo</span>
+<span class="n">quali</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Tempo&#39;</span><span class="p">,</span> <span class="s1">&#39;Vento&#39;</span><span class="p">]</span> <span class="c1">#Variáveis qualitativas</span>
+<span class="n">quant</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Temperatura&#39;</span><span class="p">,</span> <span class="s1">&#39;Umidade&#39;</span><span class="p">]</span> <span class="c1">#Variáveis quantitativas</span>
+<span class="n">base</span> <span class="o">=</span> <span class="n">dfTenis</span>
+
+<span class="c1">#Árvore</span>
+<span class="n">arv</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">()</span> <span class="c1">#árvore de decisão</span>
+<span class="c1"># arv = tree.DecisionTreeRegressor()  #árvore de regressão</span>
+<span class="n">arv</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">base</span><span class="p">[</span><span class="n">quali</span><span class="p">]),</span> <span class="n">base</span><span class="p">[</span><span class="n">quant</span><span class="p">]],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">base</span><span class="p">[</span><span class="n">alvo</span><span class="p">])</span> <span class="c1">#cria a árvore</span>
+
+<span class="c1">#Teste</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="referencias">
+<h2>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<p>FACELI, K.; LORENA, A.C.; GAMA, J.; CARVALHO, A.C.P.L.F.  Inteligência Artificial: Uma abordagem de aprendizado de máquina. Grupo Gen-LTC, 2011.</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=xSna88sBWHU&amp;t=23s">CHIAVEGATTO, A.F. Algoritmos de machine learning: support vector machines, random forests e gradient boosted trees. Notas de aula do curso  Inteligência Artificial em saúde: o uso de machine learning. Universidade de São Paulo.</a></p>
+<p><a class="reference external" href="http://hedibert.org/wp-content/uploads/2018/06/CART.pdf">LOPES, H.F.; MARQUES, P.C. Árvores de Classificação e Regressão. Insper, 2017.</a></p>
+<p><strong>Outros materiais</strong></p>
+<p><a class="reference external" href="https://www.analyticsvidhya.com/blog/2016/04/tree-based-algorithms-complete-tutorial-scratch-in-python/">ANALYTICS VIDHYA. Tree Based Algorithms: A Complete Tutorial from Scratch</a><br />
+<a class="reference external" href="https://towardsdatascience.com/the-dummys-guide-to-creating-dummy-variables-f21faddb1d40">LANGFORD, R. The Dummy’s Guide to Creating Dummy Variables. Towards Data Science, 2017.</a><br />
+<a class="reference external" href="https://h1ros.github.io/posts/introduction-to-graphviz-in-jupyter-notebook/">HIRO. Introduction to Graphviz in Jupyter Notebook.</a><br />
+<a class="reference external" href="https://explained.ai/decision-tree-viz/">Terrence, P.; Grover, P. How to visualize decision trees. Explained.ai.</a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/Arvores"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../Agrupamento/Kmeans.html" title="previous page">Kmeans</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Darlon Vasata<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

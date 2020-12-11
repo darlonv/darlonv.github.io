@@ -1,0 +1,518 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Imagens &#8212; Ciência de Dados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Ciência de Dados</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../disciplina.html">
+   Ciência de Dados
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Numpy
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/01-Importacao_e_Arrays.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Numpy/02-Operacoes_sobre_arrays.html">
+   Operações sobre
+   <em>
+    arrays
+   </em>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  pandas
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Pandas/01_Pandas.html">
+   Pandas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  gráficos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Matplotlib.html">
+   Matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Graficos/Seaborn.html">
+   Seaborn
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  estatistica basica
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Estatistica/01_Elementos_de_estatistica_I.html">
+   Estatística básica
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Estatistica/03_Correlacao.html">
+   Correlação
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Regressão
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Regressao/Regressao_linear.html">
+   Regressão linear simples
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Agrupamento
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Agrupamento/Kmeans.html">
+   Kmeans
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Predição
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Arvores/Arvores_de_decisao.html">
+   Árvores de decisão
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/Python/03-Imagens.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#criando-uma-imagem">
+   Criando uma imagem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manipulando-imagens">
+   Manipulando imagens
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#carregando-imagens">
+   Carregando imagens
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#salvando-imagens">
+   Salvando imagens
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#histogramas">
+   Histogramas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicios">
+   Exercícios
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="imagens">
+<h1>Imagens<a class="headerlink" href="#imagens" title="Permalink to this headline">¶</a></h1>
+<p>Existem diversas bibliotecas em Python que possibilitam a manipulação de imagens. Aqui, utilizaremos a bibliotca <strong>PIL</strong> (<em>Python Image Library</em>), disponível com a instalação do pacote <strong>pillow</strong>.</p>
+<p>Para mostrar as imagens, utilizaremos a biblioteca <strong>imshow</strong>, disponível no pacote <strong>matplotlib</strong>.</p>
+<p>Para importar as bibliotecas:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="c1">#Importa as bibliotecas</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span> <span class="n">imshow</span>
+<span class="c1">#Permite visualizar as imagens no próprio Jupyter Notebook</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+</pre></div>
+</div>
+<div class="section" id="criando-uma-imagem">
+<h2>Criando uma imagem<a class="headerlink" href="#criando-uma-imagem" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">imagem</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;RGB&#39;</span><span class="p">,(</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>imagemPx = imagemR.load()</p>
+<p>Para mostrar uma imagem, pode-se utilizar a função <code class="docutils literal notranslate"><span class="pre">imshow()</span></code>.<br />
+<strong>Exemplo</strong></p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">imshow</span><span class="p">(</span><span class="n">imagem</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Observe</strong></p>
+<ul class="simple">
+<li><p>Qual é o sentido dos eixos x e y?</p></li>
+<li><p>Onde estão as posições (0,0) da imagem?</p></li>
+</ul>
+<p>Para observar as dimensões da imagem, pode-ser observar o atributo <code class="docutils literal notranslate"><span class="pre">.size</span></code>. O primeiro valor corresponde à largura da imagem, e o segundo à altura.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">imagem</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>De maneira separada, os atributos <code class="docutils literal notranslate"><span class="pre">width()</span></code> e <code class="docutils literal notranslate"><span class="pre">height()</span></code> mostram essas mesmas informações, largura e altura.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Largura:&#39;</span><span class="p">,</span> <span class="n">imagem</span><span class="o">.</span><span class="n">width</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Altura :&#39;</span><span class="p">,</span> <span class="n">imagem</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="manipulando-imagens">
+<h2>Manipulando imagens<a class="headerlink" href="#manipulando-imagens" title="Permalink to this headline">¶</a></h2>
+<p>Uma maneira de acessar cada pixel da imagem é convertendo-a para uma matriz de <em>pixels</em>. Para tal, pode-ser utilizar o método <code class="docutils literal notranslate"><span class="pre">load()</span></code>:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">imagemPx</span> <span class="o">=</span> <span class="n">imagem</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Com isto, é possível acessar os valores para vermelho, verde e azul (<strong>rgb</strong>, de <em>red, green</em> e <em>blue</em>) para cada ponto da imagem, como uma matriz.</p>
+<p><strong>Exemplo</strong><br />
+Para observar os valores do ponto (50,50)</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">imagemPx</span><span class="p">[</span><span class="mi">50</span><span class="p">,</span><span class="mi">50</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Também é possível modificar os <em>pixels</em> de qualquer ponto da imagem.<br />
+<strong>Exemplo</strong><br />
+Modificando o pixel (50,75) para branco:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">imagemPx</span><span class="p">[</span><span class="mi">50</span><span class="p">,</span><span class="mi">75</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">,</span><span class="mi">255</span><span class="p">)</span>
+<span class="n">imshow</span><span class="p">(</span><span class="n">imagem</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Observe</strong><br />
+Os valores foram setados em <code class="docutils literal notranslate"><span class="pre">imagemPx</span></code>, e foi utilizado <code class="docutils literal notranslate"><span class="pre">imagemR</span></code> para mostrar a imagem. Com isto, perceba que modificar a matriz de <em>pixels</em> altera indiretamente a imagem, sem a necessidade atualizações adicionais.</p>
+<p><strong>Exemplo</strong><br />
+Criando uma linha horizontal vermelha, onde y=100:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">imagem</span><span class="o">.</span><span class="n">width</span><span class="p">):</span>
+    <span class="n">imagem</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">100</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">imshow</span><span class="p">(</span><span class="n">imagem</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Crie uma borda azul em toda a imagem</p></li>
+</ul>
+</div>
+<div class="section" id="carregando-imagens">
+<h2>Carregando imagens<a class="headerlink" href="#carregando-imagens" title="Permalink to this headline">¶</a></h2>
+<p>É possível abrir imagens utilizando o método <code class="docutils literal notranslate"><span class="pre">Image.open()</span></code>.</p>
+<p><strong>Exemplo</strong><br />
+Exemplos de imagens:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">imagem</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;imagens/summer.jpg&#39;</span><span class="p">)</span>
+<span class="n">imshow</span><span class="p">(</span><span class="n">imagem</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Também é possível modificar os valores para cada pixel, setando com os valores RGB desejados.</p>
+<p><strong>Exemplo</strong><br />
+Mantendo apenas os valores dos pixels em vermelho na imagem</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">imagemPx</span> <span class="o">=</span> <span class="n">imagem</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+<span class="n">imagemR</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;RGB&#39;</span><span class="p">,(</span><span class="n">imagem</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>
+<span class="n">imagemRPx</span> <span class="o">=</span> <span class="n">imagemR</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">imagem</span><span class="o">.</span><span class="n">width</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">imagem</span><span class="o">.</span><span class="n">height</span><span class="p">):</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">imagemPx</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#Obtém o valor vermelho da imagem original</span>
+        <span class="n">imagemRPx</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">r</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#Seta apenas o valor vermelho na nova imagem</span>
+</pre></div>
+</div>
+<p><strong>Exemplo</strong><br />
+Mantendo apenas os valores dos pixels em verde na imagem</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">imagemG</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1">&#39;RGB&#39;</span><span class="p">,(</span><span class="n">imagem</span><span class="o">.</span><span class="n">size</span><span class="p">))</span>
+<span class="n">imagemGPx</span> <span class="o">=</span> <span class="n">imagemG</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">imagem</span><span class="o">.</span><span class="n">width</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">imagem</span><span class="o">.</span><span class="n">height</span><span class="p">):</span>
+        <span class="n">g</span> <span class="o">=</span> <span class="n">imagemPx</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="c1">#Obtém o valor verde da imagem original</span>
+        <span class="n">imagemGPx</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> <span class="c1">#Seta apenas o valor verde na nova imagem</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Crie e mostre a imagem, mantendo apenas os valores dos <em>pixels</em> em azul.</p></li>
+</ul>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>[ ] Calcule a média dos valores RGB, e em uma nova imagem, coloque esta média para os três valores RBG. Qual foi o resultado obtido?</p></li>
+</ul>
+<ul class="simple">
+<li><p>[ ] Na imagem com a média dos valores, diminua 10, 20, 30, 40 e 50 aos valores de cada pixel (sempre mantendo 0 como valor mínimo). Qual foi o resultado?</p></li>
+</ul>
+<ul class="simple">
+<li><p>[ ] Na imagem com a média dos valores, aumente 10, 20, 30, 40 e 50 aos valores de cada pixel (sempre mantendo 255 como valor máximo). Qual foi o resultado?</p></li>
+</ul>
+</div>
+<div class="section" id="salvando-imagens">
+<h2>Salvando imagens<a class="headerlink" href="#salvando-imagens" title="Permalink to this headline">¶</a></h2>
+<p>Para salvar imagens, utilize o método <code class="docutils literal notranslate"><span class="pre">.save()</span></code>. O parâmetro para o método é uma <em>string</em> com o nome do arquivo de saída, de maneira que a extensão apresentada para o arquivo de saída definirá o formato de arquivo. A biblioteca já se encarrega de salvar os dados de acordo o padrão definido.</p>
+<p><strong>Exemplo</strong><br />
+Para salvar no formato JPEG:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">imagemG</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;imagens/summerR.jpg&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Para salvar no formato PNG (<em>Portable Network Graphics</em>):</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">imagemG</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s1">&#39;imagens/summerR.png&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="histogramas">
+<h2>Histogramas<a class="headerlink" href="#histogramas" title="Permalink to this headline">¶</a></h2>
+<p>Um histograma é um gráfico que apresenta a quantidade de vezes que determinado valor aparece. No caso de imagens, o histograma apresenta a quantidade de vezes que cada valor de cor aparece.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">h</span> <span class="o">=</span> <span class="n">imagem</span><span class="o">.</span><span class="n">histogram</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>É possível separar cada cor, e mostrar o histograma separado</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">255</span><span class="p">))</span>
+<span class="n">hR</span><span class="o">=</span><span class="n">h</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">255</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">hR</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">hG</span><span class="o">=</span><span class="n">h</span><span class="p">[</span><span class="mi">255</span><span class="p">:(</span><span class="mi">255</span><span class="o">*</span><span class="mi">2</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">hG</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">hB</span><span class="o">=</span><span class="n">h</span><span class="p">[(</span><span class="mi">255</span><span class="o">*</span><span class="mi">2</span><span class="p">):(</span><span class="mi">255</span><span class="o">*</span><span class="mi">3</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">hB</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Também é possível mostrar todos em um mesmo gráfico, utilizando linhas.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">255</span><span class="p">))</span>
+<span class="n">h</span> <span class="o">=</span> <span class="n">imagem</span><span class="o">.</span><span class="n">histogram</span><span class="p">()</span>
+<span class="n">hR</span><span class="o">=</span><span class="n">h</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">255</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">hR</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">hG</span><span class="o">=</span><span class="n">h</span><span class="p">[</span><span class="mi">255</span><span class="p">:(</span><span class="mi">255</span><span class="o">*</span><span class="mi">2</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">hG</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">)</span>
+<span class="n">hB</span><span class="o">=</span><span class="n">h</span><span class="p">[(</span><span class="mi">255</span><span class="o">*</span><span class="mi">2</span><span class="p">):(</span><span class="mi">255</span><span class="o">*</span><span class="mi">3</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">hB</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="exercicios">
+<h2>Exercícios<a class="headerlink" href="#exercicios" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Observe o histograma das imagens ‘arvore.jpg’. Compare com o histograma da imagem ‘summer.jpg’</p></li>
+<li><p>Observe o histograma da imagem ‘ifprpb.png’. Em que ele difere dos demais observados?</p></li>
+<li><p>Abra e observe o arquivo ‘ifprpb.png’. Aplique o procedimento necessário para convertê-lo em uma imagem igual a do arquivo ‘ifprpb_a.png’</p></li>
+<li><p>Abra e observe o arquivo ‘ifprpb.png’. Aplique o procedimento necessário para convertê-lo em uma imagem igual a do arquivo ‘ifprpb_b.png’</p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/Python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Darlon Vasata<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>
