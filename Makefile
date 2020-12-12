@@ -1,4 +1,4 @@
-all: add commit
+all: add commit push
 
 add:
 	git add * */* */*/* */*/*/* */*/*/*/* */*/*/*/*/*
