@@ -1,0 +1,660 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>XML &#8212; Algoritmos e Estruturas de Dados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Algoritmos e Estruturas de Dados</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../disciplina.html">
+   Algoritmos e Estruturas de dados
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Algoritmos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-Introducao/01_Introducao.html">
+   Introdução a algoritmos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-Python/02-Operadores.html">
+   Expressões
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-Python/03-Identificadores_e_palavras_reservadas.html">
+   Identificadores e palavras reservadas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-Python/04-Tipos_de_variaveis.html">
+   Tipos de variáveis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Estruturas de seleção
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-Estruturas_de_controle/01-if.html">
+   If
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-Estruturas_de_controle/01-elif.html">
+   elif
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Estruturas de repetição
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Estruturas_de_repeticao/Repeticao.html">
+   Estruturas de repetição
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Estruturas_de_repeticao/For.html">
+   For
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Estruturas_de_repeticao/While.html">
+   While
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Funções
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/01-Funcoes.html">
+   Funções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/02-Escopo_de_variaveis.html">
+   Escopo de variaveis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/02_Args_e_kwargs.html">
+   Args e kwargs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/02-Recursividade.html">
+   Recursividade
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Sequencias e Conjuntos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/01-Sequencias.html">
+   Sequências
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/01-Sequencias_listas.html">
+   Listas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/01-Sequencias_strings.html">
+   <em>
+    Strings
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/01-Sequencias_tuplas.html">
+   Tuplas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/02-Conjuntos.html">
+   Conjuntos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/03-Dicionarios.html">
+   Dicionários
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Bibliotecas
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../07-Bibliotecas/01-Bibliotecas.html">
+   Bibliotecas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Vetores
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../08-Vetores/01-Vetores.html">
+   Vetores
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../08-Vetores/02-Numpy_intro.html">
+   Numpy
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/09-Arquivos/03-Arquivos_xml.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#leitura">
+   Leitura
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#busca">
+   Busca
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#alteracao">
+   Alteração
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#escrita">
+   Escrita
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Referências
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="xml">
+<h1>XML<a class="headerlink" href="#xml" title="Permalink to this headline">¶</a></h1>
+<p>O XML (<em>eXtensible Markup Language</em>) é uma <strong>linguagem de marcação</strong>, amplamente utilizada para descrição de dados e estruturas. Um arquivo XML possui o conteúdo da linguagem de marcação XML.</p>
+<p>O XML organiza as estruturas utilizando <em>tags</em> e atributos.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;planetas&gt;</span>
+    <span class="nt">&lt;Terra&gt;</span>
+        <span class="nt">&lt;Ordem&gt;</span>3<span class="nt">&lt;/Ordem&gt;</span>
+        <span class="nt">&lt;Nome&gt;</span>Terra<span class="nt">&lt;/Nome&gt;</span>
+        <span class="nt">&lt;Distancia&gt;</span>149600000<span class="nt">&lt;/Distancia&gt;</span>
+        <span class="nt">&lt;Diametro&gt;</span>12742<span class="nt">&lt;/Diametro&gt;</span>
+        <span class="nt">&lt;Rochoso&gt;</span>Sim<span class="nt">&lt;/Rochoso&gt;</span>
+    <span class="nt">&lt;/Terra&gt;</span>
+<span class="nt">&lt;/planetas&gt;</span>
+</pre></div>
+</div>
+<p>echo ‘<Solar>
+<Planeta Nome="Mercurio">
+<Ordem>1</Ordem>
+<Nome>Mercurio</Nome>
+<Distancia>57910000</Distancia>
+<Diametro>4879</Diametro>
+<Rochoso>Sim</Rochoso>
+</Planeta>
+<Planeta Nome="Venus">
+<Ordem>2</Ordem>
+<Nome>Terra</Nome>
+<Distancia>108200000</Distancia>
+<Diametro>12104</Diametro>
+<Rochoso>Sim</Rochoso>
+</Planeta>
+<Planeta Nome="Terra">
+<Ordem>3</Ordem>
+<Nome>Terra</Nome>
+<Distancia>149600000</Distancia>
+<Diametro>12742</Diametro>
+<Rochoso>Sim</Rochoso>
+</Planeta>
+<Satelite Nome="Lua">
+<Ordem>1</Ordem>
+<Nome>Lua</Nome>
+<Orbita>Terra</Orbita>
+</Satelite>
+<Satelite Nome="Fobos">
+<Orbita>Marte</Orbita>
+</Satelite>
+<Satelite Nome="Deimos">
+<Orbita>Marte</Orbita>
+</Satelite></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&lt;Satelite Nome=&quot;Ganimedes&quot;&gt;
+    &lt;Orbita&gt;Jupiter&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Calisto&quot;&gt;
+    &lt;Orbita&gt;Jupiter&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Europa&quot;&gt;
+    &lt;Orbita&gt;Jupiter&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Io&quot;&gt;
+    &lt;Orbita&gt;Jupiter&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+
+ &lt;Satelite Nome=&quot;Mimas&quot;&gt;
+    &lt;Orbita&gt;Saturno&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Encélado&quot;&gt;
+    &lt;Orbita&gt;Saturno&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Tétis&quot;&gt;
+    &lt;Orbita&gt;Saturno&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Dione&quot;&gt;
+    &lt;Orbita&gt;Saturno&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Reia&quot;&gt;
+    &lt;Orbita&gt;Saturno&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Titã&quot;&gt;
+    &lt;Orbita&gt;Saturno&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Jápeto&quot;&gt;
+    &lt;Orbita&gt;Saturno&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+
+&lt;Satelite Nome=&quot;Miranda&quot;&gt;
+    &lt;Orbita&gt;Urano&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Ariel&quot;&gt;
+    &lt;Orbita&gt;Urano&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Umbriel&quot;&gt;
+    &lt;Orbita&gt;Urano&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Titânia&quot;&gt;
+    &lt;Orbita&gt;Urano&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Oberon&quot;&gt;
+    &lt;Orbita&gt;Urano&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+
+&lt;Satelite Nome=&quot;Náiade&quot;&gt;
+    &lt;Orbita&gt;Netuno&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Talassa&quot;&gt;
+    &lt;Orbita&gt;Netuno&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Despina&quot;&gt;
+    &lt;Orbita&gt;Netuno&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Galateia&quot;&gt;
+    &lt;Orbita&gt;Netuno&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Larissa&quot;&gt;
+    &lt;Orbita&gt;Netuno&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Hipocampo&quot;&gt;
+    &lt;Orbita&gt;Netuno&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Proteu&quot;&gt;
+    &lt;Orbita&gt;Netuno&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+
+&lt;Satelite Nome=&quot;Caronte&quot;&gt;
+    &lt;Orbita&gt;Plutão&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Nix&quot;&gt;
+    &lt;Orbita&gt;Plutão&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Hidra&quot;&gt;
+    &lt;Orbita&gt;Plutão&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Cérbero&quot;&gt;
+    &lt;Orbita&gt;Plutão&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Estige&quot;&gt;
+    &lt;Orbita&gt;Plutão&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+
+&lt;Satelite Nome=&quot;Namaka&quot;&gt;
+    &lt;Orbita&gt;Haumea&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+&lt;Satelite Nome=&quot;Hi\&#39;iaka&quot;&gt;
+    &lt;Orbita&gt;Haumea&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+
+&lt;Satelite Nome=&quot;MK 2&quot;&gt;
+    &lt;Orbita&gt;Makemake&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+
+&lt;Satelite Nome=&quot;Disnomia&quot;&gt;
+    &lt;Orbita&gt;Éris&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+
+&lt;planeta&gt;
+    &lt;Orbita&gt;Ceres&lt;/Orbita&gt;
+    &lt;tipo&gt;Planeta anão&lt;/tipo&gt;
+&lt;/planeta&gt;
+
+
+
+
+&lt;Satelite Nome=&quot;&quot;&gt;
+    &lt;Orbita&gt;&lt;/Orbita&gt;
+&lt;/Satelite&gt;
+
+
+
+&lt;Estrela Nome=&quot;Sol&quot;&gt;
+    &lt;Nome&gt;Sol&lt;/Nome&gt;
+&lt;/Estrela&gt;
+</pre></div>
+</div>
+<p></Solar>’ &gt; planetas.xml</p>
+<p><a class="reference external" href="https://pt.wikipedia.org/wiki/Lista_de_sat%C3%A9lites_naturais_do_Sistema_Solar">Fonte</a></p>
+<p>import xml.etree.ElementTree as ET</p>
+<p>tree = ET.parse(‘planetas.xml’)
+root = tree.getroot()</p>
+<p>print(root.attrib)</p>
+<p>k.tag</p>
+<data>
+    <items>
+        <item name="item1">item1abc</item>
+        <item name="item2">item2abc</item>
+    </items>
+</data><div class="section" id="leitura">
+<h2>Leitura<a class="headerlink" href="#leitura" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;planetas.xml&#39;</span><span class="p">)</span>
+<span class="n">root</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>#Mostra os valores na raíz
+print(‘Raiz:’)
+print(f’tag: {root.tag} - attrib:{root.attrib} - text: {root.text}’)</p>
+<p>#Mostra os valores nos filhos
+print(‘Filhos:’)
+#Percorre cada nó filho do root
+for i in root.getchildren():
+print(f’tag: {i.tag} - attrib: {i.attrib} - text: {i.text}’)</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#percorre os nós filhos de cada nó filho do root
+for j in i.getchildren():
+    print(f&#39;\ttag: {j.tag} - attrib: {j.attrib} - {j.text}&#39;)
+    
+print(&#39;&#39;)
+</pre></div>
+</div>
+</div>
+<div class="section" id="busca">
+<h2>Busca<a class="headerlink" href="#busca" title="Permalink to this headline">¶</a></h2>
+<p>tree = ET.parse(‘planetas.xml’)
+root = tree.getroot()</p>
+<p>x = root.findall(‘Planeta’)
+for i in x:
+print(f’tag: {i.tag} - attrib: {i.attrib} - text: {i.text}’)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#Mostrando os planetas que possuem satelites</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;Satelite&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">i</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;Orbita&#39;</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">j</span><span class="o">.</span><span class="n">text</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Terra
+Marte
+Marte
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="alteracao">
+<h2>Alteração<a class="headerlink" href="#alteracao" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="escrita">
+<h2>Escrita<a class="headerlink" href="#escrita" title="Permalink to this headline">¶</a></h2>
+<p><strong>Exercícios</strong></p>
+<p>Sobre o conteúdo do arquivo xml, responda:</p>
+<ol class="simple">
+<li><p>Quantos planetas há no sistema solar?</p></li>
+<li><p>Qual é o menor planeta do sistema solar?</p></li>
+<li><p>Quantos satélites possui cada planeta?</p></li>
+<li><p>Qual é o nome do satélite que está mais distante do planeta que orbita?</p></li>
+<li><p>Qual é o planeta que possui mais satélites?</p></li>
+<li><p>Existem satélites maiores que planetas? Caso sim, apresente o nome do satélite, qual planeta ele orbita e comparado a qual planeta ele é maior.</p></li>
+<li><p>Qual é o maior satélite do sistema solar?</p></li>
+<li><p>Qual é o planeta anão mais próximo do sol?</p></li>
+</ol>
+<p>Responda apenas considerando as informações contidas no exemplo.</p>
+</div>
+<div class="section" id="referencias">
+<h2>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<p><strong>Outros materiais</strong><br />
+<a class="reference external" href="https://stackabuse.com/reading-and-writing-xml-files-in-python/">Reading and Writing XML Files in Python</a></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/09-Arquivos"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Darlon Vasata<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

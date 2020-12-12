@@ -1,0 +1,554 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vetores &#8212; Algoritmos e Estruturas de Dados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Numpy" href="02-Numpy_intro.html" />
+    <link rel="prev" title="Bibliotecas" href="../07-Bibliotecas/01-Bibliotecas.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Algoritmos e Estruturas de Dados</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../disciplina.html">
+   Algoritmos e Estruturas de dados
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Algoritmos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-Introducao/01_Introducao.html">
+   Introdução a algoritmos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-Python/02-Operadores.html">
+   Expressões
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-Python/03-Identificadores_e_palavras_reservadas.html">
+   Identificadores e palavras reservadas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-Python/04-Tipos_de_variaveis.html">
+   Tipos de variáveis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Estruturas de seleção
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-Estruturas_de_controle/01-if.html">
+   If
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-Estruturas_de_controle/01-elif.html">
+   elif
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Estruturas de repetição
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Estruturas_de_repeticao/Repeticao.html">
+   Estruturas de repetição
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Estruturas_de_repeticao/For.html">
+   For
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Estruturas_de_repeticao/While.html">
+   While
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Funções
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/01-Funcoes.html">
+   Funções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/02-Escopo_de_variaveis.html">
+   Escopo de variaveis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/02_Args_e_kwargs.html">
+   Args e kwargs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/02-Recursividade.html">
+   Recursividade
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Sequencias e Conjuntos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/01-Sequencias.html">
+   Sequências
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/01-Sequencias_listas.html">
+   Listas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/01-Sequencias_strings.html">
+   <em>
+    Strings
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/01-Sequencias_tuplas.html">
+   Tuplas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/02-Conjuntos.html">
+   Conjuntos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/03-Dicionarios.html">
+   Dicionários
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Bibliotecas
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../07-Bibliotecas/01-Bibliotecas.html">
+   Bibliotecas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Vetores
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Vetores
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-Numpy_intro.html">
+   Numpy
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/08-Vetores/01-Vetores.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="vetores">
+<h1>Vetores<a class="headerlink" href="#vetores" title="Permalink to this headline">¶</a></h1>
+<p>Um vetor ou <em>array</em> é uma posição contígua de memória, alocada para determinada finalidade. Nativamente, em Python as funcionalidades dos vetores foram substituídas pelas listas. Neste momento, veremos o conceito de vetores, muito comum em linguagens de programação compiladas.</p>
+<p>Nestes exemplos, utilizaremos trechos de código em linguagem de programação C, dada a possibilidade de acesso direto às posições de memória alocadas pelas variáveis.</p>
+<p><strong>Exemplo</strong></p>
+<ul class="simple">
+<li><p>Declaração de uma variável em C. Com a declaração, o sistema operacional sabe quanto de memória será necessário reservar para o programa.</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+        <span class="c1">//Declara um inteiro</span>
+        <span class="kt">int</span> <span class="n">k</span><span class="p">;</span> 
+        <span class="c1">//Mostra quanto de memória a variável ocupa</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;tamanho: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">k</span><span class="p">));</span><span class="c1">//4 bytes</span>
+    
+        <span class="c1">//Mostra a localização da variável na memória</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;local  : %p</span><span class="se">\&#39;</span><span class="s">n&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">k</span><span class="p">);</span><span class="c1">//0x7ffde71031fc (varia a cada execução)</span>
+
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Observamos que a quantidade de memória ocupada por uma variável do tipo inteiro é de 4 <em>bytes</em>. A posição de memória é apresentada utilizando valores em hexadecimal. O operador <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> é utilizado para obter o endereço da variável.</p>
+<p>Ao declarar um vetor, é necessário informar quantas posições terá o vetor.</p>
+<p><strong>Exemplo</strong></p>
+<ul class="simple">
+<li><p>Declaração de um vetor de inteiros com 5 posições</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+        <span class="c1">//Declara um vetor com 5 posições</span>
+        <span class="kt">int</span> <span class="n">vi</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span> <span class="c1">//vi: vetor de int</span>
+        <span class="c1">//preenche as posições do vetor</span>
+        <span class="n">vi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="n">vi</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+        <span class="n">vi</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+        <span class="n">vi</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">13</span><span class="p">;</span>
+        <span class="n">vi</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">14</span><span class="p">;</span>
+
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;local vi     : %x</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span> <span class="n">vi</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;local vi[0]  : %x</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">vi</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;local vi[1]  : %x</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">vi</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;local vi[2]  : %x</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">vi</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;local vi[3]  : %x</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">vi</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;local vi[4]  : %x</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">vi</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span>
+            
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Saída:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">local</span> <span class="n">vi</span>     <span class="p">:</span> <span class="mh">0x7ffd3df68610</span>
+<span class="n">local</span> <span class="n">vi</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="p">:</span> <span class="mh">0x7ffd3df68610</span>
+<span class="n">local</span> <span class="n">vi</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="p">:</span> <span class="mh">0x7ffd3df68614</span>
+<span class="n">local</span> <span class="n">vi</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>  <span class="p">:</span> <span class="mh">0x7ffd3df68618</span>
+<span class="n">local</span> <span class="n">vi</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>  <span class="p">:</span> <span class="mh">0x7ffd3df6861c</span>
+<span class="n">local</span> <span class="n">vi</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>  <span class="p">:</span> <span class="mh">0x7ffd3df68620</span>
+</pre></div>
+</div>
+<p>Observando os resultados apresentados, vemos os endereços do vetor em si e de cada posição de seus elementos. Repare:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">vi</span></code> e <code class="docutils literal notranslate"><span class="pre">vi[0]</span></code> estão ocupando a mesma localização na memória.</p></li>
+<li><p>Na declaração do vetor, é informado seu tipo, neste caso <code class="docutils literal notranslate"><span class="pre">int</span></code>, que ocupa 4 <em>bytes</em>.</p></li>
+<li><p>A diferença dos endereços de cada posição é exatamente 4, concluindo que cada posição armazena 4 <em>bytes</em>.</p></li>
+<li><p>Perceba que para mostrar a posição de <code class="docutils literal notranslate"><span class="pre">vi</span></code>, no código, não é utilizado o <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>, visto que o que a variável <code class="docutils literal notranslate"><span class="pre">vi</span></code> armazena não é um inteiro, e sim uma posição de memória.</p>
+<ul>
+<li><p>Com isto, as demais posições de memória são obtidas a partir deste endereço inicial.</p></li>
+<li><p>Para acessar uma posição de memória é necessário saber o tamanho que o tipo de dado armazenado ocupa.</p></li>
+<li><p>Para acessar, basta a partir do endereço inicial (<code class="docutils literal notranslate"><span class="pre">vi</span></code>) “andar” <code class="docutils literal notranslate"><span class="pre">i</span></code> vezes o tamanho do dado armazenado. Aqui, <code class="docutils literal notranslate"><span class="pre">i</span></code> é a posição que se deseja acessar.</p>
+<ul class="simple">
+<li><p>Então,</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>acessaria a posição <code class="docutils literal notranslate"><span class="pre">3</span></code> do vetor, que armazena o valor <code class="docutils literal notranslate"><span class="pre">13</span></code>.</p>
+<ul class="simple">
+<li><p>Para acessar a posição <code class="docutils literal notranslate"><span class="pre">0</span></code>:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">+</span><span class="mi">0</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>que resulta no próprio endereço <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p>
+<ul class="simple">
+<li><p>Por esta razão, as posições de vetores iniciam em <code class="docutils literal notranslate"><span class="pre">0</span></code> e vão até <code class="docutils literal notranslate"><span class="pre">n-1</span></code>. Aqui, <code class="docutils literal notranslate"><span class="pre">n</span></code> é o número de elementos do vetor.</p></li>
+</ul>
+</li>
+<li><p>A quantidade de memória ocupada pelo vetor é de <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">*</span> <span class="pre">sizeof(int)</span></code> <em>bytes</em>.</p>
+<ul class="simple">
+<li><p>Com isto, acessar a posição</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">+</span><span class="n">n</span><span class="o">*</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>resulta em um erro, pois a posição 0 é considerada. Com isto, posições vão sempre até <code class="docutils literal notranslate"><span class="pre">n-1</span></code>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Observaremos esse comportamento utilizando um outro tipo de variável, o <code class="docutils literal notranslate"><span class="pre">double</span></code>, que utiliza 8 <em>bytes</em> de memória. Este tipo de variável opera como <code class="docutils literal notranslate"><span class="pre">float</span></code>, porém possui maior precisão e abrangência.</p>
+<p><strong>Exemplo</strong></p>
+<ul class="simple">
+<li><p>Vetor de <code class="docutils literal notranslate"><span class="pre">double</span></code>, com 5 posições:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+        <span class="c1">//declara um double</span>
+        <span class="kt">double</span> <span class="n">k</span><span class="p">;</span> <span class="c1">//variável de exemplo, para observarmos seu tamanho</span>
+        <span class="c1">//declara um vetor de double com 5 posições</span>
+        <span class="kt">double</span> <span class="n">vd</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span><span class="c1">//vd: vetor de double</span>
+
+        <span class="c1">//preenche as posições do vetor</span>
+        <span class="n">vd</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">10.0</span><span class="p">;</span>
+        <span class="n">vd</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">11.0</span><span class="p">;</span>
+        <span class="n">vd</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mf">12.0</span><span class="p">;</span>
+        <span class="n">vd</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">13.0</span><span class="p">;</span>
+        <span class="n">vd</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mf">14.0</span><span class="p">;</span>
+
+        <span class="c1">//mostra os endereços de memória</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;tamanho      : %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">k</span><span class="p">));</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;local vd     : %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span> <span class="n">vd</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;local vd[0]  : %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">vd</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;local vd[1]  : %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">vd</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;local vd[2]  : %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">vd</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;local vd[3]  : %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">vd</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;local vd[4]  : %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span> <span class="o">&amp;</span><span class="n">vd</span><span class="p">[</span><span class="mi">4</span><span class="p">]);</span>
+
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Saída:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tamanho</span>      <span class="p">:</span> <span class="mi">8</span>
+<span class="n">local</span> <span class="n">vd</span>     <span class="p">:</span> <span class="mh">0x7ffed4467c90</span>
+<span class="n">local</span> <span class="n">vd</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="p">:</span> <span class="mh">0x7ffed4467c90</span>
+<span class="n">local</span> <span class="n">vd</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>  <span class="p">:</span> <span class="mh">0x7ffed4467c98</span>
+<span class="n">local</span> <span class="n">vd</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>  <span class="p">:</span> <span class="mh">0x7ffed4467ca0</span>
+<span class="n">local</span> <span class="n">vd</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>  <span class="p">:</span> <span class="mh">0x7ffed4467ca8</span>
+<span class="n">local</span> <span class="n">vd</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>  <span class="p">:</span> <span class="mh">0x7ffed4467cb0</span>
+</pre></div>
+</div>
+<p><strong>Exercícios</strong></p>
+<ul class="simple">
+<li><p>Qual a diferença entre os endereços de memória?</p></li>
+<li><p>Quanto de memória é utilizada pelo vetor <code class="docutils literal notranslate"><span class="pre">vd</span></code>?</p></li>
+<li><p>Quanto de memória é utilizada pelo vetor <code class="docutils literal notranslate"><span class="pre">vi</span></code>?</p></li>
+<li><p>Com suas palavras, explique:</p>
+<ul>
+<li><p>por que os vetores iniciam na posição <code class="docutils literal notranslate"><span class="pre">0</span></code>?</p></li>
+<li><p>por que os vetores vão apenas até a posição <code class="docutils literal notranslate"><span class="pre">n-1</span></code>?</p></li>
+<li><p>o que ocorreria se uma posição <code class="docutils literal notranslate"><span class="pre">n</span></code> ou maior do vetor fosse acessada?</p></li>
+</ul>
+</li>
+<li><p>É possível remover uma determinada posição, como a <code class="docutils literal notranslate"><span class="pre">1</span></code>, assim como é feito com as listas em Python?</p>
+<ul>
+<li><p>Para remover uma posição, qual seria o procedimento? Descreva com suas palavras.</p></li>
+</ul>
+</li>
+<li><p>Visto que não é possível acessar a posição <code class="docutils literal notranslate"><span class="pre">n</span></code> de um vetor, quais passos deveriam ser feitos para adicionar um novo elemento, assim como é feito com o método <code class="docutils literal notranslate"><span class="pre">.append()</span></code> das listas em Python?</p></li>
+</ul>
+<p><strong>Dica</strong></p>
+<ul class="simple">
+<li><p>Pesquise sobre alocação dinâmica em C. Funções <code class="docutils literal notranslate"><span class="pre">malloc</span></code> e <code class="docutils literal notranslate"><span class="pre">calloc</span></code>.</p></li>
+</ul>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/08-Vetores"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../07-Bibliotecas/01-Bibliotecas.html" title="previous page">Bibliotecas</a>
+    <a class='right-next' id="next-link" href="02-Numpy_intro.html" title="next page">Numpy</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Darlon Vasata<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,507 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercícios &#8212; Algoritmos e Estruturas de Dados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Dicionários" href="03-Dicionarios.html" />
+    <link rel="prev" title="Conjuntos" href="02-Conjuntos.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Algoritmos e Estruturas de Dados</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../disciplina.html">
+   Algoritmos e Estruturas de dados
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Algoritmos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-Introducao/01_Introducao.html">
+   Introdução a algoritmos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-Python/02-Operadores.html">
+   Expressões
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-Python/03-Identificadores_e_palavras_reservadas.html">
+   Identificadores e palavras reservadas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-Python/04-Tipos_de_variaveis.html">
+   Tipos de variáveis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Estruturas de seleção
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-Estruturas_de_controle/01-if.html">
+   If
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-Estruturas_de_controle/01-elif.html">
+   elif
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Estruturas de repetição
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Estruturas_de_repeticao/Repeticao.html">
+   Estruturas de repetição
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Estruturas_de_repeticao/For.html">
+   For
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Estruturas_de_repeticao/While.html">
+   While
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Funções
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/01-Funcoes.html">
+   Funções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/02-Escopo_de_variaveis.html">
+   Escopo de variaveis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/02_Args_e_kwargs.html">
+   Args e kwargs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/02-Recursividade.html">
+   Recursividade
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Sequencias e Conjuntos
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-Sequencias.html">
+   Sequências
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-Sequencias_listas.html">
+   Listas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-Sequencias_strings.html">
+   <em>
+    Strings
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-Sequencias_tuplas.html">
+   Tuplas
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="02-Conjuntos.html">
+   Conjuntos
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Exercícios
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-Dicionarios.html">
+   Dicionários
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Bibliotecas
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../07-Bibliotecas/01-Bibliotecas.html">
+   Bibliotecas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Vetores
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../08-Vetores/01-Vetores.html">
+   Vetores
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../08-Vetores/02-Numpy_intro.html">
+   Numpy
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/06-Sequencias_e_conjuntos/02-Conjuntos_exercicios.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Referências
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="exercicios">
+<h1>Exercícios<a class="headerlink" href="#exercicios" title="Permalink to this headline">¶</a></h1>
+<p>Resolva os exercícios abaixo utilizando a linguagem de programação Python, conjuntamente com a estrutura de dados de conjuntos (<code class="docutils literal notranslate"><span class="pre">set</span></code>).</p>
+<p><strong>Exercício</strong></p>
+<p>Considerando os conjuntos <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span>, <span class="math notranslate nohighlight">\(C\)</span> e <span class="math notranslate nohighlight">\(D\)</span> definidos abaixo, mostre quais destes conjuntos são iguais.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \{a, b, −1\} \\
+B = \{b, a, −1\} \\
+C = \{b, a, b, −1\} \\
+D = \{a, −1\}
+\end{split}\]</div>
+<p>Fonte: Exercício adaptado de <a class="reference external" href="http://www.ic.uff.br/%7Eueverton/files/aulasFMC/Gabarito%20-%20CONJUNTOS.pdf">BRAVO, R.</a>.</p>
+<p><strong>Exercício</strong></p>
+<p>Dados os conjuntos</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\{0,1\} \\
+B=\{0,1,2\} \\
+C=\{2,3\} \\
+\end{split}\]</div>
+<p>Obtenha o seguinte conjunto <span class="math notranslate nohighlight">\(R\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+R = (A\cup B) \cap (B \cup C)
+\]</div>
+<p>Sejam</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+U = \{0, 1, 2, 3, 4\} \\
+A = \{0, 4\} \\
+B = \{0, 1, 2, 3\} \\
+C = \{1, 4\} \\
+D = \{0, 1\} \\
+\end{split}\]</div>
+<p>Determine os seguintes conjuntos:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+F= A \cup B \\
+G= B \cap C \\
+H= A \cap B \\
+I= A \cup (B \cap C) \\
+J= (A \cup B) \cap (A \cup C) \\
+K= A \cup (B \cap C \cap D)
+\end{split}\]</div>
+<p>Fonte: Exercício adaptado de <a class="reference external" href="http://www.ic.uff.br/%7Eueverton/files/aulasFMC/Gabarito%20-%20CONJUNTOS.pdf">BRAVO, R.</a>.</p>
+<p><strong>Exercício</strong></p>
+<p>Dados os conjuntos</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A=\{ 0, 1, 2, 3, 4, 5 \}\\
+B=\{ 4, 5, 6, 7 \}\\
+C=\{ 4, 5, 6, 8 \}
+\end{split}\]</div>
+<p>Obtenha <span class="math notranslate nohighlight">\(R\)</span>, tal que:</p>
+<div class="math notranslate nohighlight">
+\[
+R = (A -C) \cap ( B - C )
+\]</div>
+<p><strong>Exercício</strong></p>
+<p>Dados os conjuntos</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+C = \{15,25,30,35\}\\
+D = \{15, 25,40,50\}
+\end{split}\]</div>
+<p>obtenha <span class="math notranslate nohighlight">\(F\)</span>, tal que:</p>
+<div class="math notranslate nohighlight">
+\[
+F = C \cup D
+\]</div>
+<p><strong>Exercício</strong></p>
+<p>Considerando os conjuntos abaixos, definidos sobre os intervalos nos números inteiros:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = ]-2,3]\\
+B = [0,6]
+\end{split}\]</div>
+<p>quais são os elementos de <span class="math notranslate nohighlight">\(B-A\)</span>?</p>
+<p><strong>Exercício</strong></p>
+<p>Faça uma função chamada <code class="docutils literal notranslate"><span class="pre">countar_unicos</span></code>, que possui como entrada uma lista de qualquer tipo de elemento básico (<code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, ou <code class="docutils literal notranslate"><span class="pre">bool</span></code>). A função deve retornar duas listas, uma contendo os elementos da entrada sem repetir elementos, e outra lista contendo a quantidade de vezes que cada elemento aparece na lista de entrada. Não é necessário que a lista de elementos na saída esteja ordenada.</p>
+<p><strong>Exemplo</strong></p>
+<ul class="simple">
+<li><p>Entrada</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Saída</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>  
+<span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Exercício</strong></p>
+<p>Responda às seguintes perguntas:</p>
+<ul class="simple">
+<li><p>Se em uma sala há 23 pessoas, qual é a probabilidade de duas pessoas fazerem aniversário no mesmo dia?</p></li>
+<li><p>Aproximadamente, qual a quantidade mínima de elementos que deve possuir um conjunto de pessoas para que a probabilidade de existir pelo menos duas que façam aniversário no mesmo dia seja de 70%?</p></li>
+</ul>
+<p>Gere um conjunto de datas de nascimento aleatoriamente, e faça a verificação. Utilize a função <code class="docutils literal notranslate"><span class="pre">contar_unicos</span></code> desenvolvida em exercício anterior. Calcule as probabilidades utilizando pelo menos 10000 testes.</p>
+<blockquote>
+<div><p><strong>Informações</strong></p>
+<p>Este exercício é baseado no <a class="reference external" href="https://en.wikipedia.org/wiki/Birthday_problem">paradoxo do aniversário</a>.</p>
+</div></blockquote>
+<div class="section" id="referencias">
+<h2>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Birthday_problem">Birthday problem. Wikipedia</a><br />
+<a class="reference external" href="http://www.ic.uff.br/%7Eueverton/files/aulasFMC/Gabarito%20-%20CONJUNTOS.pdf">BRAVO, R. Notas de aula da disciplina Fundamentos Matemáticos para Computação, do curso de Sistemas de Informação. Universidade Federal Fluminense</a>.</p>
+<p><strong>Outros materiais</strong></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/06-Sequencias_e_conjuntos"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="02-Conjuntos.html" title="previous page">Conjuntos</a>
+    <a class='right-next' id="next-link" href="03-Dicionarios.html" title="next page">Dicionários</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Darlon Vasata<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

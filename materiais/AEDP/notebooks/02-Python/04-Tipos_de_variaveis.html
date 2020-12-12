@@ -1,0 +1,561 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tipos de variáveis &#8212; Algoritmos e Estruturas de Dados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="If" href="../03-Estruturas_de_controle/01-if.html" />
+    <link rel="prev" title="Identificadores e palavras reservadas" href="03-Identificadores_e_palavras_reservadas.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Algoritmos e Estruturas de Dados</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../disciplina.html">
+   Algoritmos e Estruturas de dados
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Algoritmos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-Introducao/01_Introducao.html">
+   Introdução a algoritmos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-Operadores.html">
+   Expressões
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-Identificadores_e_palavras_reservadas.html">
+   Identificadores e palavras reservadas
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Tipos de variáveis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Estruturas de seleção
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-Estruturas_de_controle/01-if.html">
+   If
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-Estruturas_de_controle/01-elif.html">
+   elif
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Estruturas de repetição
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Estruturas_de_repeticao/Repeticao.html">
+   Estruturas de repetição
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Estruturas_de_repeticao/For.html">
+   For
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Estruturas_de_repeticao/While.html">
+   While
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Funções
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/01-Funcoes.html">
+   Funções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/02-Escopo_de_variaveis.html">
+   Escopo de variaveis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/02_Args_e_kwargs.html">
+   Args e kwargs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/02-Recursividade.html">
+   Recursividade
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Sequencias e Conjuntos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/01-Sequencias.html">
+   Sequências
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/01-Sequencias_listas.html">
+   Listas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/01-Sequencias_strings.html">
+   <em>
+    Strings
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/01-Sequencias_tuplas.html">
+   Tuplas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/02-Conjuntos.html">
+   Conjuntos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/03-Dicionarios.html">
+   Dicionários
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Bibliotecas
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../07-Bibliotecas/01-Bibliotecas.html">
+   Bibliotecas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Vetores
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../08-Vetores/01-Vetores.html">
+   Vetores
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../08-Vetores/02-Numpy_intro.html">
+   Numpy
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/02-Python/04-Tipos_de_variaveis.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#int-e-float">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     int
+    </span>
+   </code>
+   e
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     float
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercicio">
+     Exercício
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bool">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     bool
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#str">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     str
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conversoes-de-tipos-de-dados">
+   Conversões de tipos de dados
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#atividade">
+     Atividade
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Atividade
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Atividade
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     Atividade
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="tipos-de-variaveis">
+<h1>Tipos de variáveis<a class="headerlink" href="#tipos-de-variaveis" title="Permalink to this headline">¶</a></h1>
+<p>Em Python, o tipo de uma variável é definido no momento de sua atribuição. Para observarmos o tipo de uma variável, utilizamos a função <code class="docutils literal notranslate"><span class="pre">type()</span></code></p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Existem diversos tipos de dados presentes nativamente em Python.</p>
+<div class="section" id="int-e-float">
+<h2><code class="docutils literal notranslate"><span class="pre">int</span></code> e <code class="docutils literal notranslate"><span class="pre">float</span></code><a class="headerlink" href="#int-e-float" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="exercicio">
+<h3>Exercício<a class="headerlink" href="#exercicio" title="Permalink to this headline">¶</a></h3>
+<p>Observe o tipo das seguintes variáveis</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">inteiro</span><span class="o">=</span><span class="mi">10</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">inteiro</span><span class="p">)</span>
+
+<span class="n">real</span><span class="o">=</span><span class="mf">3.5</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">real</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Os tipos de dados <code class="docutils literal notranslate"><span class="pre">int</span></code> e <code class="docutils literal notranslate"><span class="pre">float</span></code> permitem que sejam realizados operações matemáticas sobre eles, como adição, subtração e divisão. Ambos os tipos permitem o armazenamento de números positivos e negativos, porém o tipo <code class="docutils literal notranslate"><span class="pre">float</span></code> opera utilizando <em>ponto flutuante</em>, ou seja, permite que números reais sejam armazenados.</p>
+<p>A diferença na definição da variável se ela será um <code class="docutils literal notranslate"><span class="pre">int</span></code> ou <code class="docutils literal notranslate"><span class="pre">float</span></code>, é dado pelo uso do <code class="docutils literal notranslate"><span class="pre">.</span></code>, que separa as casas decimais.</p>
+</div>
+</div>
+<div class="section" id="bool">
+<h2><code class="docutils literal notranslate"><span class="pre">bool</span></code><a class="headerlink" href="#bool" title="Permalink to this headline">¶</a></h2>
+<p>O tipo de dado <code class="docutils literal notranslate"><span class="pre">bool</span></code> permite armazenar um valor <em>booleano</em>, ou seja, verdadeiro (<em>True</em>) ou falso (<em>False</em>). Este tipo de variável permite apenas estes dois valores.</p>
+<p><strong>Atenção</strong></p>
+<blockquote>
+<div><p>Os valores <strong>True</strong> e <strong>False</strong> possuem letra inicial maiúscula.</p>
+</div></blockquote>
+<p><strong>Exemplo</strong><br />
+Considere que existe uma variável que registra se uma porta e uma janela estão abertas ou fechadas. Em seguida, observe o tipo de dado dessas variáveis.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">portaAberta</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">portaAberta</span><span class="p">)</span>
+
+<span class="n">janelaAberta</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">janelaAberta</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="str">
+<h2><code class="docutils literal notranslate"><span class="pre">str</span></code><a class="headerlink" href="#str" title="Permalink to this headline">¶</a></h2>
+<p>O tipol de dado <code class="docutils literal notranslate"><span class="pre">str</span></code> é utilizado para representar uma sequência de caracteres, ou <em>string</em>.</p>
+<p>Para que o interpretador Python reconheça que o dado é uma <em>string</em>, deve-se colocar a sequência de caracteres entre aspas (<code class="docutils literal notranslate"><span class="pre">'</span></code>) .</p>
+<p><strong>Exemplo</strong><br />
+Considere variáveis que armazenam o país e o estado. Em seguida, observe o tipo da variável.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">pais</span><span class="o">=</span><span class="s1">&#39;Brasil&#39;</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">pais</span><span class="p">)</span>
+
+<span class="n">estado</span><span class="o">=</span><span class="s1">&#39;Santa Catarina&#39;</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">estado</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Anotação</strong></p>
+<blockquote>
+<div><p>Em python, uma <em>string</em> também pode ser delimitada utilizando aspas duplas (<code class="docutils literal notranslate"><span class="pre">&quot;</span></code>), e seu funcionamento ocorrerá da mesma forma. Porém, é uma convenção entre desenvolvedores a utilização das aspas simples, como utilizado no exemplo.</p>
+</div></blockquote>
+</div>
+<div class="section" id="conversoes-de-tipos-de-dados">
+<h2>Conversões de tipos de dados<a class="headerlink" href="#conversoes-de-tipos-de-dados" title="Permalink to this headline">¶</a></h2>
+<p>Para converter um tipo de dado a outro pode-se utilizar funções que possuem o mesmo nome do tipo de dado.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">()</span>
+<span class="nb">float</span><span class="p">()</span>
+<span class="nb">str</span><span class="p">()</span>
+<span class="nb">bool</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="section" id="atividade">
+<h3>Atividade<a class="headerlink" href="#atividade" title="Permalink to this headline">¶</a></h3>
+<p>Observe o conteúdo e tipo de dado de cada uma das variáveis utilizadas abaixo.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">ni</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">nf</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">ni</span><span class="p">)</span>
+<span class="n">ns</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">ni</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>O quê ocorreu com os tipos de dados?</p>
+</div>
+<div class="section" id="id1">
+<h3>Atividade<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Observe o conteúdo e tipo de dado de cada uma das variáveis utilizadas abaixo.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">nf</span> <span class="o">=</span> <span class="mf">4.7</span>
+<span class="n">ni</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">nf</span><span class="p">)</span>
+<span class="n">ns</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">nf</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>O quê ocorreu com os tipos de dados?</p>
+</div>
+<div class="section" id="id2">
+<h3>Atividade<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>Observe o conteúdo e tipo de dado de cada uma das variáveis utilizadas abaixo.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">ns</span> <span class="o">=</span> <span class="s1">&#39;4.7&#39;</span>
+<span class="n">ni</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">ns</span><span class="p">)</span>
+<span class="n">ni</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ns</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>O quê ocorreu com os tipos de dados?</p>
+</div>
+<div class="section" id="id3">
+<h3>Atividade<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Observe o conteúdo e tipo de dado de cada uma das variáveis utilizadas abaixo.</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">ns</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">nb</span><span class="p">)</span>
+<span class="n">nf</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">nb</span><span class="p">)</span>
+<span class="n">ni</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">nb</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>O quê ocorreu com os tipos de dados?</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/02-Python"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="03-Identificadores_e_palavras_reservadas.html" title="previous page">Identificadores e palavras reservadas</a>
+    <a class='right-next' id="next-link" href="../03-Estruturas_de_controle/01-if.html" title="next page">If</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Darlon Vasata<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

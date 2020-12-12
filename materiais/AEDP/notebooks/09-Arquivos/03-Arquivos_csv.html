@@ -1,0 +1,478 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>CSV &#8212; Algoritmos e Estruturas de Dados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Algoritmos e Estruturas de Dados</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../disciplina.html">
+   Algoritmos e Estruturas de dados
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Algoritmos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-Introducao/01_Introducao.html">
+   Introdução a algoritmos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-Python/02-Operadores.html">
+   Expressões
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-Python/03-Identificadores_e_palavras_reservadas.html">
+   Identificadores e palavras reservadas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-Python/04-Tipos_de_variaveis.html">
+   Tipos de variáveis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Estruturas de seleção
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-Estruturas_de_controle/01-if.html">
+   If
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-Estruturas_de_controle/01-elif.html">
+   elif
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Estruturas de repetição
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Estruturas_de_repeticao/Repeticao.html">
+   Estruturas de repetição
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Estruturas_de_repeticao/For.html">
+   For
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Estruturas_de_repeticao/While.html">
+   While
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Funções
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/01-Funcoes.html">
+   Funções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/02-Escopo_de_variaveis.html">
+   Escopo de variaveis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/02_Args_e_kwargs.html">
+   Args e kwargs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/02-Recursividade.html">
+   Recursividade
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Sequencias e Conjuntos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/01-Sequencias.html">
+   Sequências
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/01-Sequencias_listas.html">
+   Listas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/01-Sequencias_strings.html">
+   <em>
+    Strings
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/01-Sequencias_tuplas.html">
+   Tuplas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/02-Conjuntos.html">
+   Conjuntos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/03-Dicionarios.html">
+   Dicionários
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Bibliotecas
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../07-Bibliotecas/01-Bibliotecas.html">
+   Bibliotecas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Vetores
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../08-Vetores/01-Vetores.html">
+   Vetores
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../08-Vetores/02-Numpy_intro.html">
+   Numpy
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/09-Arquivos/03-Arquivos_csv.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#leitura">
+   Leitura
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#escrita">
+   Escrita
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="csv">
+<h1>CSV<a class="headerlink" href="#csv" title="Permalink to this headline">¶</a></h1>
+<p>Um arquivo o formato CSV (<em>Comma Separated Values</em>) consiste em organizar os dados em um formato de tabela, onde cada coluna dessa tabela está separada por vírgulas. Cada linha do arquivo corresponde a uma linha da tabela, e a primeira linha pode conter títulos para as colunas. Um arquivo CSV é um arquivo texto, o que o caracteriza é a sua maneira de organização dos dados nele contidos.</p>
+<p>Os arquivos em formato CSV são bastante utilizados para salvar bases de dados.</p>
+<p>Um arquivo csv típico possui seu conteúdo organizado da seguinte maneira:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Ordem</span><span class="p">,</span><span class="n">Nome</span><span class="p">,</span><span class="n">Distancia</span><span class="p">,</span><span class="n">Diametro</span><span class="p">,</span><span class="n">Rochoso</span>
+<span class="mi">1</span><span class="p">,</span><span class="n">Mercurio</span><span class="p">,</span><span class="mi">57910000</span><span class="p">,</span><span class="mi">4879</span><span class="p">,</span><span class="n">Sim</span>
+<span class="mi">2</span><span class="p">,</span><span class="n">Venus</span><span class="p">,</span><span class="mi">108200000</span><span class="p">,</span><span class="mi">12104</span><span class="p">,</span><span class="n">Sim</span>
+<span class="mi">3</span><span class="p">,</span><span class="n">Terra</span><span class="p">,</span><span class="mi">149600000</span><span class="p">,</span><span class="mi">12742</span><span class="p">,</span><span class="n">Sim</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Execute o código a seguir para criar um arquivo de exemplo.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;planetas.csv&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="s1">&#39;Ordem,Nome,Distancia,Diametro,Rochoso</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="s1">&#39;1,Mercurio,57910000,4879,Sim</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="s1">&#39;2,Venus,108200000,12104,Sim</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">writelines</span><span class="p">(</span><span class="s1">&#39;3,Terra,149600000,12742,Sim</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Como um arquivo CSV é um arquivo texto, e é possível visualizar seu conteúdo acessando-o como arquivo texto.</p>
+<p><strong>Exemplo</strong></p>
+<ul class="simple">
+<li><p>Lendo o conteúdo como arquivo texto</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">txt_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;planetas.csv&#39;</span><span class="p">,</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">linha</span> <span class="ow">in</span> <span class="n">txt_file</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">linha</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">txt_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Leia o arquivo como texto, e observe o caractere que separa cada campo.</p></li>
+</ul>
+<div class="section" id="leitura">
+<h2>Leitura<a class="headerlink" href="#leitura" title="Permalink to this headline">¶</a></h2>
+<p>Uma das formas de manipulação é utilizando a biblioteca <code class="docutils literal notranslate"><span class="pre">csv</span></code>. O uso das bibliotecas permite que a leitura dos arquivos seja mais fácil e organizada pelo programador.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+</pre></div>
+</div>
+<p>A biblioteca <code class="docutils literal notranslate"><span class="pre">csv</span></code> possibilita que cada linha seja lida como um dicionário, utilizando o método <code class="docutils literal notranslate"><span class="pre">.DictReader()</span></code>. O parâmetro <code class="docutils literal notranslate"><span class="pre">delimiter</span></code> define qual é o caractere que separa os campos. Seu valor padrão é <code class="docutils literal notranslate"><span class="pre">,</span></code>, e nosso caso poderia ser omitido.</p>
+<p><strong>Exemplo</strong></p>
+<ul class="simple">
+<li><p>Lendo o conteúdo como arquivo csv, utilizando dicionários.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">csv_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;planetas.csv&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">csv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">csv_file</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">linha</span> <span class="ow">in</span> <span class="n">csv_reader</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">linha</span><span class="p">[</span><span class="s1">&#39;Nome&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">linha</span><span class="p">[</span><span class="s1">&#39;Ordem&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1">#Obtêm-se apenas as colunas desejadas</span>
+<span class="n">csv_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="escrita">
+<h2>Escrita<a class="headerlink" href="#escrita" title="Permalink to this headline">¶</a></h2>
+<p>Com a mesma biblioteca também é possível salvar dados em arquivos CSV.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">csv_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;planetas.csv&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="c1">#abre com append. w para criar novo arquivo.</span>
+<span class="n">csv_writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">csv_file</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+
+<span class="n">csv_writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;Marte&#39;</span><span class="p">,</span><span class="mi">227900000</span><span class="p">,</span><span class="mi">6779</span><span class="p">,</span><span class="s1">&#39;Sim&#39;</span><span class="p">])</span>
+<span class="n">csv_writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span><span class="s1">&#39;Júpiter&#39;</span><span class="p">,</span><span class="mi">778500000</span><span class="p">,</span><span class="mi">139820</span><span class="p">,</span><span class="s1">&#39;Não&#39;</span><span class="p">])</span>
+<span class="n">csv_writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span><span class="s1">&#39;Saturno&#39;</span><span class="p">,</span><span class="mi">1429400000</span><span class="p">,</span><span class="mi">116460</span><span class="p">,</span><span class="s1">&#39;Não&#39;</span><span class="p">])</span>
+<span class="n">csv_writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span><span class="s1">&#39;Urano&#39;</span><span class="p">,</span><span class="mi">2870990000</span><span class="p">,</span><span class="mi">50724</span><span class="p">,</span><span class="s1">&#39;Não&#39;</span><span class="p">])</span>
+<span class="n">csv_writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="mi">8</span><span class="p">,</span><span class="s1">&#39;Netuno&#39;</span><span class="p">,</span><span class="mi">4504300000</span><span class="p">,</span><span class="mi">49244</span><span class="p">,</span><span class="s1">&#39;Não&#39;</span><span class="p">])</span>
+<span class="n">csv_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Atividade</strong></p>
+<ul class="simple">
+<li><p>Visualize o arquivo atualizado, como texto.</p></li>
+</ul>
+<!-- Vamos visualizar o arquivo, atualizado.
+```python
+txt_file = open('planetas.csv', mode='r')
+for linha in txt_file:
+    print(linha, end='')
+txt_file.close()
+``` --><p><strong>Exercícios</strong></p>
+<ul class="simple">
+<li><p>Mostre os planetas por ordem de tamanho</p></li>
+<li><p>Calcule e apresente o tamanho de cada planeta em relação à Terra.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/09-Arquivos"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Darlon Vasata<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

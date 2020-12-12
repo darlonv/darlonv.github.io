@@ -1,0 +1,585 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Exercícios &#8212; Algoritmos e Estruturas de Dados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Tuplas" href="01-Sequencias_tuplas.html" />
+    <link rel="prev" title="Strings" href="01-Sequencias_strings.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Algoritmos e Estruturas de Dados</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../disciplina.html">
+   Algoritmos e Estruturas de dados
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Algoritmos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../01-Introducao/01_Introducao.html">
+   Introdução a algoritmos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-Python/02-Operadores.html">
+   Expressões
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-Python/03-Identificadores_e_palavras_reservadas.html">
+   Identificadores e palavras reservadas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-Python/04-Tipos_de_variaveis.html">
+   Tipos de variáveis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Estruturas de seleção
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-Estruturas_de_controle/01-if.html">
+   If
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-Estruturas_de_controle/01-elif.html">
+   elif
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Estruturas de repetição
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Estruturas_de_repeticao/Repeticao.html">
+   Estruturas de repetição
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Estruturas_de_repeticao/For.html">
+   For
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Estruturas_de_repeticao/While.html">
+   While
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Funções
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/01-Funcoes.html">
+   Funções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/02-Escopo_de_variaveis.html">
+   Escopo de variaveis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/02_Args_e_kwargs.html">
+   Args e kwargs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/02-Recursividade.html">
+   Recursividade
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Sequencias e Conjuntos
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-Sequencias.html">
+   Sequências
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-Sequencias_listas.html">
+   Listas
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="reference internal" href="01-Sequencias_strings.html">
+   <em>
+    Strings
+   </em>
+  </a>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Exercícios
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01-Sequencias_tuplas.html">
+   Tuplas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02-Conjuntos.html">
+   Conjuntos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03-Dicionarios.html">
+   Dicionários
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Bibliotecas
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../07-Bibliotecas/01-Bibliotecas.html">
+   Bibliotecas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Vetores
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../08-Vetores/01-Vetores.html">
+   Vetores
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../08-Vetores/02-Numpy_intro.html">
+   Numpy
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/06-Sequencias_e_conjuntos/01-Sequencias_exercicios_strings.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Referências
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="exercicios">
+<h1>Exercícios<a class="headerlink" href="#exercicios" title="Permalink to this headline">¶</a></h1>
+<p><strong>Exercício</strong></p>
+<p>Pergunte o nome do usuário, e mostre o nome na vertical.</p>
+<p><strong>Exercício</strong></p>
+<p>Pergunte ao usuário uma frase, e mostre todas as vogais presentes na frase.</p>
+<p><strong>Exercício</strong></p>
+<p>Digite um nome, e informe quantas letras possuem nesse nome.</p>
+<p><strong>Exercício</strong></p>
+<p>Digite uma frase, e mostre essa frase na ordem inversa (de trás para frente).</p>
+<p><strong>Exercício</strong></p>
+<p>Utilize o texto abaixo para responder aos questionamentos seguintes.</p>
+<blockquote>
+<div><p>‘<em>Python é uma linguagem de programação de alto nível, interpretada, de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. Foi lançada por Guido van Rossum em 1991. Atualmente possui um modelo de desenvolvimento comunitário, aberto e gerenciado pela organização sem fins lucrativos Python Software Foundation. Apesar de várias partes da linguagem possuírem padrões e especificações formais, a linguagem como um todo não é formalmente especificada. O padrão de facto é a implementação CPython. O nome Python teve a sua origem no grupo humorístico britânico Monty Python, criador do programa Monty Python’s Flying Circus, embora muitas pessoas façam associação com o réptil do mesmo nome.</em>’<br />
+(Adaptado de <a class="reference external" href="https://pt.wikipedia.org/wiki/Python">Wikipedia - Python</a>)</p>
+</div></blockquote>
+<p>Mostre:</p>
+<ol class="simple">
+<li><p>o número total de caracteres.</p></li>
+<li><p>quantas vezes cada vogal aparece, desconsiderando letras acentuadas.</p></li>
+<li><p>quantas frases existem no texto.</p></li>
+<li><p>quantos caracteres possui a maior palavra presente no texto.</p></li>
+<li><p>qual é a maior palavra presente no texto</p></li>
+<li><p>as palavras que possuem duas letras iguais seguidas</p></li>
+<li><p>todas as palavras que iniciam com letras maiúsculas</p></li>
+<li><p>todas as palavras que possuem a letra “p” (minúscula).</p></li>
+</ol>
+<p><strong>Exercício</strong></p>
+<p>Peça ao usuário que digite uma entrada, e verifique se essa entrada forma um palíndromo, ou seja, se os caracteres da entrada forem invertidos, a entrada permanece idêntica.</p>
+<p><strong>Exemplos</strong></p>
+<ul class="simple">
+<li><p>“A mala nada na lama”</p></li>
+<li><p>“o breve verbo” e</p></li>
+<li><p>“anotaram a data da maratona”.</p></li>
+</ul>
+<p><strong>Exercício</strong></p>
+<p>A Cifra de César é uma das mais antigas e conhecidas técnicas de criptografia. Sua técnica consiste na substituição de cada letra do texto por outra, em que a letra é trocada pela letra seguinte no alfabeto com um número fixo.
+Por exemplo, para a frase <strong>python</strong>, e deslocamento utilizando <span class="math notranslate nohighlight">\(3\)</span> letras no alfabeto, o texto cifrado seria <strong>sbwkrq</strong>. Repare que: p-&gt;s,y-&gt;b,t-&gt;w,h-&gt;k,o-&gt;r e n-&gt;q.</p>
+<p><strong>Exercício</strong></p>
+<p>Implemente um algoritmo de criptografia que utiliza a Cifra de César, utilizando um deslocamento de <span class="math notranslate nohighlight">\(3\)</span> letras. Pergunte ao usuário qual frase deseja criptografar. Trabalhe apenas com letras minúsculas, mesmo que o usuário digite letras maiúsculas.  Utilize a função <code class="docutils literal notranslate"><span class="pre">ord()</span></code> para obter valor ASCII de um determinado caractere, e a função <code class="docutils literal notranslate"><span class="pre">chr()</span></code> para obter o caractere a partir do seu valor ASCII.</p>
+<p><strong>Exercício</strong></p>
+<p>Implemente um algoritmo que descriptografa um texto criptografado com a Cifra de César, cifrado utilizando deslocamento de <span class="math notranslate nohighlight">\(3\)</span> letras.</p>
+<p><strong>Exercício</strong></p>
+<p>Na frase “<strong>o sapo nao lava o pe. nao lava porque nao quer</strong>”, faça:</p>
+<ul class="simple">
+<li><p>Troque todas as vogais pela letra ‘a’;</p></li>
+<li><p>Troque todas as vogais pela letra ‘e’;</p></li>
+<li><p>Troque todas as logais pela letra ‘i’;</p></li>
+<li><p>Troque todas as logais pela letra ‘o’;</p></li>
+<li><p>Troque todas as logais pela letra ‘u’;</p></li>
+</ul>
+<p><strong>Exercício</strong></p>
+<p>Desenvolva um programa que verifica se um CPF está no formato válido (<strong>xxx.xxx.xxx-xx</strong>). O programa deve observar se apenas números e pontos foram digitados, nos locais corretos. Ao final deve informar “CPF Válido” ou “CPF Inválido”.</p>
+<p><strong>Exercício</strong></p>
+<p>Importe a biblioteca</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">shuffle</span>
+</pre></div>
+</div>
+<p>e utilize a função</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="n">shuffle</span><span class="p">(</span><span class="n">palavra</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>para embaralhar uma palavra. Com isto, implemente um jogo que mostra uma palavra embaralhada ao usuário, que deve adivinhar qual é a palavra original. Cadastre algumas palavras no código, e faça com que o sistema escolha uma delas aleatoriamente. O usuário ganha ou perde conforme adivinha corretamente ou incorretamente a palavra original.</p>
+<p><strong>Exercício</strong></p>
+<p>Peça ao usuário que digite um nome, e então converta as letras para números utilizando a tabela abaixo, e então mostre o resultado. Converta todas as letras da entrada para maiúsculas.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>letra</p></th>
+<th class="head"><p>número</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>O</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>I</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>Z</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>E</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>H</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>S</p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-even"><td><p>B</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-odd"><td><p>T</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-even"><td><p>X</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-odd"><td><p>G</p></td>
+<td><p>9</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exercício</strong></p>
+<p>O número 153 é igual à soma dos cubos dos algarismos que o compõe.<br />
+<strong>Observe:</strong><br />
+<span class="math notranslate nohighlight">\($
+1^3+5^3+3^3 = 1 + 125 + 27 = 153
+$\)</span></p>
+<p>Entre 100 e 999 também existem outros números que seguem esta propriedade. Quais são?</p>
+<p><strong>Exercício</strong></p>
+<p>Crie um programa que verifica se uma <em>string</em> de entrada é ou não um palíndromo.</p>
+<p>Implemente duas versões:</p>
+<ol class="simple">
+<li><p>Sem utilizar <code class="docutils literal notranslate"><span class="pre">reversed</span></code> ou <code class="docutils literal notranslate"><span class="pre">zip</span></code>,</p></li>
+<li><p>Utilizando as funções <code class="docutils literal notranslate"><span class="pre">reversed</span></code> e <code class="docutils literal notranslate"><span class="pre">zip</span></code>.</p></li>
+</ol>
+<p><strong>Exercício</strong></p>
+<p>Implemente uma função que pergunte um valor x e uma frase ao usuário. Deve ser mostrado na tela a frase por colunas, como apresentado no exemplo abaixo, para <code class="docutils literal notranslate"><span class="pre">x=3</span></code> e frase ABACATES.</p>
+<p><strong>Exemplo</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="n">B</span> <span class="n">A</span>
+<span class="n">C</span> <span class="n">A</span> <span class="n">T</span>
+<span class="n">E</span> <span class="n">S</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Entrada:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ABACATES</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Saída:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ACEBASAT</span>
+</pre></div>
+</div>
+<p>Desenvolva uma função que verifica se uma palavra pode ser anagrama da outra, ou seja, se a segunda palavra pode ser formada apenas com a transposição das letras da primeira. Chame sua função de <code class="docutils literal notranslate"><span class="pre">isAnagram</span></code>.</p>
+<p><strong>Exemplo</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Entrada</p></th>
+<th class="head"><p>Entrada</p></th>
+<th class="head"><p>Saida</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ABACATES</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ACEBASAT</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">primeira</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">marifrei</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">frase</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">resaf</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pudim</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">batata</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">abcdef</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">cbafed</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">sera</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ser</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ba</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">aba</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Roma</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Amor</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ovni</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ovo</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="referencias">
+<h2>Referências<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<p><strong>Outros materiais</strong></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/06-Sequencias_e_conjuntos"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="01-Sequencias_strings.html" title="previous page"><em>Strings</em></a>
+    <a class='right-next' id="next-link" href="01-Sequencias_tuplas.html" title="next page">Tuplas</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Darlon Vasata<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>

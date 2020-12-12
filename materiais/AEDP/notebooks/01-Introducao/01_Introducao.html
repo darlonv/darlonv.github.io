@@ -1,0 +1,568 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Introdução a algoritmos &#8212; Algoritmos e Estruturas de Dados</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/jupyter-sphinx.css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/mystnb.js"></script>
+    <script src="../../_static/sphinx-book-theme.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Expressões" href="../02-Python/02-Operadores.html" />
+    <link rel="prev" title="Algoritmos e Estruturas de dados" href="../../disciplina.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Algoritmos e Estruturas de Dados</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../disciplina.html">
+   Algoritmos e Estruturas de dados
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Algoritmos
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Introdução a algoritmos
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-Python/02-Operadores.html">
+   Expressões
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-Python/03-Identificadores_e_palavras_reservadas.html">
+   Identificadores e palavras reservadas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../02-Python/04-Tipos_de_variaveis.html">
+   Tipos de variáveis
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Estruturas de seleção
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-Estruturas_de_controle/01-if.html">
+   If
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03-Estruturas_de_controle/01-elif.html">
+   elif
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Estruturas de repetição
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Estruturas_de_repeticao/Repeticao.html">
+   Estruturas de repetição
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Estruturas_de_repeticao/For.html">
+   For
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../04-Estruturas_de_repeticao/While.html">
+   While
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Funções
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/01-Funcoes.html">
+   Funções
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/02-Escopo_de_variaveis.html">
+   Escopo de variaveis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/02_Args_e_kwargs.html">
+   Args e kwargs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../05-Funcoes/02-Recursividade.html">
+   Recursividade
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Sequencias e Conjuntos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/01-Sequencias.html">
+   Sequências
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/01-Sequencias_listas.html">
+   Listas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/01-Sequencias_strings.html">
+   <em>
+    Strings
+   </em>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/01-Sequencias_tuplas.html">
+   Tuplas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/02-Conjuntos.html">
+   Conjuntos
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../06-Sequencias_e_conjuntos/03-Dicionarios.html">
+   Dicionários
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Bibliotecas
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../07-Bibliotecas/01-Bibliotecas.html">
+   Bibliotecas
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Vetores
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../08-Vetores/01-Vetores.html">
+   Vetores
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../08-Vetores/02-Numpy_intro.html">
+   Numpy
+  </a>
+ </li>
+</ul>
+
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/notebooks/01-Introducao/01_Introducao.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algoritmo">
+   Algoritmo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linguagem-de-programacao">
+   Linguagem de programação
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tipos-de-linguagem">
+     Tipos de linguagem
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#processo-de-programacao">
+   Processo de programação
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logica-de-resolucao-do-problema">
+     Lógica de resolução do problema
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#codificacao">
+     Codificação
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compilacao">
+     Compilação
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#execucao">
+     Execução
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercicios">
+   Exercícios
+  </a>
+ </li>
+</ul>
+
+        </nav>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="introducao-a-algoritmos">
+<h1>Introdução a algoritmos<a class="headerlink" href="#introducao-a-algoritmos" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="algoritmo">
+<h2>Algoritmo<a class="headerlink" href="#algoritmo" title="Permalink to this headline">¶</a></h2>
+<p>Um algoritmo é uma sequência de passos para resolver um problema.</p>
+</div>
+<div class="section" id="linguagem-de-programacao">
+<h2>Linguagem de programação<a class="headerlink" href="#linguagem-de-programacao" title="Permalink to this headline">¶</a></h2>
+<p>Uma linguagem de programação é um conjunto de regras bem definidas e padronizadas, para <em>implementar</em> um <em>código fonte</em>. Utilizando este conjunto de regras é possível <em>codificar</em> um algoritmo, que posteriormente será executado por um processador.</p>
+<div class="section" id="tipos-de-linguagem">
+<h3>Tipos de linguagem<a class="headerlink" href="#tipos-de-linguagem" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Interpretadas x compiladas</p></li>
+<li><p>Alto nível x baixo nível</p></li>
+</ul>
+<ul class="simple">
+<li><p>Interpretadas</p>
+<ul>
+<li><p>Código carregado e executado linha a linha</p></li>
+<li><p>Necessário interpretador</p>
+<ul>
+<li><p>Específico para a plataforma</p></li>
+</ul>
+</li>
+<li><p>Alta portabilidade</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>Compiladas</p>
+<ul>
+<li><p>Código passado a outro formato, o compilado</p></li>
+<li><p>Necessário um compilador</p>
+<ul>
+<li><p>Compilador específico para a plataforma</p></li>
+</ul>
+</li>
+<li><p>Baixa portabilidade</p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>Alto nível</p>
+<ul>
+<li><p>A sintaxe da linguagem:</p>
+<ul>
+<li><p>se aproxima mais da nossa linguagem</p></li>
+<li><p>se distancia mais da linguagem da máquina</p></li>
+</ul>
+</li>
+<li><p>maior nível de abstração</p></li>
+<li><p>Exemplos</p>
+<ul>
+<li><p>JavaScript</p></li>
+<li><p>Python</p></li>
+<li><p>Php</p></li>
+<li><p>Ruby</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>Baixo nível</p>
+<ul>
+<li><p>A sintaxe da linguagem:</p>
+<ul>
+<li><p>é mais próxima da linguagem da máquina</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="processo-de-programacao">
+<h2>Processo de programação<a class="headerlink" href="#processo-de-programacao" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Lógica de resolução do problema</p></li>
+<li><p>Codificação</p></li>
+<li><p>Compilação</p></li>
+<li><p>Execução</p></li>
+</ul>
+<div class="section" id="logica-de-resolucao-do-problema">
+<h3>Lógica de resolução do problema<a class="headerlink" href="#logica-de-resolucao-do-problema" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Resolução do problema, em linguagem natural</p></li>
+<li><p>Necessário especialista na área</p></li>
+</ul>
+</div>
+<div class="section" id="codificacao">
+<h3>Codificação<a class="headerlink" href="#codificacao" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Escrita da lógica de resolução do problema utilizando uma linguagem de programação, com regras bem definidas</p></li>
+<li><p>C, C++, Perl, Python, Java, Pascal, etc.</p></li>
+</ul>
+</div>
+<div class="section" id="compilacao">
+<h3>Compilação<a class="headerlink" href="#compilacao" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Transformação do código escrito em uma linguagem de programação em arquivo binário</p></li>
+<li><p>Compatível com o sistema operacional (SO) e arquitetura do processador.</p></li>
+</ul>
+</div>
+<div class="section" id="execucao">
+<h3>Execução<a class="headerlink" href="#execucao" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Carregamento e execução das funções</p></li>
+<li><p>Realizado pelo SO e processador</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="exercicios">
+<h2>Exercícios<a class="headerlink" href="#exercicios" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Como fazer gelo?</p></li>
+</ul>
+<ul class="simple">
+<li><p>Como trocar uma lâmpada?</p></li>
+</ul>
+<ul class="simple">
+<li><p>Como trocar o pneu de um carro?</p></li>
+</ul>
+<p>Um homem precisa atravessar um rio com um barco que possui capacidade de transportar apenas ele mesmo e mais uma de suas três cargas, que são: um lobo, um bode e uma caixa de alfafa. Indique as ações necessárias para que o homem consiga atravessar o rio sem perder suas cargas.</p>
+<ul class="simple">
+<li><p>Utilize as funções <code class="docutils literal notranslate"><span class="pre">atravessar(p)</span></code> ou <code class="docutils literal notranslate"><span class="pre">voltar(p)</span></code></p>
+<ul>
+<li><p>p1, é o passageiro ou carga do barco, que podem ser <code class="docutils literal notranslate"><span class="pre">lobo</span></code>, <code class="docutils literal notranslate"><span class="pre">bode</span></code>, <code class="docutils literal notranslate"><span class="pre">alfafa</span></code> ou <code class="docutils literal notranslate"><span class="pre">ninguém</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+<p>Elabore um algoritmo que mova três discos de uma Torre de Hanói, que consiste em três hastes (A, B e C), uma das quais serve de suporte para três discos de tamanhos diferentes (1, 2 e 3), os menores sobre os maiores. É possível mover um disco de cada vez para qualquer haste, porém nunca deve ser colocado um disco maior sobre um menor. O objetivo é transferir os três discos para outra haste.</p>
+<ul class="simple">
+<li><p>Utilize a função <code class="docutils literal notranslate"><span class="pre">movimentar(de,</span> <span class="pre">para)</span></code>, que movimenta o disco que está no topo da haste <code class="docutils literal notranslate"><span class="pre">de</span></code> e o coloca no topo da haste <code class="docutils literal notranslate"><span class="pre">para</span></code>.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/01-Introducao"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../../disciplina.html" title="previous page">Algoritmos e Estruturas de dados</a>
+    <a class='right-next' id="next-link" href="../02-Python/02-Operadores.html" title="next page">Expressões</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Darlon Vasata<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../_static/js/index.js"></script>
+    
+  </body>
+</html>
