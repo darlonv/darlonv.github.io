@@ -1,0 +1,8 @@
+# Book settings
+title: Prof. Darlon Vasata
+author: Darlon Vasata
+# logo: logo.png
+
+latex:
+  latex_documents:
+    targetname: book.tex

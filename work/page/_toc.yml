@@ -1,0 +1,30 @@
+- file: intro
+  numbered: false
+  
+- part: pesquisa
+  sections:
+    - file: pesquisa
+      sections:
+      - file: content/gantt
+    - file: interesses
+    - file: publicacoes
+    - file: tccs
+#     - file: extensao
+#     - file: inovacao
+    
+- part: ensino
+  sections:
+    - file: disciplinas
+#     - file: horarios
+    
+- part: extensão
+  sections:
+  - file: extensao
+    
+- part: Inovação
+  sections:
+  - file: inovacao
+  
+- part: Links
+  sections:
+  - file: links/databases
