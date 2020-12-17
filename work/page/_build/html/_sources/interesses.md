@@ -1,12 +1,6 @@
-# Áreas de interesse
-Abaixo segue uma lista, não limitada, de tópicos de interesse para desenvolvimento de pesquisas, aulas e trabalhos de conclusão de curso.
+# Sugestões
 
-<!-- - [Ciência de Dados](#Ciência-de-Dados)  
-- [Redes Neurais Artificiais](#redes-neurais-artificiais)  
-- [Criptografia Homomórfica](#Criptografia-Homomórfica)  
-- [Processamento de Linguagem Natural](#Processamento-de-Linguagem-Natural)  
-- [Grafos](#grafos)  
-- [Linguagens de Programação](#Linguagens-de-Programação-(LP)) -->
+Abaixo segue uma lista, não limitada, de tópicos de interesse para desenvolvimento de pesquisas, aulas e trabalhos de conclusão de curso.
 
 ## Ciência de Dados
 
@@ -33,7 +27,7 @@ to build a better world](https://www.drivendata.org/)
 - [Kaggle](https://www.kaggle.com/)
 
 
-## Redes Neurais Artificiais
+### Redes Neurais Artificiais
 
 **Interesse**  
 
@@ -55,6 +49,23 @@ to build a better world](https://www.drivendata.org/)
     
 **Materiais**  
 
+### Processamento de Linguagem Natural (NLP)
+
+[RODRIGUES, 2017](https://medium.com/botsbrasil/o-que-%C3%A9-o-processamento-de-linguagem-natural-49ece9371cff) explica o processamento de linguagem natural (NLP, do inglês *Nature Language Processing*) como:
+
+> "O Processamento de Linguagem Natural é a subárea da Inteligência Artificial que estuda a capacidade e as limitações de uma máquina em entender a linguagem dos seres humanos. Seu objetivo é fornecer aos computadores a capacidade de entender e compor textos. “Entender” um texto significa reconhecer o contexto, fazer análise sintática, semântica, léxica e morfológica, criar resumos, extrair informação, interpretar os sentidos, analisar sentimentos e até aprender conceitos com os textos processados."
+
+**Interesse**  
+
+- Reconhecimento de itens em sentenças (sujeitos, verbos, relações)
+
+**Sugestões**  
+
+- Extração de informações utilizando obras da literatura brasileira
+
+**Materiais**  
+
+[RODRIGUES, J. O qué o processamento de linguagem natural? Medium, 2017.](https://medium.com/botsbrasil/o-que-%C3%A9-o-processamento-de-linguagem-natural-49ece9371cff)  
 
 [Deep Learning for Object Detection: A Comprehensive Review](https://towardsdatascience.com/deep-learning-for-object-detection-a-comprehensive-review-73930816d8d9)  
 
@@ -102,23 +113,7 @@ Algumas bibliotecas foram desenvolvidas, porém, foi mostrado que o mecanismo de
 [What is Homomorphic Encryption?](https://www.thesslstore.com/blog/what-is-homomorphic-encryption/)  
 
 
-## Processamento de Linguagem Natural (NLP)
 
-[RODRIGUES, 2017](https://medium.com/botsbrasil/o-que-%C3%A9-o-processamento-de-linguagem-natural-49ece9371cff) explica o processamento de linguagem natural (NLP, do inglês *Nature Language Processing*) como:
-
-> "O Processamento de Linguagem Natural é a subárea da Inteligência Artificial que estuda a capacidade e as limitações de uma máquina em entender a linguagem dos seres humanos. Seu objetivo é fornecer aos computadores a capacidade de entender e compor textos. “Entender” um texto significa reconhecer o contexto, fazer análise sintática, semântica, léxica e morfológica, criar resumos, extrair informação, interpretar os sentidos, analisar sentimentos e até aprender conceitos com os textos processados."
-
-**Interesse**  
-
-- Reconhecimento de itens em sentenças (sujeitos, verbos, relações)
-
-**Sugestões**  
-
-- Extração de informações utilizando obras da literatura brasileira
-
-**Materiais**  
-
-[RODRIGUES, J. O qué o processamento de linguagem natural? Medium, 2017.](https://medium.com/botsbrasil/o-que-%C3%A9-o-processamento-de-linguagem-natural-49ece9371cff)  
 
 ## Grafos
 
