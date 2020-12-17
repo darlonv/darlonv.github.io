@@ -12,3 +12,15 @@ page_clean:
 deploy: page
 	mkdir -p /home/darlon/public_html/darlonv/work
 	cp -v -r page/_build/html/* /home/darlon/public_html/darlonv/work
+
+
+publish: add commit push
+
+add:
+	git add * */* */*/* */*/*/* */*/*/*/* */*/*/*/*/*
+
+commit:
+	git commit -m 'auto commit'
+
+push:
+	git push
