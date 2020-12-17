@@ -1,4 +1,6 @@
-# Projetos
+# Pesquisa
+
+Projetos de pesquisa
 
 ## Mineração de dados e descoberta de conhecimento
 - Colaboradores:

@@ -1,4 +1,4 @@
-# Projetos
+# Inovação
 
 ## IFTECH
 - Feira de Inovação Tecnológica do IFPR - Campus Cascavel

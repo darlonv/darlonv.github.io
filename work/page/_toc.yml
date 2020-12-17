@@ -1,29 +1,29 @@
 - file: intro
   numbered: false
   
-- part: pesquisa
+- part: projetos
   sections:
     - file: pesquisa
-      sections:
-      - file: content/gantt
+#       sections:
+    - file: content/cronograma
     - file: interesses
     - file: publicacoes
     - file: tccs
-#     - file: extensao
-#     - file: inovacao
+    - file: extensao
+    - file: inovacao
     
 - part: ensino
   sections:
     - file: disciplinas
 #     - file: horarios
     
-- part: extensão
-  sections:
-  - file: extensao
+# - part: extensão
+#   sections:
+#   - file: extensao
     
-- part: Inovação
-  sections:
-  - file: inovacao
+# - part: Inovação
+#   sections:
+#   - file: inovacao
   
 - part: Links
   sections:
