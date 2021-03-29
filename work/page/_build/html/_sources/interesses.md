@@ -26,22 +26,6 @@ O conhecimento desta área pode ser aplicado a diversas outras áreas, como Biol
 to build a better world](https://www.drivendata.org/)
 - [Kaggle](https://www.kaggle.com/)
 
-### Rotas para veículos de monitoramento
-
-**Interesse**
-
-Elaboração e aplicação de algoritmos de menor caminho, para serem utilizados em trajetórias de veículos de monitoramento.
-
-
-**Sugestões**
-Existem diversas sub-tarefas a serem exploradas por diversos trabalhos, como:
-- Elaboração de malha com pontos a serem monitorados
-- Elaboração de caminhos que possuam baixo custo para percorrer
-- Caminhos considerando forças externas
-- Processamento das rotas utilizando computação paraelela e distribuída
-- IA e *Machine Learning* para elaboração dos caminhos
-
-
 
 ### Processamento de Linguagem Natural (NLP)
 
@@ -62,6 +46,42 @@ Existem diversas sub-tarefas a serem exploradas por diversos trabalhos, como:
 [RODRIGUES, J. O qué o processamento de linguagem natural? Medium, 2017.](https://medium.com/botsbrasil/o-que-%C3%A9-o-processamento-de-linguagem-natural-49ece9371cff)  
 
 [Deep Learning for Object Detection: A Comprehensive Review](https://towardsdatascience.com/deep-learning-for-object-detection-a-comprehensive-review-73930816d8d9)  
+
+## Grafos
+
+Um grafo é uma abstração matemática de uma situação, denotado por conjuntos vértices e arestas, onde as arestas são ligações entre os vértices. Utilizando grafos, é possível modelar problemas e encontrar suas soluções.
+
+**Interesse**  
+
+- Desenvolvimento de aplicações utilizando grafos
+- Pesquisa de soluções utilizando grafos
+- Uso de bancos de dados orientados a grafos
+
+**Sugestões**  
+
+- Análise de relações entre pessoas/empresas de dados públicos
+- Análise de relações entre personagens utilizando obras da literatura brasileira
+
+**Materiais**  
+
+[FEOFILOFF, P. Grafos: O que é um grafo? USP, 2018](https://www.ime.usp.br/~pf/algoritmos_em_grafos/aulas/grafos.html)  
+[BEVERIDGE, A. Network of Thrones: A song of Math and Westeros](https://networkofthrones.wordpress.com/)  
+
+### Rotas para veículos de monitoramento
+
+**Interesse**
+
+Elaboração e aplicação de algoritmos de menor caminho, para serem utilizados em trajetórias de veículos de monitoramento.
+
+
+**Sugestões**
+Existem diversas sub-tarefas a serem exploradas por diversos trabalhos, como:
+- Elaboração de malha com pontos a serem monitorados
+- Elaboração de caminhos que possuam baixo custo para percorrer
+- Caminhos considerando forças externas
+- Processamento das rotas utilizando computação paraelela e distribuída
+- IA e *Machine Learning* para elaboração dos caminhos
+
 
 ## Segurança
 
@@ -109,25 +129,7 @@ Algumas bibliotecas foram desenvolvidas, porém, foi mostrado que o mecanismo de
 
 
 
-## Grafos
 
-Um grafo é uma abstração matemática de uma situação, denotado por conjuntos vértices e arestas, onde as arestas são ligações entre os vértices. Utilizando grafos, é possível modelar problemas e encontrar suas soluções.
-
-**Interesse**  
-
-- Desenvolvimento de aplicações utilizando grafos
-- Pesquisa de soluções utilizando grafos
-- Uso de bancos de dados orientados a grafos
-
-**Sugestões**  
-
-- Análise de relações entre pessoas/empresas de dados públicos
-- Análise de relações entre personagens utilizando obras da literatura brasileira
-
-**Materiais**  
-
-[FEOFILOFF, P. Grafos: O que é um grafo? USP, 2018](https://www.ime.usp.br/~pf/algoritmos_em_grafos/aulas/grafos.html)  
-[BEVERIDGE, A. Network of Thrones: A song of Math and Westeros](https://networkofthrones.wordpress.com/)  
 
 
 ## Linguagens de Programação (LP)
