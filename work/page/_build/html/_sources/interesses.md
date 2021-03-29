@@ -4,7 +4,7 @@ Abaixo segue uma lista, não limitada, de tópicos de interesse para desenvolvim
 
 ## Ciência de Dados
 
-A Ciência de dados ou *Data Science* consiste no estudo de dados e informações armazenadas. É um termo amplamente utilizado para representar uma área de conhecimento dedicada ao estudo e análise de dados, dos quais busca-se extrar conhecimento e gerar novas informações. A ciência de dados aborda da maneira principal duas grandes áreas: a Ciência da Computação e a Estatística. 
+A Ciência de dados ou *Data Science* consiste no estudo de dados e informações armazenadas. É um termo amplamente utilizado para representar uma área de conhecimento dedicada ao estudo e análise de dados, dos quais busca-se extrar conhecimento e gerar novas informações. A ciência de dados abrange principalmente as áreas da Ciência da Computação, Estatística e Matemática.
 
 A Ciência de dados trata da entendimento da organização e significado dos dados, e uso de algoritmos que busquem e expliquem padrões existentes, ou seja, pode tentar **explicar** os dados ou então **prever** dados futuros.
 
@@ -26,28 +26,22 @@ O conhecimento desta área pode ser aplicado a diversas outras áreas, como Biol
 to build a better world](https://www.drivendata.org/)
 - [Kaggle](https://www.kaggle.com/)
 
+### Rotas para veículos de monitoramento
 
-### Redes Neurais Artificiais
+**Interesse**
 
-**Interesse**  
+Elaboração e aplicação de algoritmos de menor caminho, para serem utilizados em trajetórias de veículos de monitoramento.
 
-- Aplicações utilizando RNA's
-- Desenvolvimento de RNA's
-- Pesquisa sobre RNA's
-- Execução de RNA's em ambientes distribuídos
 
-**Sugestões**  
+**Sugestões**
+Existem diversas sub-tarefas a serem exploradas por diversos trabalhos, como:
+- Elaboração de malha com pontos a serem monitorados
+- Elaboração de caminhos que possuam baixo custo para percorrer
+- Caminhos considerando forças externas
+- Processamento das rotas utilizando computação paraelela e distribuída
+- IA e *Machine Learning* para elaboração dos caminhos
 
-- Aplicação de RNA's em imagens relacionadas à área de saúde
-- Levantamento sobre tipos de RNA's utilizadas atualmente
-    - RNN: Redes Neurais Recorrentes
-    - CNN: Redes Neurais Convolucionais
-    - R-CNN: *Region-based CNN*
-    - Faster R-CNN
-    - ...
-    
-    
-**Materiais**  
+
 
 ### Processamento de Linguagem Natural (NLP)
 
@@ -154,4 +148,26 @@ Estudos sobre linguagens de programação, especialmente LP's recentes.
 - Julia:
     - Podcast [Pizza de Dados, Episódio 021: Precisamos falar sobre Julia](https://podcast.pizzadedados.com/e/episodio-021/)  
     - Blog [Pizza de Dados: Precisamos falar sobre a linguagem Julia](https://medium.com/pizzadedados/precisamos-falar-sobre-a-linguagem-julia-e22eb235969e)    
+    
+### Redes Neurais Artificiais
+
+**Interesse**  
+
+- Aplicações utilizando RNA's
+- Desenvolvimento de RNA's
+- Pesquisa sobre RNA's
+- Execução de RNA's em ambientes distribuídos
+
+**Sugestões**  
+
+- Aplicação de RNA's em imagens relacionadas à área de saúde
+- Levantamento sobre tipos de RNA's utilizadas atualmente
+    - RNN: Redes Neurais Recorrentes
+    - CNN: Redes Neurais Convolucionais
+    - R-CNN: *Region-based CNN*
+    - Faster R-CNN
+    - ...
+    
+    
+**Materiais**  
  
