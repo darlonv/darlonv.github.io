@@ -13,7 +13,7 @@
 
 1. MACHADO, A.A.R.; SOUZA, M.E.M.C.; SELLA, P.; VASATA, D. Abstração relacional de obras literárias por meio do processamento de linguagem natural. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR Assis Chateaubriand. 6, 2020. Assis Chateaubriand-PR. Disponível em: <[Anais VI FEPIAC, pg. 13](https://www.even3.com.br/6fepiac/)>. Acesso em 09 jul 2021.
 
-1. MACHADO, A.A.R.; SOUZA, M.E.M.C.; SELLA, P.; VASATA, D. A influência da linguagem: Análise de sentimentos baseada em léxico sobre obras em língua inglesa. In: Jornada de Letras e Congresso Nacional de Ensino-aprendizagem de Línguas, Linguística e Literaturas - Conael. 2, 2020, Avaré-SP. Disponivel em: <[Anais II CONAEL, pg 210-225](https://sites.google.com/view/jornadadeletraseconael2020/edição-atual-anais-v-3-2020)>. Acesso em 9 jul 2020.
+1. MACHADO, A.A.R.; SOUZA, M.E.M.C.; SELLA, P.; VASATA, D. A influência da linguagem: Análise de sentimentos baseada em léxico sobre obras em língua inglesa. In: Jornada de Letras e Congresso Nacional de Ensino-aprendizagem de Línguas, Linguística e Literaturas - Conael. 2, 2020, Avaré-SP. Disponivel em: <[Anais II CONAEL, pg](https://sites.google.com/view/jornadadeletraseconael2020/edição-atual-anais-v-3-2020)>. Acesso em 9 jul 2020.
 
 1. MACHADO, H.; OLIVEIRA, H.C.; VASATA, D. Aplicação Mobile mediadora de mudanças intermunicipais no oeste paranaense. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR Assis Chateaubriand. 6, 2020. Assis Chateaubriand-PR. Disponível em: <[Anais VI FEPIAC, pg. 18](https://www.even3.com.br/6fepiac/)>. Acesso em 09 jul 2021.
 

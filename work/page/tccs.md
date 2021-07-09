@@ -1,7 +1,30 @@
 # TCCs
 
-<!-- ## 2021 -->
-<!-- ### Em andamento -->
+## 2021
+### Em andamento
+
+1. **Sistema de apoio ** (título provisório)
+    - Ricardo Luis Vessaro da Silva
+    
+1. **Sistema de previsão de vôos** (título provisório)
+    - João Rafael Quadros dos Santos
+    
+1. **Cálculo de rotas para dispositivos de monitoramento utilizando inteligência artificial** (título provisório)
+    - Fabricio de Medeira Fernandes
+    
+1. **---** (título provisório)
+    - José Vinicius Santos Barbosa
+    
+1. **Cálculo de rotas para dispositivos de monitoramente utilizando aprendizado de máquina** (título provisório)
+    - André Augusto Bortoli
+    - Sarah Klock Mauricio
+
+#### Coorientações
+
+**Geração de malhas a partir de informações geolocalizadas**
+    - Willer Seno Trambuch
+    - Orientador: Ricardo da Rosa
+
 
 ## 2020
 1. **Enlace narrativo: tecendo valor sobre dados desestruturados de obras literárias em língua inglesa**
