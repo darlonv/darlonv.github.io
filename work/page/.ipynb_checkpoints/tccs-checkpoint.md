@@ -5,46 +5,46 @@
 ### Em andamento
 
 1. **A interação virtual docente por meio de tecnologias digitais no ensino de Ciências e Biologia**
-    - Mikael Otto $$ $$
+    - Mikael Otto
     
 1. **Sistema de apoio docente utilizando algoritmo de aprendizado de máquina** (título provisório)
-    - Ricardo Luis Vessaro da Silva $$ $$
+    - Ricardo Luis Vessaro da Silva
     
 1. **Sistema de previsão de vôos** (título provisório)
-    - João Rafael Quadros dos Santos $$ $$
+    - João Rafael Quadros dos Santos
     
 1. **Cálculo de rotas para dispositivos de monitoramento utilizando inteligência artificial** (título provisório)
     - Fabricio de Medeira Fernandes
-    - Coorientador: Ricardo da Rosa $$ $$
+    - Coorientador: Ricardo da Rosa
     
 1. **Predição de evasão estudantil utilizando aprendizado de máquina** (título provisório)
-    - José Vinicius Santos Barbosa $$ $$
+    - José Vinicius Santos Barbosa
     
 1. **Cálculo de rotas para dispositivos de monitoramento utilizando aprendizado de máquina** (título provisório)
     - André Augusto Bortoli
     - Sarah Klock Mauricio
-    - Coorientadora: Polyanna Guimarães e Miranda $$ $$
+    - Coorientadora: Polyanna Guimarães e Miranda
 
 1. **Análise de acidentes nas rodovias federais** (título provisório)
     - Izadora Scheren Klassmann
     - Lohana de Aguiar Bristoti
-    - Coorientadora: Lilian Orvatti $$ $$
+    - Coorientadora: Lilian Orvatti
 
 1. **Robô dicionário** (título provisório)
     - Ana Flavia Moretto
     - Mariana Pimentel dos Santos
-    - Coorientador: André Luiz da Silva $$ $$
+    - Coorientador: André Luiz da Silva
 
 
 #### Coorientações
 
 1. **Geração de malhas computacionais a partir de informações geolocalizadas** (título provisório)
     - Willer Seno Trambuch
-    - Orientador: Ricardo da Rosa $$ $$
+    - Orientador: Ricardo da Rosa
 1. **Mapeamento da dengue no município de Cascavel** (título provisório)
     - Ana Alice Silva Costa
     - Amabile de Lima Oliveira
-    - Orientador: André Luiz da Silva $$ $$
+    - Orientador: André Luiz da Silva
 <!-- #endregion -->
 
 ## 2020
@@ -76,14 +76,14 @@
     - Coorientadora: Natássia Cosmann
 
 
-#### Coorientações
+### Coorientações
 1. **Análise estatística de dados do ENEM**
     - Bernardo Bueno
     - Orientadora: Polyanna Guimarães e Miranda
 1. **Dicionário de termos biológicos**
     - David Antonio Brocardo
     - João Augusto da Silva Ribeiro
-    - Orientador: André Luiz da Silva    
+    - Orientador: André Luiz da Silva
 
 
 ## 2019
