@@ -27,7 +27,7 @@
 
 ### Participações em eventos e feiras
 
-1. PAPANI, F.; VASATA, D. Criptografia Visual. In: Feira de Inovação Tecnológica do Instituto Federal do Paraná - Campus Cacavel. 2020, Cascavel-PR.
+1. PAPANI, F.; VASATA, D. Criptografia Visual. In: Feira de Inovação Tecnológica do Instituto Federal do Paraná - Campus Cascavel. 2020, Cascavel-PR.
 
 ## 2019
 
@@ -53,7 +53,7 @@
 
 ### Participações em eventos e feiras
 
-1. PINHEIRO, M.H.F.; TRISTONI, J.M.H.P.; VIANA, J.R.M.; VASATA, D. SUNDATA SYSTEM: Controle de geração de energia fotovoltaica. In: Feira de Inovação Tecnológica do Instituto Federal do Paraná - Campus Cacavel. 2019, Cascavel-PR. Disponível em: [IFTECH](https://cascavel.ifpr.edu.br/wp-content/uploads/2019/09/CLASSIFICAÇAO-FINAL-IFTECH.pdf).  
+1. PINHEIRO, M.H.F.; TRISTONI, J.M.H.P.; VIANA, J.R.M.; VASATA, D. SUNDATA SYSTEM: Controle de geração de energia fotovoltaica. In: Feira de Inovação Tecnológica do Instituto Federal do Paraná - Campus Cacavel. 2019, Cascavel-PR. Disponível em: <[Resultado IFTECH 2019](https://cascavel.ifpr.edu.br/wp-content/uploads/2019/09/CLASSIFICAÇAO-FINAL-IFTECH.pdf)>. Acesso em 12 jul 2021.  
 
 ```python
 
