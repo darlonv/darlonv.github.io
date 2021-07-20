@@ -1,12 +1,23 @@
 # Disciplinas
 
 Cursos:
+
 |Sigla|Nível|Curso|
 |-|-|-|
 |TADS|Graduação|Tecnologia em Análise e Desenvolvimento de Sistemas|
 |TINF|Técnico|Técnico em Informática|
 |TAQ |Técnico|Técnico em Análises Químicas| 
 |EETS|Pós-graduação|Especialização em Educação, Tecnologia e Sociedade|
+
+## 2021
+- TADS
+    - Algoritmos e Estruturas de Dados
+    - Redes de Computadores
+    - Tópicos Especiais em Computação
+- TINF
+    - Tópicos Especiais em Informática
+    - Linguagem de Programação II
+    - Redes de Computadores
 
 ## 2020
 - TADS
@@ -44,7 +55,7 @@ Cursos:
 -TAQ
     - Informática Instrumental
 
-    
+
 ### Contribuições
 - TINF
     - Análise e Projeto de Sistemas
