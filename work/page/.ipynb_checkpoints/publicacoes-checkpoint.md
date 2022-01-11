@@ -2,36 +2,17 @@
 
 ## 2021
 
-1. BARBOZA, J.V., VASATA, D. Predição de evasão estudantil utilizando algoritmos de aprendizagem de máquina. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. No prelo.  
-<!-- PREDIÇÃO DE EVASÃO ESTUDANTIL UTILIZANDO ALGORITMOS DE APRENDIZAGEM DE MÁQUINA	DARLON VASATA	JOSÉ VINICIUS SANTOS BARBOZA	DARLON VASATA -->
-
-1. FERNANDES, F., VASATA, D. Cálculo de rotas para dispositivos de monitoramente utilizando inteligência artificial. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. No prelo.  
-<!-- CÁLCULO DE ROTAS PARA DISPOSITIVOS DE MONITORAMENTO UTILIZANDO INTELIGÊNCIA ARTIFICIAL	DARLON VASATA	FABRICIO DE MEDEIRA FERNANDES	 -->
-
-1. KLASSMANN, I.S., BRISTOTI, L.A., ORVATTI, L., VASATA, D. Análise de base de dados da Polícia Rodoviária Federal. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. No prelo. 
-<!-- ANÁLISE DE BASE DE DADOS DA POLÍCIA RODOVIÁRIA FEDERAL	DARLON VASATA	IZADORA SCHEREN KLASSMANN	LOHANA DE AGUIAR BRISTOTI CORDEIRO	LILIAN ORVATTI -->
-
-1. KLASSMANN, I.S., BRISTOTI, L.A., ORVATTI, L., VASATA, D. Predição de acidentes em rodovias federais utilizando regressão linear. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR Assis Chateaubriand. 7, 2021. Assis Chateaubriand-PR. No prelo.  
-<!-- PREDIÇÃO DE ACIDENTES EM RODOVIAS FEDERAIS UTILIZANDO REGRESSÃO LINEAR -->
-
+1. BARBOZA, J.V., VASATA, D. Predição de evasão estudantil utilizando algoritmos de aprendizagem de máquina. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: <[!Anais do II SCIENTIF](https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=45), pg.45>. Acesso em: 6 jan 2021.
+1. FERNANDES, F., VASATA, D. Cálculo de rotas para dispositivos de monitoramente utilizando inteligência artificial. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: <[!Anais do II SCIENTIF](https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=44), pg.44>. Acesso em: 6 jan 2021.
+1. KLASSMANN, I.S., BRISTOTI, L.A., ORVATTI, L., VASATA, D. Análise de base de dados da Polícia Rodoviária Federal. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: <[!Anais do II SCIENTIF](https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=33), pg.33>. Acesso em: 6 jan 2021.
+1. KLASSMANN, I.S., BRISTOTI, L.A., ORVATTI, L., VASATA, D. Predição de acidentes em rodovias federais utilizando regressão linear. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR Assis Chateaubriand. 7, 2021. Assis Chateaubriand-PR. No prelo.
 1. MAURICIO, S.K. BORTOLI, A.A, VASATA, D. Solução geométrica plana ao problema do caixeiro viajante utilizando divisão e conquista, Curva de Hilbert e Branch and Bound. In: Latin.Science, 2021, Foz do Iguaçú-PR. No prelo.
-<!-- 1. MORETTO, A.F. PIMENTEL, M., SILVA, A.L., VASATA, D. Biobot: Dicionário em termos biológicos automatizado com robô via Telegram. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. No prelo.   -->
-<!-- BIOBOT: DICIONÁRIO EM TERMOS BIOLÓGICOS AUTOMATIZADO COM ROBÔ VIA TELEGRAM	DARLON VASATA	ANA FLÁVIA MORETTO	MARIANA PIMENTEL DOS SANTOS	ANDRÉ LUIZ DA SILVA -->  
-
-1. OLIVEIRA, A.L., COSTA, A.A.S., VASATA, D., SILVA, A.L. Abordagem teórica através de dados e informações sobre a Dengue. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. No prelo.  
-<!-- ABORDAGEM TEÓRICA ATRAVÉS DE DADOS E INFORMAÇÕES SOBRE A DENGUE	ANDRE LUIS DA SILVA	DARLON VASATA	AMABILE DE LIMA OLIVEIRA	ANA ALICE SILVA COSTA -->
-
-1. RIBEIRO, M.C. GOMES, K.A.B., OLIVEIRA, E.F.N., VASATA, D. Características da linguagem de programação Julia. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. No prelo.  
-<!-- CARACTERÍSTICAS DA LINGUAGEM DE PROGRAMAÇÃO JULIA	DARLON VASATA	MATEUS COSTA RIBEIRO	KAMILI APARECIDA BATISTA GOMES	EDIMALDO FIALHO NUNES DE OLIVEIRA	 -->
-
-1. SANTOS, J.R.Q., VASATA, D. Uso de aprendizado de máquina para análise e predição de vôos. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. No prelo.  
-<!-- USO DE APRENDIZADO DE MÁQUINA PARA ANÁLISE E PREDIÇÃO DE VÔOS	DARLON VASATA	JOAO RAFAEL QUADROS DOS SANTOS	 -->
-
+1. MORETTO, A.F. PIMENTEL, M., SILVA, A.L., VASATA, D. Biobot: Dicionário em termos biológicos automatizado com robô via Telegram. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: <[!Anais do II SCIENTIF](https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=43), pg.43>. Acesso em: 6 jan 2021.
+1. OLIVEIRA, A.L., COSTA, A.A.S., VASATA, D., SILVA, A.L. Abordagem teórica através de dados e informações sobre a Dengue. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: <[!Anais do II SCIENTIF](https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=34), pg.34>. Acesso em: 6 jan 2021.
+1. RIBEIRO, M.C. GOMES, K.A.B., OLIVEIRA, E.F.N., VASATA, D. Características da linguagem de programação Julia. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: <[!Anais do II SCIENTIF](https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=52), pg.52>. Acesso em: 6 jan 2021.
+1. SANTOS, J.R.Q., VASATA, D. Uso de aprendizado de máquina para análise e predição de vôos. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: <[!Anais do II SCIENTIF](https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=45), pg.45>. Acesso em: 6 jan 2021.
 1. SILVA JUNIOR, C.H., VASATA, D., MIRANDA, P.G. Qualificação docente e o desempenho dos estudantes do ensino médio das escolas do Paraná no ENEM. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR Assis Chateaubriand. 7, 2021. Assis Chateaubriand-PR. No prelo.
-<!-- QUALIFICAÇÃO DOCENTE E O DESEMPENHO DOS ESTUDANTES DO ENSINO MÉDIO DAS ESCOLAS DO PARANÁ NO ENEM -->
-
-1. TRAMBUCH, W.S., ROSA, R., VASATA, D. Geração de malhas computacionais a partir de informações de geolocalização para exploração de ambientes abertos com robôs autônomos. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. No prelo.  
-<!-- GERAÇÃO DE MALHAS COMPUTACIONAIS A PARTIR DE INFORMAÇÕES DE GEOLOCALIZAÇÃO PARA EXPLORAÇÃO DE AMBIENTES ABERTOS COM ROBÔS AUTÔNOMOS	RICARDO DA ROSA	WILLER SENO TRAMBUCH	DARLON VASATA -->
+1. TRAMBUCH, W.S., DA ROSA, R., VASATA, D. Geração de malhas computacionais a partir de informações de geolocalização para exploração de ambientes abertos com robôs autônomos. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: <[!Anais do II SCIENTIF](https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=56), pg.56>. Acesso em: 6 jan 2021.
 
 
 
@@ -71,7 +52,7 @@
 
 ## 2019
 
-1. ROSA, A.S.; MOTTER, L.G.; RUCHEL, L. PARCIANELLO, R.V.R., VASATA, D. Mineração de dados e descoberta de conhecimento. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 1, 2019, Cascavel-PR. Disponível em: [Anais I SCIENTIF, p.33-34](https://cascavel.ifpr.edu.br/wp-content/uploads/2020/03/ANAIS-DO-I-SCIENTIF-Vol-1-Dez-2019.pdf#page=33). 
+1. DA ROSA, A.S.; MOTTER, L.G.; RUCHEL, L. PARCIANELLO, R.V.R., VASATA, D. Mineração de dados e descoberta de conhecimento. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 1, 2019, Cascavel-PR. Disponível em: [Anais I SCIENTIF, p.33-34](https://cascavel.ifpr.edu.br/wp-content/uploads/2020/03/ANAIS-DO-I-SCIENTIF-Vol-1-Dez-2019.pdf#page=33). 
 
 1. PAPANI, F.G.; VASATA, D. Criptografia Visual. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 1, 2019, Cascavel-PR. Disponível em: [Anais I SCIENTIF, p.31](https://cascavel.ifpr.edu.br/wp-content/uploads/2020/03/ANAIS-DO-I-SCIENTIF-Vol-1-Dez-2019.pdf#page=31). 
 
