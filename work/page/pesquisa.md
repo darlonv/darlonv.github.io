@@ -2,6 +2,20 @@
 
 Projetos de pesquisa
 
+
+## Estudo e Aplicação de Algoritmos e Ferramentas para Análises Descritivas e Preditivas em Bases de Dados
+- Colaboradores:
+    - Polyanna Guimarães e Miranda
+    - Claudio Honório da Silva Junior
+    - João Rafael Quadros dos Santos
+    - José Vinícius Santos Barboza
+    - Ricardo Luís Vessaro da Silva
+    - Izadora Scheren Klassmann
+    - Lohana de Aguiar Bristoti
+- Período: Ago/2021 - Ago/2023
+    
+
+
 ## Mineração de dados e descoberta de conhecimento
 - Colaboradores:
     - Roberta Vanessa Rojo Parcianello

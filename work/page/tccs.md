@@ -1,74 +1,78 @@
-# TCCs
+# Orientações de Trabalhos de Conclusão de Curso
+
+
+## 2022
+
+### Coorientações
+
+1. **Qualificação docente e o desempenho dos estudantes do ensino médio das escolas do Paraná no ENEM.** (título provisório)
+    - Aluno:
+        - Caudio Honório da Silva Junior
+    - Orientadora: Polyanna Guimarães e Miranda
+    - Trabalho desenvolvido no IFPR Campus Assis Chateaubriand
+
 
 ## 2021 
 
-### Em andamento
-
-1. **A interação virtual docente por meio de tecnologias digitais no ensino de Ciências e Biologia**
+1. **A interação virtual docente por meio de ferramentas síncronas e assíncronas no ensino de Ciências e Biologia**
     - Aluno:
         - Mikael Otto
-    
-1. **Sistema de apoio docente utilizando algoritmo de aprendizado de máquina** (título provisório)
+    - Defendido em 29/09/2021
+    - Modalidade: Pós Graduação
+
+1. **Aplicação de Análise de Dados como ferramenta de auxílio ao aprendizado**
     - Aluno:
         - Ricardo Luis Vessaro da Silva
-    
-1. **Sistema de previsão de vôos** (título provisório)
+    - Modalidade: Graduação
+1. **Análise e predição de voos no aeroporto de Cascavel-PR utilizando o algoritmo Random Forest**  
     - Aluno:
         - João Rafael Quadros dos Santos
+    - Modalidade: Graduação
     
-1. **Cálculo de rotas para dispositivos de monitoramento utilizando inteligência artificial** (título provisório)
+1. **Cálculo de rotas para dispositivos de monitoramento utilizando inteligência artificial**
     - Fabricio de Medeira Fernandes
     - Coorientador: Ricardo da Rosa
+    - Modalidade: Graduação
     
-1. **Predição de evasão estudantil utilizando aprendizado de máquina** (título provisório)
+1. **Predição de evasão estudantil utilizando aprendizado de máquina**
     - Aluno:
         - José Vinicius Santos Barbosa
+    - Modalidade: Graduação
     
-1. **Cálculo de rotas para dispositivos de monitoramento utilizando aprendizado de máquina** (título provisório)
-    - Alunas:
+1. **Algoritmo solução a casos geométricos planos do problema do Caixeiro Viajante utilizando Divisão e Conquista, Curva de Hilbert e Branch and Bound**
+    - Alunos:
         - André Augusto Bortoli
         - Sarah Klock Mauricio
     - Coorientadora: Polyanna Guimarães e Miranda
+    - Modalidade: Técnico integrado ao ensino médio
 
-1. **Análise de acidentes nas rodovias federais** (título provisório)
+1. **Análise de base de dados da Polícia Rodoviária Federal**
     - Alunas:
         - Izadora Scheren Klassmann
         - Lohana de Aguiar Bristoti
     - Coorientadora: Lilian Orvatti
+    - Modalidade: Técnico integrado ao ensino médio
 
-1. **Robô dicionário** (título provisório)
-    - Alunas:
-        - Ana Flavia Moretto
-        - Mariana Pimentel dos Santos
-    - Coorientador: André Luiz da Silva
-
-1. **Características da Linguagem de Programação Julia** (título provisório)
+1. **Estudo da Linguagem de Programação Julia**
     - Alunos:
-        - Kamili Aparecida Batista Gomes
         - Mateus Costa Ribeiro
+        - Kamili Aparecida Batista Gomes
     - Coorientador: Edimaldo Fialho Nunes de Oliveira
+    - Modalidade: Técnico integrado ao ensino médio
  
 
 
 ### Coorientações
 
-1. **Geração de malhas computacionais a partir de informações geolocalizadas** (título provisório)
+1. **Geração de malhas computacionais a partir de informações de geolocalização para exploração de ambientes abertos com robôs autônomos**
     - Aluno:
         - Willer Seno Trambuch
     - Orientador: Ricardo da Rosa
-1. **Mapeamento da dengue no município de Cascavel** (título provisório)
+1. **Acesso facilitado a informações sobre a Dengue**
     - Alunas:
         - Ana Alice Silva Costa
         - Amabile de Lima Oliveira
     - Orientador: André Luiz da Silva
-1. **Atualização de pesos em grafos direcionados considerando forças externas para uso em rotas de dispositivos robóticos de monitoramento** (título provisório)
-    - Aluno:
-        - Gabriel Santa Maria Sinotti Barboza
-    - Orientadora: Polyanna Guimarães e Miranda 
-    - Trabalho desenvolvido no IFPR Campus Assis Chateaubriand
-
-
- 
 
 
 ## 2020
@@ -158,7 +162,3 @@
         - Daniel Carlos Chaves Boll
         - Eduardo José Cordeiro
     - Co-orientador: Ricardo Sonsim de Oliveira
-
-```python
-
-```
