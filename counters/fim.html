@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css" title="mystyles" media="all">
+            body{
+                background: #1abc9c;
+            }
+            .content {
+                padding: 10px;
+                text-align: center;
+                background: #1abc9c;
+                color: white;
+                font-size: 60px;
+            }
+        </style>
+        <!-- <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" /> -->
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    </head>
+    <body>
+        <py-script output="out">
+from datetime import date
+ferias= date(2022,12,16)
+faltam = ferias-date.today()
+print(f'{round(faltam.days/7)} semanas')
+        </py-script>
+        <div class="content">
+            Faltam
+        </div>
+        <div id="out" class="content">
+        </div>
+        <div class="content">
+            para o fim desta bosta!
+        </div>
+
+    </body>
+</html>
+
+
