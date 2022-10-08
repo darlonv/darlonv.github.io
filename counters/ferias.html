@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css" title="mystyles" media="all">
+            body{
+                background: #1abc9c;
+                padding: 10px;
+                text-align: center;
+                color: white;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var date_target = new Date('12/24/2022');
+            var date_today = new Date();
+            var difference = date_target.getTime() - date_today.getTime();
+            var days = Math.ceil(difference / (1000 * 3600 * 24));
+            document.body.innerHTML = "<h1>" + days + "</h1>"
+        </script>
+    </body>
+</html>
+
+
