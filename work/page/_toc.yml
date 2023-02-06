@@ -1,30 +1,17 @@
-- file: intro
-  numbered: false
-  
-- part: projetos
-  sections:
-    - file: pesquisa
-#       sections:
-    - file: content/cronograma
-    - file: interesses
-    - file: publicacoes
-    - file: tccs
-    - file: extensao
-    - file: inovacao
-    
-- part: ensino
-  sections:
-    - file: disciplinas
-#     - file: horarios
-    
-# - part: extensão
-#   sections:
-#   - file: extensao
-    
-# - part: Inovação
-#   sections:
-#   - file: inovacao
-  
-- part: Links
-  sections:
+format: jb-book
+root: intro
+parts:
+- caption: projetos
+  chapters:
+  - file: pesquisa
+  - file: interesses
+  - file: publicacoes
+  - file: tccs
+  - file: extensao
+  - file: inovacao
+- caption: ensino
+  chapters:
+  - file: disciplinas
+- caption: Links
+  chapters:
   - file: links/databases
