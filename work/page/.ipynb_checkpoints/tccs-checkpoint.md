@@ -3,13 +3,42 @@
 
 ## 2022
 
+1. **Distribuição Eletrônica: uma Abordagem Visual e Imersiva com a Computação Gráfica** (Título provisório)
+    - Aluno:
+        - Gabriel Grechuski
+    - Modalidade: Pós Graduação
+
+1. **Predição da produção agrícola com base em dados pluviométricos para a cidade de Maringá-PR**
+    - Alunos:
+        - Matheus Eberts Sigolin
+        - Vitor Matheus Miola
+      - Coorientador:
+          - Thiago Berticelli Ló
+      - Modalidade: Técnico integrado ao ensino médio
+
+1. **Ciência de Dados: Análise e predição da criminalidade urbana no município de São Paulo**
+    - Alunos:
+        - Pablo Vinicius de Campos Souza
+        - Paulo Henrique da Rosa
+    - Coorientador:
+        - Thiago Berticelli Ló
+    - Modalidade: Técnico integrado ao ensino médio
+
 ### Coorientações
 
-1. **Qualificação docente e o desempenho dos estudantes do ensino médio das escolas do Paraná no ENEM.** (título provisório)
+1. **Desempenho dos estudantes do ensino médio no Enem e sua relação com a qualificação do corpo docente nas escolas do Paraná.**
     - Aluno:
         - Caudio Honório da Silva Junior
     - Orientadora: Polyanna Guimarães e Miranda
     - Trabalho desenvolvido no IFPR Campus Assis Chateaubriand
+    - Modalidade: Técnico integrado ao ensino médio
+    
+1. **Desenvolvimento de software para ocultação de informações por meio de esteganografia**
+    - Alunos:
+        - Anderson Angelo de Souza Rossi
+        - Marcelo Henrique Karas
+    - Orientador: Thiago Berticelli Ló
+    - Modalidade: Técnico integrado ao ensino médio
 
 
 ## 2021 

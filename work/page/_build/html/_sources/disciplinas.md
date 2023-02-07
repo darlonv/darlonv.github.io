@@ -9,6 +9,23 @@ Cursos:
 |TAQ |Técnico|Técnico em Análises Químicas| 
 |EETS|Pós-graduação|Especialização em Educação, Tecnologia e Sociedade|
 
+## 2023
+- TADS
+    - Algoritmos e Estruturas de Dados
+    - Redes de Computadores
+- TINF
+    - Linguagem de Programação II
+    - Redes de Computadores
+
+## 2022
+- TADS
+    - Algoritmos e Estruturas de Dados
+    - Tópicos Especiais em Computação
+- TINF
+    - Tópicos Especiais em Informática
+    - Linguagem de Programação II
+    - Redes de Computadores
+    
 ## 2021
 - TADS
     - Algoritmos e Estruturas de Dados
