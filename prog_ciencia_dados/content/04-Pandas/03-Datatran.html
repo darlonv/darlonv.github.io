@@ -1,0 +1,840 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;no title&gt; &#8212; Programação para Ciência de Dados</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Programação para Ciência de Dados</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Pesquise este livro ..." aria-label="Pesquise este livro ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Programação para Ciência de Dados
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Curso
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../Planejamento.html">
+   Planejamento
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Python
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../01-Intro/01-Intro.html">
+   Python
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/01-Intro/01-A_Linguagem.html">
+     A linguagem
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/01-Intro/02-Operadores.html">
+     Expressões
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/01-Intro/03-Identificadores.html">
+     Identificadores
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/01-Intro/04-Tipos_de_variaveis.html">
+     Tipos de variáveis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/02-Selecao/01-if.html">
+     If
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/02-Selecao/02-elif.html">
+     elif
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/03-Repeticao/01-Repeticao.html">
+     Estruturas de repetição
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/03-Repeticao/02-For.html">
+     For
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/03-Repeticao/03-While.html">
+     While
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/04-Funcoes/01-Funcoes.html">
+     Funções
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/04-Funcoes/02-Escopo.html">
+     Escopo de variáveis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/05-Estruturas/01-Sequencias.html">
+     Sequências
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/05-Estruturas/02-Listas.html">
+     Listas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/05-Estruturas/03-Strings.html">
+     <em>
+      Strings
+     </em>
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/05-Estruturas/04-Tuplas.html">
+     Tuplas
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/05-Estruturas/05-Conjuntos.html">
+     Conjuntos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/05-Estruturas/06-Dicionarios.html">
+     Dicionários
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/08-Arquivos/01-Arquivos.html">
+     Arquivos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/08-Arquivos/02-Texto.html">
+     Arquivos texto
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/08-Arquivos/03-csv.html">
+     CSV
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/08-Arquivos/04-json.html">
+     JSON
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/08-Arquivos/05-xml.html">
+     XML
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/08-Arquivos/06-Serializacao_binario.html">
+     Serialização e arquivos binários
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/09-Funcoes_especiais/01-Iterators_e_generators.html">
+     Iterators e generators
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/09-Funcoes_especiais/02-Comprehensions.html">
+     Comprehensions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/09-Funcoes_especiais/03-Enumerate_e_zip.html">
+     Enumerate e Zip
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../02-Python/09-Funcoes_especiais/04-Funcoes_lambda.html">
+     Map e funções lambda
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Numpy
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../03-Numpy/01-Arrays.html">
+   Numpy
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../03-Numpy/02-Operacoes.html">
+     Operações sobre
+     <em>
+      arrays
+     </em>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Alternar de navegação" aria-controls="site-navigation"
+                title="Alternar de navegação" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Baixe esta página"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/content/04-Pandas/03-Datatran.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Baixar arquivo fonte" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Imprimir em PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Modo tela cheia"
+        title="Modo tela cheia"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/content/04-Pandas/03-Datatran.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Lançamento Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Conteúdo
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1><no title></h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Conteúdo </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <p>A Polícia Rodoviária Federal (PRF) disponibiliza dados sobre os acidentes de trânsito ocorridos em rodovias federais.</p>
+<p><a class="reference external" href="https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-acidentes">DATATRAN</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Download da base:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>print(&#39;Realizando download...&#39;)
+!wget -q --show-progress -O base_2021.zip &#39;http://arquivos.prf.gov.br/arquivos/index.php/s/n1T3lymvIdDOzzb/download&#39;
+print(&#39;Descompactando...&#39;)
+!unzip -q -o base_2021.zip
+print(&#39;Removendo arquivo compactado...&#39;)
+!rm base_2021.zip
+!ls *.csv
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Realizando download...&#39;</span><span class="p">)</span>
+<span class="o">!</span>wget -q --show-progress -O base_2021.zip <span class="s1">&#39;http://arquivos.prf.gov.br/arquivos/index.php/s/n1T3lymvIdDOzzb/download&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Descompactando...&#39;</span><span class="p">)</span>
+<span class="o">!</span>unzip -q -o base_2021.zip
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Removendo arquivo compactado...&#39;</span><span class="p">)</span>
+<span class="o">!</span>rm base_2021.zip
+<span class="o">!</span>ls *.csv
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Realizando download...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>base_2021.zip         0%[                    ]       0  --.-KB/s               
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>base_2021.zip         3%[                    ] 112,08K   417KB/s               
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>base_2021.zip        15%[==&gt;                 ] 482,83K  1022KB/s               
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>base_2021.zip        23%[===&gt;                ] 696,00K  1,01MB/s               
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>base_2021.zip        31%[=====&gt;              ] 944,00K  1,05MB/s               
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>base_2021.zip        39%[======&gt;             ]   1,17M  1,09MB/s               
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>base_2021.zip        48%[========&gt;           ]   1,43M  1,12MB/s               
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>base_2021.zip        56%[==========&gt;         ]   1,67M  1,13MB/s               
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>base_2021.zip        65%[============&gt;       ]   1,94M  1,16MB/s               
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>base_2021.zip        74%[=============&gt;      ]   2,21M  1,16MB/s               
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>base_2021.zip        84%[===============&gt;    ]   2,50M  1,19MB/s               
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>base_2021.zip        95%[==================&gt; ]   2,81M  1,22MB/s               
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>base_2021.zip       100%[===================&gt;]   2,95M  1,22MB/s    em 2,4s    
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Descompactando...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Removendo arquivo compactado...
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datatran2021.csv
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para abrir a base:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">fonte</span><span class="o">=</span><span class="s1">&#39;./datatran2021.csv&#39;</span>
+<span class="n">base_21</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">fonte</span><span class="p">,</span> 
+                      <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;latin-1&#39;</span><span class="p">,</span>
+                      <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fonte</span><span class="o">=</span><span class="s1">&#39;./datatran2021.csv&#39;</span>
+<span class="n">base</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">fonte</span><span class="p">,</span> 
+                      <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;latin-1&#39;</span><span class="p">,</span>
+                      <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">base</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>data_inversa</th>
+      <th>dia_semana</th>
+      <th>horario</th>
+      <th>uf</th>
+      <th>br</th>
+      <th>km</th>
+      <th>municipio</th>
+      <th>causa_acidente</th>
+      <th>tipo_acidente</th>
+      <th>...</th>
+      <th>feridos_graves</th>
+      <th>ilesos</th>
+      <th>ignorados</th>
+      <th>feridos</th>
+      <th>veiculos</th>
+      <th>latitude</th>
+      <th>longitude</th>
+      <th>regional</th>
+      <th>delegacia</th>
+      <th>uop</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>331730.0</td>
+      <td>2021-01-01</td>
+      <td>sexta-feira</td>
+      <td>05:30:00</td>
+      <td>SP</td>
+      <td>116.0</td>
+      <td>453</td>
+      <td>REGISTRO</td>
+      <td>Reação tardia ou ineficiente do condutor</td>
+      <td>Tombamento</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>-24,56168114</td>
+      <td>-47,86752174</td>
+      <td>SPRF-SP</td>
+      <td>DEL05-SP</td>
+      <td>UOP01-DEL05-SP</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>331804.0</td>
+      <td>2021-01-01</td>
+      <td>sexta-feira</td>
+      <td>08:05:00</td>
+      <td>AM</td>
+      <td>174.0</td>
+      <td>937</td>
+      <td>MANAUS</td>
+      <td>Reação tardia ou ineficiente do condutor</td>
+      <td>Colisão traseira</td>
+      <td>...</td>
+      <td>0</td>
+      <td>5</td>
+      <td>0</td>
+      <td>1</td>
+      <td>4</td>
+      <td>-2,508068</td>
+      <td>-60,036434</td>
+      <td>SPRF-AM</td>
+      <td>DEL01-AM</td>
+      <td>UOP01-DEL01-AM</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>331815.0</td>
+      <td>2021-01-01</td>
+      <td>sexta-feira</td>
+      <td>10:10:00</td>
+      <td>CE</td>
+      <td>222.0</td>
+      <td>128,5</td>
+      <td>ITAPAJE</td>
+      <td>Velocidade Incompatível</td>
+      <td>Tombamento</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>-3,707626</td>
+      <td>-39,623509</td>
+      <td>SPRF-CE</td>
+      <td>DEL04-CE</td>
+      <td>UOP03-DEL04-CE</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>331823.0</td>
+      <td>2021-01-01</td>
+      <td>sexta-feira</td>
+      <td>12:30:00</td>
+      <td>RJ</td>
+      <td>493.0</td>
+      <td>18</td>
+      <td>MAGE</td>
+      <td>Ingestão de álcool e/ou substâncias psicoativa...</td>
+      <td>Colisão lateral</td>
+      <td>...</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>-22,6687122</td>
+      <td>-43,01862696</td>
+      <td>SPRF-RJ</td>
+      <td>DEL02-RJ</td>
+      <td>UOP04-DEL02-RJ</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>331843.0</td>
+      <td>2021-01-01</td>
+      <td>sexta-feira</td>
+      <td>14:40:00</td>
+      <td>RJ</td>
+      <td>393.0</td>
+      <td>252</td>
+      <td>BARRA DO PIRAI</td>
+      <td>Condutor Dormindo</td>
+      <td>Colisão frontal</td>
+      <td>...</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>2</td>
+      <td>2</td>
+      <td>-22,43422023</td>
+      <td>-43,77561487</td>
+      <td>SPRF-RJ</td>
+      <td>DEL05-RJ</td>
+      <td>UOP02-DEL05-RJ</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 30 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">base</span><span class="o">.</span><span class="n">shape</span> <span class="c1">#Mostra o número de linhas e colunas na base</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(64539, 30)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">base</span><span class="o">.</span><span class="n">info</span><span class="p">()</span> <span class="c1">#Mostra informações sobre a base</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 64539 entries, 0 to 64538
+Data columns (total 30 columns):
+ #   Column                  Non-Null Count  Dtype  
+---  ------                  --------------  -----  
+ 0   id                      64539 non-null  float64
+ 1   data_inversa            64539 non-null  object 
+ 2   dia_semana              64539 non-null  object 
+ 3   horario                 64539 non-null  object 
+ 4   uf                      64539 non-null  object 
+ 5   br                      64372 non-null  float64
+ 6   km                      64372 non-null  object 
+ 7   municipio               64539 non-null  object 
+ 8   causa_acidente          64539 non-null  object 
+ 9   tipo_acidente           64539 non-null  object 
+ 10  classificacao_acidente  64539 non-null  object 
+ 11  fase_dia                64539 non-null  object 
+ 12  sentido_via             64539 non-null  object 
+ 13  condicao_metereologica  64539 non-null  object 
+ 14  tipo_pista              64539 non-null  object 
+ 15  tracado_via             64539 non-null  object 
+ 16  uso_solo                64539 non-null  object 
+ 17  pessoas                 64539 non-null  int64  
+ 18  mortos                  64539 non-null  int64  
+ 19  feridos_leves           64539 non-null  int64  
+ 20  feridos_graves          64539 non-null  int64  
+ 21  ilesos                  64539 non-null  int64  
+ 22  ignorados               64539 non-null  int64  
+ 23  feridos                 64539 non-null  int64  
+ 24  veiculos                64539 non-null  int64  
+ 25  latitude                64539 non-null  object 
+ 26  longitude               64539 non-null  object 
+ 27  regional                64539 non-null  object 
+ 28  delegacia               64521 non-null  object 
+ 29  uop                     64407 non-null  object 
+dtypes: float64(2), int64(8), object(20)
+memory usage: 14.8+ MB
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Item 01</strong></p>
+<ul class="simple">
+<li><p>Qual é o estado que mais teve o maior número de acidentes?</p></li>
+</ul>
+<p><strong>Item 02</strong></p>
+<ul class="simple">
+<li><p>Apresente a quantidade de acidentes por dia da semana.</p></li>
+</ul>
+<p><strong>Item 03</strong></p>
+<ul class="simple">
+<li><p>Apresente a quantidade de acidentes por estado.</p></li>
+</ul>
+<p><strong>Item 04</strong></p>
+<ul class="simple">
+<li><p>De acordo com a quantidade de acidentes, quais são as 5 rodovias mais perigosas?</p></li>
+</ul>
+<p><strong>Item 05</strong></p>
+<ul class="simple">
+<li><p>Considerando apenas acidentes com vítimas fatais, qual rodovia é a mais perigosa?</p></li>
+</ul>
+<p><strong>Item 06</strong></p>
+<ul class="simple">
+<li><p>No Paraná, quais são as 10 cidades do interior que possuiram o maior número de acidentes?</p></li>
+</ul>
+<p><strong>Item 07</strong></p>
+<ul class="simple">
+<li><p>Os acidentes com vítimas fatais ocorrem em sua maioria em trechos de curvas ou de reta?</p></li>
+</ul>
+<p><strong>Item 08</strong></p>
+<ul class="simple">
+<li><p>Quais são as 10 maiores causas de acidentes?</p></li>
+</ul>
+<p><strong>Item 09</strong></p>
+<ul class="simple">
+<li><p>Em que estado ocorre o maior núemro de acidentes em que a causa foi animais na pista?</p></li>
+</ul>
+<p><strong>Item 10</strong></p>
+<ul class="simple">
+<li><p>Em Cascavel, no Paraná, qual são as rodovias que existem na base de dados?</p></li>
+</ul>
+<p><strong>Item 11</strong></p>
+<ul class="simple">
+<li><p>Em Cascavel, no Paraná, qual é a rodovia que mais possui acidentes?</p></li>
+</ul>
+<p><strong>Item 12</strong></p>
+<ul class="simple">
+<li><p>Em Cascavel, no Paraná, em qual kilômetro da rodovia BR 277 ocorreram o maior número de acidentes com vítimas fatais? Obs: por padrão a coluna <code class="docutils literal notranslate"><span class="pre">br</span></code> está com valores do tipo <code class="docutils literal notranslate"><span class="pre">float</span></code>. (<code class="docutils literal notranslate"><span class="pre">277.0</span></code>).</p></li>
+</ul>
+<p><strong>Item 13</strong></p>
+<ul class="simple">
+<li><p>O que mais pode ser explorado na base?</p></li>
+</ul>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/04-Pandas"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      De Darlon Vasata<br/>
+    
+        &copy; direito autoral 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

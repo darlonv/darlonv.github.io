@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Produções &#8212; Prof. Darlon Vasata</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -31,30 +31,35 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Orientações de Trabalhos de Conclusão de Curso" href="tccs.html" />
     <link rel="prev" title="Sugestões" href="interesses.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -72,13 +77,14 @@
     <a class="navbar-brand text-wrap" href="index.html">
       
       
+      
       <h1 class="site-logo" id="site-title">Prof. Darlon Vasata</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -87,7 +93,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   projetos
  </span>
@@ -96,11 +102,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="pesquisa.html">
    Pesquisa
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="content/cronograma.html">
-   Cronograma
   </a>
  </li>
  <li class="toctree-l1">
@@ -129,7 +130,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   ensino
  </span>
@@ -141,7 +142,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Links
  </span>
@@ -198,7 +199,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -216,20 +217,25 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
-   2021
+   2022
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
+   2021
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
    2020
   </a>
   <ul class="nav section-nav flex-column">
@@ -241,12 +247,12 @@
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
+  <a class="reference internal nav-link" href="#id4">
    2019
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id4">
+    <a class="reference internal nav-link" href="#id5">
      Participações em eventos e feiras
     </a>
    </li>
@@ -260,29 +266,99 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Produções</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   2022
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   2021
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   2020
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#participacoes-em-eventos-e-feiras">
+     Participações em eventos e feiras
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   2019
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Participações em eventos e feiras
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <div class="section" id="producoes">
+  <div class="tex2jax_ignore mathjax_ignore section" id="producoes">
 <h1>Produções<a class="headerlink" href="#producoes" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="id1">
-<h2>2021<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<h2>2022<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p>BARBOZA, J.V., VASATA, D. Predição de evasão estudantil utilizando algoritmos de aprendizagem de máquina. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=45">!Anais do II SCIENTIF</a>, pg.45&gt;. Acesso em: 6 jan 2021.</p></li>
-<li><p>FERNANDES, F., VASATA, D. Cálculo de rotas para dispositivos de monitoramente utilizando inteligência artificial. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=44">!Anais do II SCIENTIF</a>, pg.44&gt;. Acesso em: 6 jan 2021.</p></li>
-<li><p>KLASSMANN, I.S., BRISTOTI, L.A., ORVATTI, L., VASATA, D. Análise de base de dados da Polícia Rodoviária Federal. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=33">!Anais do II SCIENTIF</a>, pg.33&gt;. Acesso em: 6 jan 2021.</p></li>
-<li><p>KLASSMANN, I.S., BRISTOTI, L.A., ORVATTI, L., VASATA, D. Predição de acidentes em rodovias federais utilizando regressão linear. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR Assis Chateaubriand. 7, 2021. Assis Chateaubriand-PR. No prelo.</p></li>
-<li><p>MAURICIO, S.K. BORTOLI, A.A, VASATA, D. Solução geométrica plana ao problema do caixeiro viajante utilizando divisão e conquista, Curva de Hilbert e Branch and Bound. In: Latin.Science, 2021, Foz do Iguaçú-PR. No prelo.</p></li>
-<li><p>MORETTO, A.F. PIMENTEL, M., SILVA, A.L., VASATA, D. Biobot: Dicionário em termos biológicos automatizado com robô via Telegram. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=43">!Anais do II SCIENTIF</a>, pg.43&gt;. Acesso em: 6 jan 2021.</p></li>
-<li><p>OLIVEIRA, A.L., COSTA, A.A.S., VASATA, D., SILVA, A.L. Abordagem teórica através de dados e informações sobre a Dengue. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=34">!Anais do II SCIENTIF</a>, pg.34&gt;. Acesso em: 6 jan 2021.</p></li>
-<li><p>RIBEIRO, M.C. GOMES, K.A.B., OLIVEIRA, E.F.N., VASATA, D. Características da linguagem de programação Julia. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=52">!Anais do II SCIENTIF</a>, pg.52&gt;. Acesso em: 6 jan 2021.</p></li>
-<li><p>SANTOS, J.R.Q., VASATA, D. Uso de aprendizado de máquina para análise e predição de vôos. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=45">!Anais do II SCIENTIF</a>, pg.45&gt;. Acesso em: 6 jan 2021.</p></li>
-<li><p>SILVA JUNIOR, C.H., VASATA, D., MIRANDA, P.G. Qualificação docente e o desempenho dos estudantes do ensino médio das escolas do Paraná no ENEM. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR Assis Chateaubriand. 7, 2021. Assis Chateaubriand-PR. No prelo.</p></li>
-<li><p>TRAMBUCH, W.S., DA ROSA, R., VASATA, D. Geração de malhas computacionais a partir de informações de geolocalização para exploração de ambientes abertos com robôs autônomos. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=56">!Anais do II SCIENTIF</a>, pg.56&gt;. Acesso em: 6 jan 2021.</p></li>
+<li><p>BARBOZA, V. VASATA, D. Análise descritiva do resultado das eleições do ano de 2018 na cidade de Cascavel. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 3, 2022, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2022/12/ANAIS-III-SCIENTIF-ISSN.pdf#page=53">!Anais do III SCIENTIF</a>, pg.53&gt;. Acesso em: 6 fev 2023.</p></li>
+<li><p>GRANATTA, T. VASATA, D. Evasão, abandono e conclusão no IFPR: Desenvolvimento de um sistema para apresentação de resultados quantitativos. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 3, 2022, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2022/12/ANAIS-III-SCIENTIF-ISSN.pdf#page=51">!Anais do III SCIENTIF</a>, pg.51&gt;. Acesso em: 6 fev 2023.</p></li>
+<li><p>GRECHUSKI, G. VASATA, D. Distribuição Eletrônica: Uma abordagem visual e imersiva com a computação gráfica. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 3, 2022, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2022/12/ANAIS-III-SCIENTIF-ISSN.pdf#page=42">!Anais do III SCIENTIF</a>, pg.42&gt;. Acesso em: 6 fev 2023.</p></li>
+<li><p>JUNIOR, I. LÓ, T.B. VASATA, D. Sistema para análise descritiva da produção agropecuária no Estado do Paraná. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 3, 2022, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2022/12/ANAIS-III-SCIENTIF-ISSN.pdf#page=52">!Anais do III SCIENTIF</a>, pg.52&gt;. Acesso em: 6 fev 2023.</p></li>
+<li><p>JUNIOR, C.H.S, MIRANDA, P.G. VASATA, D. Desempenho dos estudantes do ensino médio no Enem e sua relação com a qualificação do corpo docente nas escolas do Paraná. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR - Assis Chateaubriand - VII FEPIAC . 8, 2022, Assis Chateaubriand-PR. Disponível em: &lt;<a class="reference external" href="https://drive.google.com/file/d/1La3Ead0KipQYjP4ubz40WTj6-MFAlJsW/view#page=26">!Anais do VIII FEPIAC</a>, pg.26&gt;. Acesso em: 6 fev 2023.</p></li>
+<li><p>MIOLA, V.M. SIGOLIN, M.E, LÓ, T.B. VASATA, D. Predição da produção agrícola a partir de dados pluviómetricos utilizando regressão linear múltipla. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR - Assis Chateaubriand - VII FEPIAC . 8, 2022, Assis Chateaubriand-PR. Disponível em: &lt;<a class="reference external" href="https://drive.google.com/file/d/1La3Ead0KipQYjP4ubz40WTj6-MFAlJsW/view#page=70">!Anais do VIII FEPIAC</a>, pg.70&gt;. Acesso em: 6 fev 2023.</p></li>
+<li><p>MIOLA, V.M. SIGOLIN, M.E. LÓ, T.B. VASATA, D. Produção Agrícola com base em dados pluviométricos. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 3, 2022, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2022/12/ANAIS-III-SCIENTIF-ISSN.pdf#page=17">!Anais do III SCIENTIF</a>, pg.17&gt;. Acesso em: 6 fev 2023.</p></li>
+<li><p>SILVA, R.A. VASATA, D. Sumarização e compilação de dados sobre a mortalidade no Brasil. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR - Assis Chateaubriand - VII FEPIAC . 8, 2022, Assis Chateaubriand-PR. Disponível em: &lt;<a class="reference external" href="https://drive.google.com/file/d/1La3Ead0KipQYjP4ubz40WTj6-MFAlJsW/view#page=78">!Anais do VIII FEPIAC</a>, pg.78&gt;. Acesso em: 6 fev 2023.</p></li>
+<li><p>SILVA, K.J. VASATA, D. Vida, trabalho e morde 1,22 milhões de pessoas: Uma análise interativa sobre dados de figuras populares e históricas. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 3, 2022, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2022/12/ANAIS-III-SCIENTIF-ISSN.pdf#page=82">!Anais do III SCIENTIF</a>, pg.82&gt;. Acesso em: 6 fev 2023.</p></li>
+<li><p>SOUZA, P.V, ROSA, P.H, LÓ, T.B. VASATA, D. Ciência de Dados: Análise da criminalidade urbana no Estado de São Paulo. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 3, 2022, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2022/12/ANAIS-III-SCIENTIF-ISSN.pdf#page=18">!Anais do III SCIENTIF</a>, pg.18&gt;. Acesso em: 6 fev 2023.</p></li>
+<li><p>SOUZA, P.V.C. ROSA, P.H, LÓ, T.B. VASATA, D. Ciência de Dados. Predição de ocorrências criminais urbanas no Estado de São Paulo. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR - Assis Chateaubriand - VII FEPIAC . 8, 2022, Assis Chateaubriand-PR. Disponível em: &lt;<a class="reference external" href="https://drive.google.com/file/d/1La3Ead0KipQYjP4ubz40WTj6-MFAlJsW/view#page=18">!Anais do VIII FEPIAC</a>, pg.18&gt;. Acesso em: 6 fev 2023.</p></li>
+<li><p>TAMBARUSSI, C. VASATA, D. CHESCA, D.S. PELIÇON, E.F. JUNIOR, E.J.H, KUNZLER, K.K. MIRANDA, P.G. BEBER, S.Z.C. BECHLIN, K.R.K. Investigação de práticas interdisciplinares e utilização da técnica de mapeamento conceitual no ensino de Ciências . In: Seminário de Pesquisa e Extensão do IFPR - Assis Chateaubriand - SEPE. 3, 2022, Assis Chateaubriand-PR. Disponível em: &lt;<a class="reference external" href="https://drive.google.com/file/d/1L6NpmV4eXSw08IGXPA4W-8Wq0d8c05Id/view#page=19">!Anais do VIII FEPIAC</a>, pg.19&gt;. Acesso em: 6 fev 2023.</p></li>
+<li><p>VALENTIN, J.A. VASATA, D. Notas de matemática do Enem 2020 e a relação com a escolaridade materna. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR - Assis Chateaubriand - VII FEPIAC . 8, 2022, Assis Chateaubriand-PR. Disponível em: &lt;<a class="reference external" href="https://drive.google.com/file/d/1La3Ead0KipQYjP4ubz40WTj6-MFAlJsW/view#page=64">!Anais do VIII FEPIAC</a>, pg.64&gt;. Acesso em: 6 fev 2023.</p></li>
 </ol>
 </div>
 <div class="section" id="id2">
-<h2>2020<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>2021<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>BARBOZA, J.V., VASATA, D. Predição de evasão estudantil utilizando algoritmos de aprendizagem de máquina. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=45">!Anais do II SCIENTIF</a>, pg.45&gt;. Acesso em: 6 jan 2022.</p></li>
+<li><p>FERNANDES, F., VASATA, D. Cálculo de rotas para dispositivos de monitoramente utilizando inteligência artificial. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=44">!Anais do II SCIENTIF</a>, pg.44&gt;. Acesso em: 6 jan 2022.</p></li>
+<li><p>KLASSMANN, I.S., BRISTOTI, L.A., ORVATTI, L., VASATA, D. Análise de base de dados da Polícia Rodoviária Federal. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=33">!Anais do II SCIENTIF</a>, pg.33&gt;. Acesso em: 6 jan 2022.</p></li>
+<li><p>KLASSMANN, I.S., BRISTOTI, L.A., ORVATTI, L., VASATA, D. Predição de acidentes em rodovias federais utilizando regressão linear. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR Assis Chateaubriand. 7, 2021. Assis Chateaubriand-PR. No prelo.</p></li>
+<li><p>MAURICIO, S.K. BORTOLI, A.A, VASATA, D. Solução geométrica plana ao problema do caixeiro viajante utilizando divisão e conquista, Curva de Hilbert e Branch and Bound. In: Latin.Science, 2021, Foz do Iguaçú-PR. No prelo.</p></li>
+<li><p>MORETTO, A.F. PIMENTEL, M., SILVA, A.L., VASATA, D. Biobot: Dicionário em termos biológicos automatizado com robô via Telegram. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=43">!Anais do II SCIENTIF</a>, pg.43&gt;. Acesso em: 6 jan 2022.</p></li>
+<li><p>OLIVEIRA, A.L., COSTA, A.A.S., VASATA, D., SILVA, A.L. Abordagem teórica através de dados e informações sobre a Dengue. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=34">!Anais do II SCIENTIF</a>, pg.34&gt;. Acesso em: 6 jan 2022.</p></li>
+<li><p>RIBEIRO, M.C. GOMES, K.A.B., OLIVEIRA, E.F.N., VASATA, D. Características da linguagem de programação Julia. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=52">!Anais do II SCIENTIF</a>, pg.52&gt;. Acesso em: 6 jan 2022.</p></li>
+<li><p>SANTOS, J.R.Q., VASATA, D. Uso de aprendizado de máquina para análise e predição de vôos. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=45">!Anais do II SCIENTIF</a>, pg.45&gt;. Acesso em: 6 jan 2022.</p></li>
+<li><p>SILVA JUNIOR, C.H., VASATA, D., MIRANDA, P.G. Qualificação docente e o desempenho dos estudantes do ensino médio das escolas do Paraná no ENEM. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR Assis Chateaubriand. 7, 2021. Assis Chateaubriand-PR. No prelo.</p></li>
+<li><p>TRAMBUCH, W.S., DA ROSA, R., VASATA, D. Geração de malhas computacionais a partir de informações de geolocalização para exploração de ambientes abertos com robôs autônomos. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=56">!Anais do II SCIENTIF</a>, pg.56&gt;. Acesso em: 6 jan 2022.</p></li>
+</ol>
+</div>
+<div class="section" id="id3">
+<h2>2020<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>BUENO, B.J.; VASATA, D.; MIRANDA, P.G.  Análise do impacto dos Institutos Federais na educação pública a partir de dados do ENEM. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR Assis Chateaubriand. 6, 2020. Assis Chateaubriand-PR. Disponível em: &lt;<a class="reference external" href="https://www.even3.com.br/6fepiac/">Anais VI FEPIAC, pg. 16</a>&gt;. Acesso em 09 jul 2021.</p></li>
 <li><p>DAMBROSIO, K.C.; SOUZA, K.C.P.; COSMANN, N.J.; VASATA, D. Identificação computadorizada de células cancerígenas em exames de imagens utilizando algoritmos de inteligência artificial. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR Assis Chateaubriand. 6, 2020. Assis Chateaubriand-PR. Disponível em: &lt;<a class="reference external" href="https://www.even3.com.br/6fepiac/">Anais VI FEPIAC, pg. 37</a>&gt;. Acesso em 09 jul 2021.</p></li>
@@ -303,8 +379,8 @@
 </ol>
 </div>
 </div>
-<div class="section" id="id3">
-<h2>2019<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>2019<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>DA ROSA, A.S.; MOTTER, L.G.; RUCHEL, L. PARCIANELLO, R.V.R., VASATA, D. Mineração de dados e descoberta de conhecimento. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 1, 2019, Cascavel-PR. Disponível em: <a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2020/03/ANAIS-DO-I-SCIENTIF-Vol-1-Dez-2019.pdf#page=33">Anais I SCIENTIF, p.33-34</a>.</p></li>
 <li><p>PAPANI, F.G.; VASATA, D. Criptografia Visual. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 1, 2019, Cascavel-PR. Disponível em: <a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2020/03/ANAIS-DO-I-SCIENTIF-Vol-1-Dez-2019.pdf#page=31">Anais I SCIENTIF, p.31</a>.</p></li>
@@ -317,8 +393,8 @@
 <li><p>LO, T.B.; VASATA, D. Histórico do IFPR Campus Assis Chateaubriand com base em dados públicos. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR Assis Chateaubriand. 5, 2019. Assis Chateaubriand-PR. Disponível em: <a class="reference external" href="https://fepiac.ifpreventos.com.br/docs/fepiac-anais-2019.pdf#page=65">Anais da V FEPIAC, p.58</a></p></li>
 <li><p>LO, T.B.; CHAVES, L.I.; Painel digital de recados.  In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR Assis Chateaubriand. 5, 2019. Assis Chateaubriand-PR. Disponível em: <a class="reference external" href="https://fepiac.ifpreventos.com.br/docs/fepiac-anais-2019.pdf#page=88">Anais da V FEPIAC, p.81</a></p></li>
 </ol>
-<div class="section" id="id4">
-<h3>Participações em eventos e feiras<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h3>Participações em eventos e feiras<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
 <li><p>PINHEIRO, M.H.F.; TRISTONI, J.M.H.P.; VIANA, J.R.M.; VASATA, D. SUNDATA SYSTEM: Controle de geração de energia fotovoltaica. In: Feira de Inovação Tecnológica do Instituto Federal do Paraná - Campus Cacavel. 2019, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2019/09/CLASSIFICA%C3%87AO-FINAL-IFTECH.pdf">Resultado IFTECH 2019</a>&gt;. Acesso em 12 jul 2021.</p></li>
 </ol>
@@ -351,34 +427,42 @@
 
               </div>
               
-        
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="interesses.html" title="previous page">Sugestões</a>
-    <a class='right-next' id="next-link" href="tccs.html" title="next page">Orientações de Trabalhos de Conclusão de Curso</a>
-
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="interesses.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Sugestões</p>
         </div>
-        
+    </a>
+    <a class='right-next' id="next-link" href="tccs.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Orientações de Trabalhos de Conclusão de Curso</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Darlon Vasata<br/>
-        
-            &copy; Copyright 2020.<br/>
-      </p>
-    </div>
-  </footer>
+    <footer class="footer">
+  <p>
+    
+      By Darlon Vasata<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
