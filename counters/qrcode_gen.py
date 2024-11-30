@@ -3,7 +3,7 @@
 
 import qrcode
 
-input_data = 'https://darlonv.github.io/counters/ferias.html'
+input_data = 'https://darlonv.github.io/counters/natal'
 
 qr = qrcode.QRCode(
         version=1,
