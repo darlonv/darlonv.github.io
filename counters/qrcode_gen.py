@@ -13,4 +13,4 @@ qr = qrcode.QRCode(
 qr.add_data(input_data)
 qr.make(fit=True)
 img = qr.make_image(fill='black', back_color='white')
-img.save('qrcode_ferias.png')
+img.save('qrcode_natal.png')
