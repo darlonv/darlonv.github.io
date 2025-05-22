@@ -1,5 +1,51 @@
 # Produções
 
+## 2024
+
+1. MACHADO, H. GRACIANO, L. VASATA, D. Incidência de Queimadas no Paraná: Análise de Variáveis Climáticas e Comparação entre Biomas. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: <[!Anais do V SCIENTIF](https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=76), pg.76>. Acesso em: 2 mai 2025.
+
+2. COSTA, K. A. VASATA, D. Evolução das Plataformas Steam: Uma Análise de Tendências em Jogos, Plataformas e Preferências dos Usuários (1997-2019). In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: <[!Anais do V SCIENTIF](https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=79), pg.79>. Acesso em: 2 mai 2025.
+
+3. OLIVEIRA, N. I. MIRANDA, P. G. VASATA, D. Análise da Avaliação Nacional da Alfabetização: Desempenho e Influência Socioeconômica nas Notas Obtidas Pelas Escolas do Ensino Fundamental. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: <[!Anais do V SCIENTIF](https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=107), pg.107>. Acesso em: 2 mai 2025.
+
+4. BOTTEGA, E. VASATA, D. Análise Quantitativa dos Riscos de Rompimento e Potencial Dano das Barragens de Mineração no Brasil. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: <[!Anais do V SCIENTIF](https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=108), pg.108>. Acesso em: 2 mai 2025.
+
+5. TONIN, P. VASATA, D. Análise da Evolução dos Preços de Combustíveis Automotivos e Comparação com Índices de Inflação (2013-2014). In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: <[!Anais do V SCIENTIF](https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=109), pg.109>. Acesso em: 2 mai 2025.
+
+6. SIFONTES, J. SOUZA, L. C. VASATA, D. Análise do Programa PROUNI: Resultados por Raça, Sexo e Região. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: <[!Anais do V SCIENTIF](https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=112), pg.112>. Acesso em: 2 mai 2025.
+
+7. LIMA, L. M. VASATA, D. Análsie Exploratória de Crimes em Rodovias Brasileiras: Um Estudo com Dados da PRF no Ano de 2023. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: <[!Anais do V SCIENTIF](https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=113), pg.113>. Acesso em: 2 mai 2025.
+
+8. ADIERS, S. N. VASATA, D. Análise Quantitavida do Catálogo de Filmes e Séries Disponibilizados no Serviço de Streaming da Netflix no Ano de 2021. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: <[!Anais do V SCIENTIF](https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=115), pg.115>. Acesso em: 2 mai 2025.
+
+9. PALOSCHI, N. G. VASATA, D. Análise Descritiva da Oscilação Sul El Niño: Padrões Climáticos e Variações do Índice Niño Oceânico. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: <[!Anais do V SCIENTIF](https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=116), pg.116>. Acesso em: 2 mai 2025.
+
+10. ROMERO, D. A. M. VASATA, D. Impostos e suas Diferentes Variações ao Longo dos Anos em cada Estado do Brasil. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: <[!Anais do V SCIENTIF](https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=117), pg.117>. Acesso em: 2 mai 2025.
+
+11. RIBEIRO, M. C. VASATA, D. Análise de Óbitos no Estado do Paraná no Ano de 2022. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: <[!Anais do V SCIENTIF](https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=118), pg.118>. Acesso em: 2 mai 2025.
+
+12. MARTINS, P. A. S., BELLORINI, E. A., VASATA, D. Análise do Andamento de Obras Públicas Utilizando Dados de Portais de Transparência. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: <[!Anais do V SCIENTIF](https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=119), pg.119>. Acesso em: 2 mai 2025.
+
+13. MATOS, M. P., VASATA, D. Análise da Base de Microdados de 2022: Notas ENADE com Base nos Tipos de Instituição e Modalidades de Ensino. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: <[!Anais do V SCIENTIF](https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=121), pg.121>. Acesso em: 2 mai 2025.
+
+14. MACHADO, H., LÓ, T. B., VASATA, D. Desenvolvimento de um Modelo Preditivo para Detecção de Risco de Ataques Cardíacos Utilizando Aprendizado de Máquina. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: <[!Anais do V SCIENTIF](https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=126), pg.126>. Acesso em: 2 mai 2025.
+
+15. GALESCKY, J.V.C., BELLORINI, E.A., VASATA, D. Análise de Dados do Programa Banda Larga na Escola: Nível de Conexão nas Instituições de Ensino no Paraná. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: <[!Anais do V SCIENTIF](https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=127), pg.127>. Acesso em: 2 mai 2025.
+
+16. POLIDO, L.O.A., BELLORINI, E.A., VASATA, D. Dinâmicas Climáticas em Foz do Iguaçu: Uma Análise de Dados Meteorológicosde 2024. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: <[!Anais do V SCIENTIF](https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=128), pg.128>. Acesso em: 2 mai 2025.
+
+17. SILVA, A.C.P., BELLORINI, E.A., VASATA, D. Análise da Distribuição e Situação das Conexões de Internet pelo GESAC: Cobertura por Região e Área no Brasil. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: <[!Anais do V SCIENTIF](https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=135), pg.135>. Acesso em: 2 mai 2025.
+
+18. OLIVEIRA, R.B., VASATA, D. Análise Quantitativa das Negociações Realizadas no Programa Desenrola Brasil. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: <[!Anais do V SCIENTIF](https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=139), pg.139>. Acesso em: 2 mai 2025.
+
+## 2023
+
+
+1. MUJICA, P. M. SCHROEDER, P. H. ALVES, F. L. VASATA, D. Desenvolvimento de Aplicação REST para Apresentar Dados de Geoprocessamento. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 4, 2023, Cascavel-PR. Disponível em: <[!Anais do IV SCIENTIF](https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2023/11/ANAIS-DO-IV-SCIENTIF-1.pdf#page=33), pg.33>. Acesso em: 2 mai 2024.
+
+8. MUJICA, P. M. SCHROEDER, P. H. ALVES, F. L. VASATA, D. API Rest para Consulta de Endereços para um Sistema de Gerenciamento de Alunos em Instituições de Ensino. In: Seminário de Pesquisa, Inovação, Ensino e Extensão do Campus Quedas do Iguaçu - SEPIEX. 7, 2023, Quedas do Iguaçu-PR. Disponível em: <[!Anais do VII SEPIEX](https://drive.google.com/file/d/1VO__HTS_crkPdxFoVrk7QGtxy0zWI-F0/view#page=29), pg.29>. Acesso em: 2 mai 2024.
+
+9. JUNIOR, C. H. S. VASATA, D. MIRANDA, P. G. Concentração Geográfica de Docentes Mestres e Doutores nas Escolas Federais na Mesorregião Oeste do Estado do Paraná. In: Seminário de Pesquisa, Inovação, Ensino e Extensão do Campus Quedas do Iguaçu - SEPIEX. 7, 2023, Quedas do Iguaçu-PR. Disponível em: <[!Anais do VII SEPIEX](https://drive.google.com/file/d/1VO__HTS_crkPdxFoVrk7QGtxy0zWI-F0/view#page=37), pg.37>. Acesso em: 2 mai 2024.
 
 ## 2022
 

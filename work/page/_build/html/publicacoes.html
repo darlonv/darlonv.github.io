@@ -1,331 +1,401 @@
 
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" data-content_root="./" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Produções &#8212; Prof. Darlon Vasata</title>
-    
-  <link href="_static/css/theme.css" rel="stylesheet">
-  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    
-      
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
-
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'publicacoes';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Orientações de Trabalhos de Conclusão de Curso" href="tccs.html" />
     <link rel="prev" title="Sugestões" href="interesses.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="index.html">
-      
-      
-      
-      <h1 class="site-logo" id="site-title">Prof. Darlon Vasata</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Conteúdo
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  projetos
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="pesquisa.html">
-   Pesquisa
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="interesses.html">
-   Sugestões
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Produções
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="tccs.html">
-   Orientações de Trabalhos de Conclusão de Curso
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="extensao.html">
-   Extensão
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="inovacao.html">
-   Inovação
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  ensino
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="disciplinas.html">
-   Disciplinas
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Links
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="links/databases.html">
-   Bases de dados
-  </a>
- </li>
-</ul>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
 
-    </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
 
-</div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
 
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/publicacoes.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
 
-            <!-- Source interaction buttons -->
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
 
-            <!-- Full screen (wrap in <a> to have style consistency -->
+  
+    
+  
 
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Prof. Darlon Vasata</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
 
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   2022
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   2021
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
-   2020
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#participacoes-em-eventos-e-feiras">
-     Participações em eventos e feiras
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id4">
-   2019
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id5">
-     Participações em eventos e feiras
-    </a>
-   </li>
-  </ul>
- </li>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Conteúdo
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">projetos</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="pesquisa.html">Pesquisa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interesses.html">Sugestões</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Produções</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tccs.html">Orientações de Trabalhos de Conclusão de Curso</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extensao.html">Extensão</a></li>
+<li class="toctree-l1"><a class="reference internal" href="inovacao.html">Inovação</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">ensino</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="disciplinas.html">Disciplinas</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="links/databases.html">Bases de dados</a></li>
 </ul>
 
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/publicacoes.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Produções</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2024</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2023</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2022</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2021</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2020</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#participacoes-em-eventos-e-feiras">Participações em eventos e feiras</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2019</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Participações em eventos e feiras</a></li>
+</ul>
+</li>
+</ul>
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Produções</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   2022
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   2021
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id3">
-   2020
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#participacoes-em-eventos-e-feiras">
-     Participações em eventos e feiras
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id4">
-   2019
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id5">
-     Participações em eventos e feiras
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
 
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            
-              <div>
+              
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="producoes">
-<h1>Produções<a class="headerlink" href="#producoes" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2>2022<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="producoes">
+<h1>Produções<a class="headerlink" href="#producoes" title="Link to this heading">#</a></h1>
+<section id="id1">
+<h2>2024<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>MACHADO, H. GRACIANO, L. VASATA, D. Incidência de Queimadas no Paraná: Análise de Variáveis Climáticas e Comparação entre Biomas. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=76">!Anais do V SCIENTIF</a>, pg.76&gt;. Acesso em: 2 mai 2025.</p></li>
+<li><p>COSTA, K. A. VASATA, D. Evolução das Plataformas Steam: Uma Análise de Tendências em Jogos, Plataformas e Preferências dos Usuários (1997-2019). In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=79">!Anais do V SCIENTIF</a>, pg.79&gt;. Acesso em: 2 mai 2025.</p></li>
+<li><p>OLIVEIRA, N. I. MIRANDA, P. G. VASATA, D. Análise da Avaliação Nacional da Alfabetização: Desempenho e Influência Socioeconômica nas Notas Obtidas Pelas Escolas do Ensino Fundamental. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=107">!Anais do V SCIENTIF</a>, pg.107&gt;. Acesso em: 2 mai 2025.</p></li>
+<li><p>BOTTEGA, E. VASATA, D. Análise Quantitativa dos Riscos de Rompimento e Potencial Dano das Barragens de Mineração no Brasil. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=108">!Anais do V SCIENTIF</a>, pg.108&gt;. Acesso em: 2 mai 2025.</p></li>
+<li><p>TONIN, P. VASATA, D. Análise da Evolução dos Preços de Combustíveis Automotivos e Comparação com Índices de Inflação (2013-2014). In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=109">!Anais do V SCIENTIF</a>, pg.109&gt;. Acesso em: 2 mai 2025.</p></li>
+<li><p>SIFONTES, J. SOUZA, L. C. VASATA, D. Análise do Programa PROUNI: Resultados por Raça, Sexo e Região. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=112">!Anais do V SCIENTIF</a>, pg.112&gt;. Acesso em: 2 mai 2025.</p></li>
+<li><p>LIMA, L. M. VASATA, D. Análsie Exploratória de Crimes em Rodovias Brasileiras: Um Estudo com Dados da PRF no Ano de 2023. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=113">!Anais do V SCIENTIF</a>, pg.113&gt;. Acesso em: 2 mai 2025.</p></li>
+<li><p>ADIERS, S. N. VASATA, D. Análise Quantitavida do Catálogo de Filmes e Séries Disponibilizados no Serviço de Streaming da Netflix no Ano de 2021. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=115">!Anais do V SCIENTIF</a>, pg.115&gt;. Acesso em: 2 mai 2025.</p></li>
+<li><p>PALOSCHI, N. G. VASATA, D. Análise Descritiva da Oscilação Sul El Niño: Padrões Climáticos e Variações do Índice Niño Oceânico. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=116">!Anais do V SCIENTIF</a>, pg.116&gt;. Acesso em: 2 mai 2025.</p></li>
+<li><p>ROMERO, D. A. M. VASATA, D. Impostos e suas Diferentes Variações ao Longo dos Anos em cada Estado do Brasil. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=117">!Anais do V SCIENTIF</a>, pg.117&gt;. Acesso em: 2 mai 2025.</p></li>
+<li><p>RIBEIRO, M. C. VASATA, D. Análise de Óbitos no Estado do Paraná no Ano de 2022. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=118">!Anais do V SCIENTIF</a>, pg.118&gt;. Acesso em: 2 mai 2025.</p></li>
+<li><p>MARTINS, P. A. S., BELLORINI, E. A., VASATA, D. Análise do Andamento de Obras Públicas Utilizando Dados de Portais de Transparência. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=119">!Anais do V SCIENTIF</a>, pg.119&gt;. Acesso em: 2 mai 2025.</p></li>
+<li><p>MATOS, M. P., VASATA, D. Análise da Base de Microdados de 2022: Notas ENADE com Base nos Tipos de Instituição e Modalidades de Ensino. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=121">!Anais do V SCIENTIF</a>, pg.121&gt;. Acesso em: 2 mai 2025.</p></li>
+<li><p>MACHADO, H., LÓ, T. B., VASATA, D. Desenvolvimento de um Modelo Preditivo para Detecção de Risco de Ataques Cardíacos Utilizando Aprendizado de Máquina. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=126">!Anais do V SCIENTIF</a>, pg.126&gt;. Acesso em: 2 mai 2025.</p></li>
+<li><p>GALESCKY, J.V.C., BELLORINI, E.A., VASATA, D. Análise de Dados do Programa Banda Larga na Escola: Nível de Conexão nas Instituições de Ensino no Paraná. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=127">!Anais do V SCIENTIF</a>, pg.127&gt;. Acesso em: 2 mai 2025.</p></li>
+<li><p>POLIDO, L.O.A., BELLORINI, E.A., VASATA, D. Dinâmicas Climáticas em Foz do Iguaçu: Uma Análise de Dados Meteorológicosde 2024. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=128">!Anais do V SCIENTIF</a>, pg.128&gt;. Acesso em: 2 mai 2025.</p></li>
+<li><p>SILVA, A.C.P., BELLORINI, E.A., VASATA, D. Análise da Distribuição e Situação das Conexões de Internet pelo GESAC: Cobertura por Região e Área no Brasil. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=135">!Anais do V SCIENTIF</a>, pg.135&gt;. Acesso em: 2 mai 2025.</p></li>
+<li><p>OLIVEIRA, R.B., VASATA, D. Análise Quantitativa das Negociações Realizadas no Programa Desenrola Brasil. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 5, 2024, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2024/12/Anais-do-V-Scientif-1.pdf#page=139">!Anais do V SCIENTIF</a>, pg.139&gt;. Acesso em: 2 mai 2025.</p></li>
+</ol>
+</section>
+<section id="id2">
+<h2>2023<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>MUJICA, P. M. SCHROEDER, P. H. ALVES, F. L. VASATA, D. Desenvolvimento de Aplicação REST para Apresentar Dados de Geoprocessamento. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 4, 2023, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://ifpr.edu.br/cascavel/wp-content/uploads/sites/8/2023/11/ANAIS-DO-IV-SCIENTIF-1.pdf#page=33">!Anais do IV SCIENTIF</a>, pg.33&gt;. Acesso em: 2 mai 2024.</p></li>
+<li><p>MUJICA, P. M. SCHROEDER, P. H. ALVES, F. L. VASATA, D. API Rest para Consulta de Endereços para um Sistema de Gerenciamento de Alunos em Instituições de Ensino. In: Seminário de Pesquisa, Inovação, Ensino e Extensão do Campus Quedas do Iguaçu - SEPIEX. 7, 2023, Quedas do Iguaçu-PR. Disponível em: &lt;<a class="reference external" href="https://drive.google.com/file/d/1VO__HTS_crkPdxFoVrk7QGtxy0zWI-F0/view#page=29">!Anais do VII SEPIEX</a>, pg.29&gt;. Acesso em: 2 mai 2024.</p></li>
+<li><p>JUNIOR, C. H. S. VASATA, D. MIRANDA, P. G. Concentração Geográfica de Docentes Mestres e Doutores nas Escolas Federais na Mesorregião Oeste do Estado do Paraná. In: Seminário de Pesquisa, Inovação, Ensino e Extensão do Campus Quedas do Iguaçu - SEPIEX. 7, 2023, Quedas do Iguaçu-PR. Disponível em: &lt;<a class="reference external" href="https://drive.google.com/file/d/1VO__HTS_crkPdxFoVrk7QGtxy0zWI-F0/view#page=37">!Anais do VII SEPIEX</a>, pg.37&gt;. Acesso em: 2 mai 2024.</p></li>
+</ol>
+</section>
+<section id="id3">
+<h2>2022<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
 <li><p>BARBOZA, V. VASATA, D. Análise descritiva do resultado das eleições do ano de 2018 na cidade de Cascavel. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 3, 2022, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2022/12/ANAIS-III-SCIENTIF-ISSN.pdf#page=53">!Anais do III SCIENTIF</a>, pg.53&gt;. Acesso em: 6 fev 2023.</p></li>
 <li><p>GRANATTA, T. VASATA, D. Evasão, abandono e conclusão no IFPR: Desenvolvimento de um sistema para apresentação de resultados quantitativos. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 3, 2022, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2022/12/ANAIS-III-SCIENTIF-ISSN.pdf#page=51">!Anais do III SCIENTIF</a>, pg.51&gt;. Acesso em: 6 fev 2023.</p></li>
 <li><p>GRECHUSKI, G. VASATA, D. Distribuição Eletrônica: Uma abordagem visual e imersiva com a computação gráfica. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 3, 2022, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2022/12/ANAIS-III-SCIENTIF-ISSN.pdf#page=42">!Anais do III SCIENTIF</a>, pg.42&gt;. Acesso em: 6 fev 2023.</p></li>
@@ -340,10 +410,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>TAMBARUSSI, C. VASATA, D. CHESCA, D.S. PELIÇON, E.F. JUNIOR, E.J.H, KUNZLER, K.K. MIRANDA, P.G. BEBER, S.Z.C. BECHLIN, K.R.K. Investigação de práticas interdisciplinares e utilização da técnica de mapeamento conceitual no ensino de Ciências . In: Seminário de Pesquisa e Extensão do IFPR - Assis Chateaubriand - SEPE. 3, 2022, Assis Chateaubriand-PR. Disponível em: &lt;<a class="reference external" href="https://drive.google.com/file/d/1L6NpmV4eXSw08IGXPA4W-8Wq0d8c05Id/view#page=19">!Anais do VIII FEPIAC</a>, pg.19&gt;. Acesso em: 6 fev 2023.</p></li>
 <li><p>VALENTIN, J.A. VASATA, D. Notas de matemática do Enem 2020 e a relação com a escolaridade materna. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR - Assis Chateaubriand - VII FEPIAC . 8, 2022, Assis Chateaubriand-PR. Disponível em: &lt;<a class="reference external" href="https://drive.google.com/file/d/1La3Ead0KipQYjP4ubz40WTj6-MFAlJsW/view#page=64">!Anais do VIII FEPIAC</a>, pg.64&gt;. Acesso em: 6 fev 2023.</p></li>
 </ol>
-</div>
-<div class="section" id="id2">
-<h2>2021<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
+</section>
+<section id="id4">
+<h2>2021<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
 <li><p>BARBOZA, J.V., VASATA, D. Predição de evasão estudantil utilizando algoritmos de aprendizagem de máquina. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=45">!Anais do II SCIENTIF</a>, pg.45&gt;. Acesso em: 6 jan 2022.</p></li>
 <li><p>FERNANDES, F., VASATA, D. Cálculo de rotas para dispositivos de monitoramente utilizando inteligência artificial. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=44">!Anais do II SCIENTIF</a>, pg.44&gt;. Acesso em: 6 jan 2022.</p></li>
 <li><p>KLASSMANN, I.S., BRISTOTI, L.A., ORVATTI, L., VASATA, D. Análise de base de dados da Polícia Rodoviária Federal. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=33">!Anais do II SCIENTIF</a>, pg.33&gt;. Acesso em: 6 jan 2022.</p></li>
@@ -356,10 +426,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>SILVA JUNIOR, C.H., VASATA, D., MIRANDA, P.G. Qualificação docente e o desempenho dos estudantes do ensino médio das escolas do Paraná no ENEM. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR Assis Chateaubriand. 7, 2021. Assis Chateaubriand-PR. No prelo.</p></li>
 <li><p>TRAMBUCH, W.S., DA ROSA, R., VASATA, D. Geração de malhas computacionais a partir de informações de geolocalização para exploração de ambientes abertos com robôs autônomos. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 2, 2021, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2021/12/ANAIS-II-SCIENTIF.pdf#page=56">!Anais do II SCIENTIF</a>, pg.56&gt;. Acesso em: 6 jan 2022.</p></li>
 </ol>
-</div>
-<div class="section" id="id3">
-<h2>2020<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
+</section>
+<section id="id5">
+<h2>2020<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
 <li><p>BUENO, B.J.; VASATA, D.; MIRANDA, P.G.  Análise do impacto dos Institutos Federais na educação pública a partir de dados do ENEM. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR Assis Chateaubriand. 6, 2020. Assis Chateaubriand-PR. Disponível em: &lt;<a class="reference external" href="https://www.even3.com.br/6fepiac/">Anais VI FEPIAC, pg. 16</a>&gt;. Acesso em 09 jul 2021.</p></li>
 <li><p>DAMBROSIO, K.C.; SOUZA, K.C.P.; COSMANN, N.J.; VASATA, D. Identificação computadorizada de células cancerígenas em exames de imagens utilizando algoritmos de inteligência artificial. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR Assis Chateaubriand. 6, 2020. Assis Chateaubriand-PR. Disponível em: &lt;<a class="reference external" href="https://www.even3.com.br/6fepiac/">Anais VI FEPIAC, pg. 37</a>&gt;. Acesso em 09 jul 2021.</p></li>
 <li><p>GOMES, E.H.B.; MEIRELES, D.A.C.; NUNES, L.A.G.; VASATA, D. Análise das decisões de solicitações de refúgio no Brasil. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR Assis Chateaubriand. 6, 2020. Assis Chateaubriand-PR. Disponível em: &lt;<a class="reference external" href="https://www.even3.com.br/6fepiac/">Anais VI FEPIAC, pg. 14</a>&gt;. Acesso em 09 jul 2021.</p></li>
@@ -372,16 +442,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>RIBEIRO, J.A; BROCARDO, D.; VASATA, D.; SILVA, A.L. Diocionário de termos biológicos. In: Seminário de Pesquisa, Inovação, Ensino e Extensão do Campus Avançado de Quedas do Iguaçu - SEPIEX. 2, 2020. Quedas do Iguaçu - PR. Disponível em: &lt;<a class="reference external" href="http://sepiexquedas.blogspot.com/p/edi.html">Anais II SEPIEX, pg. 25</a>&gt;. Acesso em 09 jul 2021.</p></li>
 <li><p>TAVARES, D.; CARDOSO, G.P.; VASATA, D. Desenvolvimento de uma plataforma utilizando processamento de linguagem natural para relacionar ofertas e demandas de serviços. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR Assis Chateaubriand. 6, 2020. Assis Chateaubriand-PR. Disponível em: &lt;<a class="reference external" href="https://www.even3.com.br/6fepiac/">Anais VI FEPIAC, pg. 27</a>&gt;. Acesso em 09 jul 2021.</p></li>
 </ol>
-<div class="section" id="participacoes-em-eventos-e-feiras">
-<h3>Participações em eventos e feiras<a class="headerlink" href="#participacoes-em-eventos-e-feiras" title="Permalink to this headline">¶</a></h3>
-<ol class="simple">
+<section id="participacoes-em-eventos-e-feiras">
+<h3>Participações em eventos e feiras<a class="headerlink" href="#participacoes-em-eventos-e-feiras" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
 <li><p>PAPANI, F.; VASATA, D. Criptografia Visual. In: Feira de Inovação Tecnológica do Instituto Federal do Paraná - Campus Cascavel. 2020, Cascavel-PR.</p></li>
 </ol>
-</div>
-</div>
-<div class="section" id="id4">
-<h2>2019<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
+</section>
+</section>
+<section id="id6">
+<h2>2019<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
 <li><p>DA ROSA, A.S.; MOTTER, L.G.; RUCHEL, L. PARCIANELLO, R.V.R., VASATA, D. Mineração de dados e descoberta de conhecimento. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 1, 2019, Cascavel-PR. Disponível em: <a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2020/03/ANAIS-DO-I-SCIENTIF-Vol-1-Dez-2019.pdf#page=33">Anais I SCIENTIF, p.33-34</a>.</p></li>
 <li><p>PAPANI, F.G.; VASATA, D. Criptografia Visual. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 1, 2019, Cascavel-PR. Disponível em: <a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2020/03/ANAIS-DO-I-SCIENTIF-Vol-1-Dez-2019.pdf#page=31">Anais I SCIENTIF, p.31</a>.</p></li>
 <li><p>GIACOMEL, D.M.; VASATA, D. Aplicação distribuída para geração de soluções ótimas para permutações do cubo de Rubik. In: Seminário de Ciência, Educação e Tecnologia do IFPR Campus Cascavel - SCIENTIF. 1, 2019, Cascavel-PR. Disponível em: <a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2020/03/ANAIS-DO-I-SCIENTIF-Vol-1-Dez-2019.pdf#page=7">Anais I SCIENTIF, p.7</a>.</p></li>
@@ -393,17 +463,17 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>LO, T.B.; VASATA, D. Histórico do IFPR Campus Assis Chateaubriand com base em dados públicos. In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR Assis Chateaubriand. 5, 2019. Assis Chateaubriand-PR. Disponível em: <a class="reference external" href="https://fepiac.ifpreventos.com.br/docs/fepiac-anais-2019.pdf#page=65">Anais da V FEPIAC, p.58</a></p></li>
 <li><p>LO, T.B.; CHAVES, L.I.; Painel digital de recados.  In: Feira de Ensino, Extensão, Pesquisa e Inovação do IFPR Assis Chateaubriand. 5, 2019. Assis Chateaubriand-PR. Disponível em: <a class="reference external" href="https://fepiac.ifpreventos.com.br/docs/fepiac-anais-2019.pdf#page=88">Anais da V FEPIAC, p.81</a></p></li>
 </ol>
-<div class="section" id="id5">
-<h3>Participações em eventos e feiras<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-<ol class="simple">
+<section id="id7">
+<h3>Participações em eventos e feiras<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
 <li><p>PINHEIRO, M.H.F.; TRISTONI, J.M.H.P.; VIANA, J.R.M.; VASATA, D. SUNDATA SYSTEM: Controle de geração de energia fotovoltaica. In: Feira de Inovação Tecnológica do Instituto Federal do Paraná - Campus Cacavel. 2019, Cascavel-PR. Disponível em: &lt;<a class="reference external" href="https://cascavel.ifpr.edu.br/wp-content/uploads/2019/09/CLASSIFICA%C3%87AO-FINAL-IFTECH.pdf">Resultado IFTECH 2019</a>&gt;. Acesso em 12 jul 2021.</p></li>
 </ol>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -417,7 +487,7 @@ const thebe_selector_output = ".output, .cell_output"
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
@@ -425,44 +495,114 @@ const thebe_selector_output = ".output, .cell_output"
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="interesses.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Sugestões</p>
-        </div>
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="interesses.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Sugestões</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="tccs.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="tccs.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Orientações de Trabalhos de Conclusão de Curso</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
+                </footer>
+              
+            </div>
             
-        </div>
-    </div>
-    <footer class="footer">
-  <p>
-    
-      By Darlon Vasata<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
-      </div>
-    </div>
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2024</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2023</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2022</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2021</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2020</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#participacoes-em-eventos-e-feiras">Participações em eventos e feiras</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2019</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Participações em eventos e feiras</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
   
-  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Darlon Vasata
+</p>
 
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
