@@ -1,5 +1,51 @@
 # Orientações de Trabalhos de Conclusão de Curso
 
+## 2025
+
+1. **(Ainda sem título definido)** - em andamento
+    - Aluno:
+        - Emerson Bottega
+    - Co-orientador:
+        - Edmar André Bellorini
+    - Modalidade: Graduação
+    - Curso: Tecnologia em Análise e Desenvolvimento de Sistemas
+
+2. **(Ainda sem título definido)** - em andamento
+    - Aluna:
+        - Lais Mayer
+    - Co-orientador:
+        - Fernando de Lima Alves
+    - Modalidade: Técnico
+    - Curso: Técnico em Informática Integrado ao Ensino Médio
+
+## 2024
+
+1. **Sistema de Detecção de Intrusão (IDS) para dispositivos Linux utilizando Aprendizado de Máquina baseado em Chamadas de Sistema**.
+    - Aluno:
+        - André Augusto Bortoli
+    - Co-orientador:
+        - Thiago Berticelli Ló
+    - Modalidade: Graduação
+    - Curso: Tecnologia em Análise e Desenvolvimento de Sistemas
+
+2. **Desenvolvimento de um Modelo de Predição de Ataques Cardíacos Utilizando Machine Learning**.
+    - Aluna:
+        - Heloisa Machado
+    - Co-orientador:
+        - Thiago Berticelli Ló
+    - Modalidade: Graduação
+    - Curso: Tecnologia em Análise e Desenvolvimento de Sistemas
+
+## 2023
+
+1. **Aplicação rest para consulta de dados geolocalizados**.
+    - Alunos:
+        - Pedro Henrique Schroeder Bolfe
+        - Pedro Miotto
+    - Co-orientador:
+        - Fernando de Lima Alves
+    - Modalidade: Técnico
+    - Curso: Técnico em Informática Integrado ao Ensino Médio
 
 ## 2022
 
